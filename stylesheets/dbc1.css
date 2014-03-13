@@ -1,0 +1,27 @@
+body {
+	margin: auto;
+	width: 500px;
+}
+
+img {
+	margin: auto;
+	width: 500px;
+}
+
+header {
+	color: lime;
+	background-color: black;
+	text-align: center;
+}
+
+.hover-time:hover {
+	background-color: gray;
+	color: aqua;
+}
+
+#click-me:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: maroon;
+}
+
