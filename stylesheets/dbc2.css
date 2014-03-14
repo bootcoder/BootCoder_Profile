@@ -3,28 +3,6 @@ body {
 	width: 500px;
 }
 
-img {
-	margin: auto;
-	width: 500px;
-}
-
-header {
-	color: lime;
-	background-color: black;
-	text-align: center;
-}
-
-.hover-time:hover {
-	background-color: gray;
-	color: aqua;
-}
-
-#click-me:hover {
-	cursor: pointer;
-	background-color: gray;
-	color: maroon;
-}
-
 footer {
 	background-color: yellow;
 	color: black;
@@ -45,4 +23,8 @@ footer {
 	text-align: center;
 	margin: 10px auto 20px auto;
 	padding: 5px;
+}
+
+#navbar li:hover {
+	font-style: italic;
 }
