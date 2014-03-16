@@ -34,6 +34,12 @@ h2 {
   text-align: center;
 }
 
+
+h2:hover {
+  font-style: italic;
+}
+
+
 h3 {
   font-size: 1.4em;
   font-weight: 700;
@@ -47,6 +53,7 @@ h4 {
   text-align: center;
 }
 
+
 /* Navigation */
 .nav li {
   float: left;
@@ -56,6 +63,10 @@ h4 {
   margin: 0 10px;
   padding: 5px 10px;
   text-decoration: none;
+}
+
+.nav ul li a:hover {
+  color: green;
 }
 
 .jump {
@@ -75,25 +86,25 @@ h4 {
 
 
 /* Header */
-#header {
+header {
   background-color: #009D92;
   padding: 10px;
 }
-#header h1 {
+header h1 {
   color: #FFEECC;
   background: url('../images/icons/it.png') no-repeat 0 50%;
   padding-left: 40px;
 }
-#header .nav {
+header .nav {
   float: right;
   font-size: 1.2em;
   margin-left: 20px;
 }
-#header .nav li {
+header .nav li {
   line-height: 75px;
 }
 
-#header:after {
+header:after {
   /* clearfix hack */
   content: "";
   display: table;
@@ -140,7 +151,6 @@ h4 {
   width: 100%;
 }
 
-
 /* Organizations */
 #organizations {
   clear: both;
@@ -177,6 +187,7 @@ h4 {
   line-height: 1.3em;
   margin-bottom: 1em;
   padding-left: 5px;
+  font-family: cursive;
 }
 
 
