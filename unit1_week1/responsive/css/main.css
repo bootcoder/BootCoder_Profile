@@ -89,7 +89,7 @@ body {
 }
 
 .title {
-    color: white;
+    color: blue;
 }
 
 /* ==============
@@ -103,15 +103,15 @@ nav ul {
 
 nav a {
     display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
+    margin-bottom: 5px;
+    padding: 5px 0;
 
     text-align: center;
     text-decoration: none;
     font-weight: bold;
 
     color: white;
-    background: #e44d26;
+    background: blue;
 }
 
 nav a:hover,
@@ -141,7 +141,7 @@ nav a:hover {
 }
 
 .footer-container footer {
-    color: white;
+    color: blue;
     padding: 20px 0;
 }
 
@@ -182,11 +182,11 @@ nav a:hover {
    ==================== */
 
     nav a {
-        float: left;
+        float: right;
         width: 27%;
         margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
+        padding: 5px 2%;
+        margin: 5px;
     }
 
     nav li:first-child a {
