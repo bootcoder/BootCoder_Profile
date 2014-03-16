@@ -395,3 +395,8 @@ nav a:hover {
         page-break-after: avoid;
     }
 }
+
+.footer-center {
+    text-align: center;
+
+}
