@@ -2,16 +2,17 @@ body {
 	background-color: black;
 }
 h1, h2, footer{
-	background-color: gray;
+	background-color: #303030;
 	width: 100%;
 	text-align: center;
 	padding: 10px;
 	margin: 0px;
 	font-size: 2em;
+	color: yellow;
 }
 
 h3 {
-	background-color: gray;
+	background-color: #303030;
 	padding: 10px;
 }
 
