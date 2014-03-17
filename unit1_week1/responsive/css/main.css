@@ -13,6 +13,8 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+    background-color: blue;
+    color: white;
 }
 
 ::-moz-selection {
@@ -36,6 +38,11 @@ hr {
 
 img {
     vertical-align: middle;
+    border-radius: 30px;
+}
+
+h2 {
+    color: orange;
 }
 
 fieldset {
@@ -80,6 +87,8 @@ body {
 .footer-container,
 .main aside {
     border-top: 20px solid #e44d26;
+    font-size: 1.5em;
+    padding: 10px;
 }
 
 .header-container,
