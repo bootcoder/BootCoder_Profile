@@ -88,6 +88,7 @@ body {
 .main aside {
     border-top: 20px solid #e44d26;
     font-size: 1.5em;
+    line-height: 150%;
     padding: 10px;
 }
 
