@@ -406,7 +406,14 @@ nav a:hover {
     }
 }
 
+#truth {
+    float: left;
+    border-radius: 0px;
+    margin: 10px 700px 10px auto;
+}
+
 .footer-center {
+    /*margin: 10px auto 10px 700px;*/
     text-align: center;
 
 }
