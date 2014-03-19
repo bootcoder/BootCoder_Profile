@@ -414,6 +414,10 @@ nav a:hover {
     margin: 10px 700px 10px auto;
 }
 
+#truth:hover {
+    width: 950px;
+}
+
 .footer-center {
     /*margin: 10px auto 10px 700px;*/
     text-align: center;
