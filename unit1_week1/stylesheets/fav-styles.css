@@ -38,10 +38,10 @@ ul {
 	border: 1px dashed white;
 }
 
-footer {
+footer, header {
 	background-color: white;
 	width: 100%;
-	text-align: left;
+	text-align: right;
 	padding: 10px;
 	margin: 0px;
 	font-size: 1.5em;
