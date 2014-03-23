@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+ 
+    <head>
+        <script type="text/javascript">
+            
+var player = {
+name: "Eddie Murphy",
+};
+var ogre = {
+name: "Donkey!",
+};
+ 
+var positionArray = [];
+function startGame(){
+    var x = Math.floor((Math.random()*10));
+    var y = Math.floor((Math.random()*10));
+    ogre.position = x + "," + y;
+    var playerPos = prompt("The Ogre, " + ogre.name + " is at " + ogre.position + ". Where would you like to move " + player.name + "? Type in 'x-value,y-value'. We recommend next to the ogre, if you are not scared...");
+    var y2 = playerPos[2];
+    var x2 = playerPos[0];
+    var attackYesNo = confirm("You are positioned at " + x2 +"," + y2 + ". Would you like to attack the dreaded ogre?");
+    // if ((x2-x===0||1) && (y2-y===0||1)) {
+    if (((x2-x===1) && (y2-y===0)) || ((x2-x===0) && (y2-y===1)) || ((x-x2===1) && (y-y2===0)) || ((x-x2===0) && (y-y2===1))) {
+        alert("You have won!");
+    } else {
+        alert("Wow, you really need to learn to position yourself better! Go learn how to do that and come back to try again.");
+    };
+    
+};
+ 
+    </script>
+    </head>
+ 
+    <body>
+       
+            <button onclick="startGame()">Start</button>
+            <style type="text/css">
+            button {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background-color: red;
+                border-radius: 100%;
+                border: 1px solid black;
+                padding: 15px;
+                font-size: 1.5em;
+            }
+            </style>
+
+            <div class="main">
+
+            </div>
+    </body>
+ 
+</html>
