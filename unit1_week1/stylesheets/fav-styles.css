@@ -20,7 +20,7 @@ h2 {
 }
 
 h3 {
-	background-color:  white;
+	background-color:  #787878;
 	padding: 10px;
 	color: orange;
 }
@@ -47,7 +47,7 @@ ul {
 }
 
 footer, header {
-	background-color: white;
+	background-color: #787878;
 	width: 100%;
 	text-align: right;
 	padding: 10px;
