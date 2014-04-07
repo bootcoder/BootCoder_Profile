@@ -13,14 +13,17 @@
 			<h1>BootCoder</h1>
 			
 			<section>
-				<h3>POST</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</section>
+			<h3>Enumerable#group_by</h3>
+			<p>Ruby's group_by mixin is a handy dandy thing to have around. Lets think a grand scale. What if you had an array with the telephone numbers of all of S.F. But you wanted to sort them by prefix.</p>
+			<p>You can use group_by to easily accomplish this task.
+			Producing the following hash made up of arrays for each prefix</p>
+			<div class="code_block">
+			<p>nums = %w[554-323-7654 534-323-7654 554-323-7654<br> 524-333-7654 524-323-7454 554-323-7054 554-323-7454<br> 554-323-7614 524-323-7654]</p>
+			<p>nums.group_by { |n| n[0..2] }</p>
+			<p>{<br>"554"=>["554-323-7654", "554-323-7654", "554-323-7054", "554-323-7454", "554-323-7614"],<br> "534"=>["534-323-7654"],<br>"524"=>["524-333-7654", "524-323-7454", "524-323-7654"]<br>}</p>
+			</div>
+			<p>I found a great site detailing how this works <a href="http://markusjais.com/the-group_by-method-from-rubys-enumerable-mixin-and-compared-with-scal/">here.</a></p>
+		</section>	
 		</article>
 
 		<footer>

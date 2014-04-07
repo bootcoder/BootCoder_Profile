@@ -45,7 +45,16 @@ ul {
 	border: 1px dashed white;
 	padding: 3px;
 }
-
+.code_block {
+	background-color: blue;
+	position: relative;
+	color: black;
+	border: 5px solid orange;
+	padding: 10px;
+	margin: 5px;
+	width: 500px;
+	font-style: italic;
+}
 footer, header {
 	background-color: #787878;
 	width: 100%;
