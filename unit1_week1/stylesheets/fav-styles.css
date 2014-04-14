@@ -45,17 +45,21 @@ ul {
 	border: 1px dashed white;
 	padding: 3px;
 }
+
 .code_block {
-	background-color: blue;
-	position: relative;
+	background-color: whitesmoke;
 	color: black;
-	border: 5px solid orange;
+	border: 2px solid black;
 	padding: 10px;
 	margin: 5px;
-	width: 500px;
-	font-style: italic;
+	width: 50%;
 }
-footer, header {
+
+.code_block p {
+	color: black;
+}
+
+footer {
 	background-color: #787878;
 	width: 100%;
 	text-align: right;
