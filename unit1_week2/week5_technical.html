@@ -3,23 +3,28 @@
 	<header>
 		<title>W5 Tech</title>
 		<link rel="stylesheet" type="text/css" href="../unit1_week1/stylesheets/fav-styles.css">
-		<a href="../index.html">Site Home</a>
-		<a href="../unit1_week2/blog_index.html">Blog Index</a>
 	</header>
 
 	<body>
 		<article>
-			<h1>Blogs</h1>
+			<h1>Tech Blog Week 5</h1>
 			<h1>BootCoder</h1>
 			
 			<section>
-				<h3>POST</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h3>Class Act</h3>
+				
+				<p>Classes are a great way to create similar objects in Ruby, or to group related functions together under one roof.<br> Making your own is super easy just:</p>
+				<p class="code_block">class Dog<br>end<br><br>Fido = Dog.new</p>
+				<p>Pretty basic stuff really.</p>
+				
+				<p>Each time you create a new Dog from the class they should receive certain pre-defined traits. Let's add some in using the <em>initialize</em> method.</p>
+				<p class="code_block">class Dog<br>def initialize(name, breed)<br>@name = name<br>@breed = breed<br>end<br>end<br><br>Fido = Dog.new("Fido","Corgi")</p>
+				<p>The @ symbol in front of the variables denotes it as an instance variable.</p>
+				<p>An instance variable is available across functions within a class.</p>
+				
+				<p>Lastly, let's throw in a method to demonstate class functionality.</p>
+				<p class="code_block">class Dog<br>&nbsp;def initialize(name, breed)<br>&nbsp;&nbsp;@name = name<br>&nbsp;&nbsp;@breed = breed<br>&nbsp;end<br>&nbsp;def speak<br>&nbsp;&nbsp;puts "#{@name} says Woof Woof"<br>&nbsp;end<br>end<br>Fido = Dog.new("Fido","Corgi")<br>Fido.speak<br>=> Fido says Woof Woof</p>
+
 			</section>
 		</article>
 
