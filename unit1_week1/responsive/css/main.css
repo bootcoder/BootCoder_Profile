@@ -13,7 +13,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
-    background-color: blue;
+    /*background-color: #8B9E55;*/
     color: white;
 }
 
@@ -81,12 +81,12 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+    border-bottom: 20px solid #FF8240;
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #e44d26;
+    border-top: 20px solid #FF8240;
     font-size: 1.5em;
     line-height: 150%;
     padding: 10px;
@@ -95,14 +95,19 @@ body {
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+    background: #006D4C;
 }
 
 .title {
-    color: blue;
+    color: #FF8240;
     line-height: 140%;
     text-align: center;
 }
+
+.main-container {
+    background-color: #00A876
+}
+    
 
 /* ==============
     MOBILE: Menu
@@ -123,7 +128,7 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: blue;
+    
 }
 
 nav a:hover,
@@ -153,7 +158,6 @@ nav a:hover {
 }
 
 .footer-container footer {
-    color: blue;
     padding: 20px 0;
 }
 
@@ -196,9 +200,9 @@ nav a:hover {
     nav a {
         float: right;
         display: inline-block;
-        width: 27%;
+        /*width: 27%;*/
         padding: 5px;
-        margin: 5px;
+        /*margin: 5px;*/
 
     }
 
