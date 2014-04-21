@@ -1,28 +1,28 @@
 body {
-	background-color: blue;
+	background-color: #006D4C;
 }
 
 h1 {
-	background-color: orange;
+	background-color: #00A876;
 	width: 100%;
 	text-align: center;
 	padding: 10px;
 	margin: 0px;
 	font-size: 2em;
-	color: blue;
+	color: white;
 	border: 1px solid white;
 }
 
 h2 {
 	text-align: center;
-	color: orange;
+	color: white;
 
 }
 
 h3 {
-	background-color:  #787878;
+	background-color:  #FF8240;
 	padding: 10px;
-	color: orange;
+	color: white;
 	width: 100%
 }
 
@@ -32,12 +32,12 @@ p {
 }
 
 a {
-	color: orange;
+	color: white;
 	padding: 5px;
 }
 
 ul {
-	color: white;
+	color: black;
 	font-size: 1.2em;
 }
 
@@ -61,11 +61,11 @@ ul {
 }
 
 footer {
-	background-color: #787878;
+	background-color: #00A876;
 	width: 100%;
 	text-align: right;
 	padding: 15px;
 	margin: 0px;
 	font-size: 1.5em;
-	color: blue;
+	color: white;
 }
