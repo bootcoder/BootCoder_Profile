@@ -37,8 +37,9 @@ a {
 }
 
 ul {
-	color: black;
+	color: white;
 	font-size: 1.2em;
+	line-height: 1.6em;
 }
 
 .selection {
@@ -56,8 +57,19 @@ ul {
 	width: 50%;
 }
 
+.code_block ul {
+	color: black;
+}
+
 .code_block p {
 	color: black;
+}
+
+.centered {
+	width: 75%;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 footer {

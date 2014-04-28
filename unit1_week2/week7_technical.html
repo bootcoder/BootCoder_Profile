@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<header>
+		<title>W7 Tech</title>
+		<link rel="stylesheet" type="text/css" href="../unit1_week1/stylesheets/fav-styles.css">
+		<!-- <a href="../index.html">Site Home</a>
+		<a href="../unit1_week2/blog_index.html">Blog Index</a> -->
+	</header>
+
+	<body>
+		<article>
+			<h1>Week 7 Technical Blog</h1>
+			<h1>BootCoder</h1>
+			
+			<section>
+				<h3>SQL INJECT</h3>
+				<p>SQL Injection vulnerability is an occurrence whereby an attacker can submit code through web forms that returns db information that doesn't belong to them. Very naughty.</p>
+				<p>The attacker submits a command to the database that tricks the application into executing unintededed commands. These may include creating, reading, updating, altering or deleting items from your db.</p>
+				<p>Examples include:</p>
+				<p class = "code_block">SELECT * FROM Users WHERE UserId = 105 or 1=1</p>
+				<p>or</p>
+				<p class="code_block">SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1</p>
+				<p>This passes into the db as true because 'OR 1=1' is always true, yikes!</p>
+
+
+				<p>Newb Programmers should establish best practices right out of the gate to close vulnerabilities. This step alone takes a huge bite out of crime. After setting good security habits it is also important for web developers to continually update their practices based on the latest known vulnerability and their counter measures.</p>
+				<p>Here's a handy InfoGraphic I found over at VeraCode on the subject.</p>
+			</section>
+			<section class = "centered">
+				<img src="http://www.veracode.com/sites/default/files/styles/media_responsive_widest/public/sql-injection-ig.jpg?itok=7StHjjzH">
+			</section>
+		</article>
+
+		<footer>
+			<a href="../index.html">Site Home</a>
+			<a href="../unit1_week2/blog_index.html">Blog Index</a>
+		</footer>
+	</body>
+</html>   
