@@ -67,7 +67,7 @@ ul {
 
 .centered {
 	width: 75%;
-	position: relative;
+	/*position: relative;*/
 	margin-right: auto;
 	margin-left: auto;
 }
