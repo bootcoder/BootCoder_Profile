@@ -19,6 +19,12 @@ h2 {
 
 }
 
+.break {
+	background-color: #FF8240;
+	max-width: 200px;
+	text-align: center;
+}
+
 h3 {
 	background-color:  #FF8240;
 	padding: 10px;
