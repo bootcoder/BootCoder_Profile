@@ -1,0 +1,21 @@
+body {
+	background-color: aqua;
+	text-align: left;
+}
+
+h2 {
+	color: red;
+	text-align: left;
+	font-style: bold;
+}
+
+p {
+	font-style: italic;
+}
+
+.code {
+	background-color: gray;
+	color: black;
+	border: black solid 2px;
+	width: 40%;
+}

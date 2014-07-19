@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<header>
+		<title>Tech W6</title>
+		<link rel="stylesheet" type="text/css" href="../unit1_week1/stylesheets/fav-styles.css">
+		<!-- <a href="../index.html">Site Home</a>
+		<a href="../unit1_week2/blog_index.html">Blog Index</a> -->
+	</header>
+
+	<body>
+		<article>
+			<h1>Week 6 Technical Blog</h1>
+			<h1>BootCoder</h1>
+			
+			<section>
+				<h3>Functional VS: Object Oriented Programming</h3>
+				<p>There are many differnces between OOP and Functional programming. The starkest of which I found is this.<br><br>Functional programming wishes you to declare a value for x. Then work through the entire function to arrive at y without changing the original value of x.<br><br>OOP on the other hand could care less what you do with x as you jouney through your program to arrive at y.</p>
+				<p>A more definition-e definition can be found on wikipedia.</p>
+				<p class = "code_block"><em>In object-oriented and functional programming, an immutable object is an object whose state cannot be modified after it is created.[1] This is in contrast to a mutable object, which can be modified after it is created. In some cases, an object is considered immutable even if some internally used attributes change but the object's state appears to be unchanging from an external point of view. For example, an object that uses memoization to cache the results of expensive computations could still be considered an immutable object.</em></p>
+				<p>Or this comparison from SO:</p>
+				<div class = "code_block">
+					<p>The two biggest distinctions involved are:</p>
+					<ul>
+						<li><strong>Identity vs. value:</strong> Do you model things by implicit identity (based on memory location or whatnot) and allow them to change arbitrarily? Or do you model things by their value, with no inherent notion of identity? If you say x = 4 does that mean that x is an alias to the timeless Platonic ideal of the number 4, or is x the name of a thing that's currently a four, but could be something else later (while still being x)?</li>
+						<li><strong>Data vs. behavior:</strong> Do you work with simple data structures whose representation can be inspected, manipulated, and transformed? Or do you work with abstracted behaviors that do things, representing data only in terms of the things you can do with it, and let these behavioral abstractions operate on each other?</li>
+					</ul>
+				</div>
+				<div class = "code_block">
+					<p>Object-oriented:</p>
+					<p>Data:</p>
+					<ul>
+						<li>OOP asks <strong>What can I do with the data?</strong></li>
+						<li>Producer: Class</li>
+						<li>Consumer: Class method</li>
+					</ul>
+					<p>State:</p>
+						<ul>
+							<li>The methods and objects in OOP have some internal state (method variables and object attributes) and they possibly have side effects affecting the state of computers peripherals, the global scope, or the state of an object or method. Variable assignment is one good sign of something having a state.</li>
+						</ul>
+						<br><br>
+					<p>Functional:</p>
+					<p>Data:</p>
+					<ul>
+						<li>Functional programming asks <strong>How the data is constructed?</strong></li>
+						<li>Producer: Type Constructor</li>
+						<li>Consumer: Function</li>
+					</ul>
+					<p>State:</p>
+					<ul>
+						<li>If a pure functional programming ever assigns to a variable, the variable must be considered and handled as immutable. There must not be a state in pure functional programming.</li>
+						<li>Code with side effects is often separated from the main purely functional body of code</li>
+						<li>State can be passed around as an argument to a function, this is called a continuation.</li>
+					</ul>
+				</div>
+			</section>
+		</article>
+
+		<footer>
+			<a href="../index.html">Site Home</a>
+			<a href="../unit1_week2/blog_index.html">Blog Index</a>
+		</footer>
+	</body>
+</html>

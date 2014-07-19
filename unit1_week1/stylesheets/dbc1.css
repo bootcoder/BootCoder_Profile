@@ -1,0 +1,48 @@
+body {
+	margin: auto;
+	width: 500px;
+}
+
+img {
+	margin: auto;
+	width: 500px;
+}
+
+header {
+	color: lime;
+	background-color: black;
+	text-align: center;
+}
+
+.hover-time:hover {
+	background-color: gray;
+	color: aqua;
+}
+
+#click-me:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: maroon;
+}
+
+footer {
+	background-color: yellow;
+	color: black;
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 150px;
+	text-align: center;
+	margin: 10px auto 20px auto;
+	padding: 5px;
+}
+
+#navbar {
+	background-color: yellow;
+	color: black;
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 150px;
+	text-align: center;
+	margin: 10px auto 20px auto;
+	padding: 5px;
+}
