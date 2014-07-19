@@ -1,0 +1,17 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: bootcoder_development
+test:
+  <<: *default
+  database: bootcoder_test
+production:
+  <<: *default
+  database: bootcoder_production
+  username: #Set these when you deploy
+  password:
