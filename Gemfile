@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+
+ruby '2.0.0'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -33,13 +36,15 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 gem 'unicorn'
 
-# Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
 
-# Use debugger
-gem 'debugger', group: [:development, :test]
+
+group :production  do
+  gem 'rails_12factor'  
+end
 
 group :development, :test do
+  gem 'capistrano-rails'
+  gem 'debugger'
 	gem 'pry'
   gem 'rspec-rails', '=2.14'
   gem 'factory_girl_rails'
