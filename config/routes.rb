@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :users
 
-  # root to:, 'index.html.erb'  
+  root to: 'users#index'  
 
   resources :projects
 
