@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root to:, 'index.html.erb'  
+
   resources :projects
 
   # The priority is based upon order of creation: first created -> highest priority.
