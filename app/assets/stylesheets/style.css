@@ -176,6 +176,10 @@ Home sections
 Spacer
 ============================= */
 
+.spacer {
+	background-color: gray;
+}
+
 /*#spacer1{	
 	background-image: url(bg-code.jpeg);
 }
