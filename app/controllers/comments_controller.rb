@@ -4,4 +4,10 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.create!(params[:comment])
 		redirect_to @post
 	end
+
+	private
+
+	def comment_params
+		params.require(:comment).permit(:comment)
+	end
 end

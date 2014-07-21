@@ -67,7 +67,6 @@ class PostsController < ApplicationController
       authenticate_or_request_with_http_basic do |name, password|
         name == "admin" && password == "secret"
       end
-
     end
 
     # Use callbacks to share common setup or constraints between actions.
