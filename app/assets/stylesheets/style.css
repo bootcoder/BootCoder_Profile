@@ -618,7 +618,6 @@ more media queries
 }
 
 
-
 .curved-1 {
 	width: 100%;
 	-moz-border-radius: 1em 4em 1em 4em;
@@ -635,10 +634,11 @@ more media queries
 	color: white;
 }
 
-.pad-5P {
-	padding: 10% 5% 5% 5%;
+
+.pad-5P-down {
+	padding-top: 5%;
 }
 
-.pad-5P-0B {
-	padding: 5% 5% 0 5%;
+.pad-5P-up {
+	padding-bottom: 5%;
 }
