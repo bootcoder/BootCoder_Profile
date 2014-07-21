@@ -1,3 +1,7 @@
+/** {
+	border: 1px solid red;
+}*/
+
 /* ================================
 Imports
 ================================= */
@@ -151,6 +155,10 @@ Home sections
 	background: #575757;
 }
 
+.bg-site {
+	background: #529abb;
+}
+
 
 /* --- section content general color --- */
 
@@ -169,10 +177,25 @@ Spacer
 ============================= */
 
 #spacer1{	
-	background-image: url(../assets/images/spacer/1.jpg);
+	background-image: url(bg-code.jpeg);
 }
 #spacer2{	
-	background-image: url(../images/spacer/2.jpg);
+	background-size: 35%;	
+	background-image: url(bg-awesome.jpg);
+}
+
+#spacer3{
+	background-size: 100%;	
+	background-image: url(mac-spacer.jpg);
+}
+
+#spacer4{
+	background-size: 100%;	
+	background-image: url(bg-mount.jpg);
+}
+
+.glow {
+	text-shadow: 0px 2px 3px #666;
 }
 
 
@@ -184,7 +207,7 @@ Intro
     height:635px;
     width:100%;
     background-color: #529abb;
-    background-image: url(../images/bg-mac.png);
+    background-image: url(bg-mac.png);
     background-position:center;
     background-repeat:no-repeat;
     overflow-y:hidden;
@@ -583,4 +606,31 @@ more media queries
 .max-200 {
 	max-height: 200px;
 	max-width: 200px;
+}
+
+.max-500 {
+	max-height: 300px;
+	max-width: 300px;
+}
+
+.pad-down-20 {
+	padding-top: 20px;
+}
+
+
+
+.curved-1 {
+	width: 100%;
+	-moz-border-radius: 1em 4em 1em 4em;
+	border-radius: 1em 4em 1em 4em;
+}
+
+.curved-2 {
+	width:80%;
+	-moz-border-radius: 10% 25% / 100% 100%;
+	border-radius: 20% 25% / 100% 100%;
+}
+
+.white {
+	color: white;
 }

@@ -15,6 +15,7 @@
 //= require jquery.smooth-scroll.min
 //= require jquery.dlmenu
 //= require wow.min
+//= require modernizr.custom
 //= require custom
 //
 //= require_tree .
