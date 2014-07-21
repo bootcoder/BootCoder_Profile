@@ -117,7 +117,7 @@ Home sections
 
 .home-section {
 	width: 100%;
-	padding: 90px 0px 150px 0px;
+	padding: 90px 0px 90px 0px;
 }
 
 /* --- heading --- */
@@ -176,7 +176,7 @@ Home sections
 Spacer
 ============================= */
 
-#spacer1{	
+/*#spacer1{	
 	background-image: url(bg-code.jpeg);
 }
 #spacer2{	
@@ -190,9 +190,9 @@ Spacer
 }
 
 #spacer4{
-	background-size: 100%;	
-	background-image: url(bg-mount.jpg);
-}
+	
+	
+}*/
 
 .glow {
 	text-shadow: 0px 2px 3px #666;
@@ -633,4 +633,12 @@ more media queries
 
 .white {
 	color: white;
+}
+
+.pad-5P {
+	padding: 10% 5% 5% 5%;
+}
+
+.pad-5P-0B {
+	padding: 5% 5% 0 5%;
 }
