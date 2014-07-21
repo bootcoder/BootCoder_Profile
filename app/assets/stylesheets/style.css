@@ -169,10 +169,10 @@ Spacer
 ============================= */
 
 #spacer1{	
-	background-image: url(../img/spacer/1.jpg);
+	background-image: url(../assets/images/spacer/1.jpg);
 }
 #spacer2{	
-	background-image: url(../img/spacer/2.jpg);
+	background-image: url(../images/spacer/2.jpg);
 }
 
 
@@ -184,7 +184,7 @@ Intro
     height:635px;
     width:100%;
     background-color: #529abb;
-    background-image: url(../img/bg-mac.png);
+    background-image: url(../images/bg-mac.png);
     background-position:center;
     background-repeat:no-repeat;
     overflow-y:hidden;
@@ -547,7 +547,7 @@ more media queries
 
 @media (max-width:768px) {
 	#intro{
-		background-image: url(../img/bg-mac.png);
+		background-image: url(../images/bg-mac.png);
 		background-size:100%;
 	}
 	.box-team, .box-team img {
@@ -577,4 +577,10 @@ more media queries
 	#intro{
 		background-image: none;
 	}
+}
+
+
+.max-200 {
+	max-height: 200px;
+	max-width: 200px;
 }

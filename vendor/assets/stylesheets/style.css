@@ -184,7 +184,7 @@ Intro
     height:635px;
     width:100%;
     background-color: #529abb;
-    background-image: url(../img/bg-mac.png);
+    background-image: url(../images/bg-mac.png);
     background-position:center;
     background-repeat:no-repeat;
     overflow-y:hidden;
@@ -547,7 +547,7 @@ more media queries
 
 @media (max-width:768px) {
 	#intro{
-		background-image: url(../img/bg-mac.png);
+		background-image: url(../images/bg-mac.png);
 		background-size:100%;
 	}
 	.box-team, .box-team img {
