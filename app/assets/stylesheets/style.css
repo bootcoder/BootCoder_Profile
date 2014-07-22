@@ -607,7 +607,7 @@ more media queries
 }
 
 .glow h2{
- font:normal 40pt Arial;
+ font:normal 35pt Arial;
  color: white;
  text-shadow:  0 1px 0 #666,
 							 0 2px 0 #666,
@@ -624,7 +624,7 @@ more media queries
 }
 
 .glow p{
- font:normal 40pt Arial;
+ font:normal 20pt Arial;
  color: white;
  text-shadow: 0 1px 0 #ccc,
  0 2px 0 gray,
