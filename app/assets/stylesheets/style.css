@@ -671,6 +671,8 @@ more media queries
 
 .black {
 	color: black;
+	text-shadow: 0px 1px 2px #666;
+
 }
 
 .red {
@@ -679,6 +681,7 @@ more media queries
 
 .glow {
 	text-shadow: 0px 2px 3px #666;
+	font-size: 1.5em;
 }
 
 .pad-5 {
