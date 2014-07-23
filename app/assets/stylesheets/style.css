@@ -701,7 +701,17 @@ more media queries
 	max-width: 200px;
 }
 
-.max-500 {
+.max-300 {
 	max-height: 300px;
 	max-width: 300px;
+}
+
+.max-400 {
+	max-height: 400px;
+	max-width: 400px;
+}
+
+.max-500 {
+	max-height: 500px;
+	max-width: 500px;
 }
