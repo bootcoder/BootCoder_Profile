@@ -169,6 +169,10 @@ Home sections
 	background-image: url(debut_dark.png);
 }
 
+.bg-white-curve {
+	
+}
+
 
 
 
@@ -714,4 +718,8 @@ more media queries
 .max-500 {
 	max-height: 500px;
 	max-width: 500px;
+}
+
+.btn-gray {
+		background-image: url(bg-low.png);
 }
