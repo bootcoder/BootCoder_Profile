@@ -148,7 +148,7 @@ Home sections
 }
 
 .bg-gray {
-	background: #f8f8f8;
+	background: #666;
 }
 
 .bg-dark {
@@ -156,11 +156,17 @@ Home sections
 }
 
 .bg-site {
-	background: #529abb;
+	background-image: url(bg-low.png);
+	/*background: #529abb;*/
 }
 
 .bg-black {
 	background: #000000;
+}
+
+.bg-space {
+	/*background: #666;*/
+	background-image: url(debut_dark.png);
 }
 
 
@@ -181,7 +187,7 @@ Spacer
 ============================= */
 
 .spacer {
-	background-color: #000000;
+	background-image: url(bg-pat-dark.png);
 }
 
 /*#spacer1{	
@@ -680,10 +686,22 @@ more media queries
 	color: gray;
 }
 
+.black {
+	color: black;
+}
+
+.red {
+	color: red;
+}
+
 .pad-5P-down {
 	padding-top: 5%;
 }
 
 .pad-5P-up {
 	padding-bottom: 5%;
+}
+
+.pad-5P-LR {
+	padding: 0 3% 0 3%;
 }
