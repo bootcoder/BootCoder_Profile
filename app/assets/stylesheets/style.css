@@ -21,6 +21,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 1.6em;
+	background: url("bg-light4.png");
 	
 }
 
@@ -156,7 +157,7 @@ Home sections
 }
 
 .bg-site {
-	background-image: url(bg-low.png);
+	background-image: url(bg-light4.png);
 	/*background: #529abb;*/
 }
 
@@ -166,7 +167,7 @@ Home sections
 
 .bg-space {
 	/*background: #666;*/
-	background-image: url(debut_dark.png);
+	background-image: url(bg-light4.png);
 }
 
 .bg-white-curve {
@@ -181,7 +182,8 @@ Spacer
 ============================= */
 
 .spacer {
-	background-image: url(bg-pat-dark.png);
+	/*background-image: url(bg-pat-dark.png);*/
+	background-image: url(debut_dark.png);
 }
 
 /*#spacer1{	
@@ -700,6 +702,10 @@ more media queries
 	padding: 0 3% 0 3%;
 }
 
+.pad-10P-down {
+	padding-top: 11%;
+}
+
 .pad-down-20 {
 	padding-top: 20px;
 }
@@ -724,5 +730,5 @@ more media queries
 }
 
 .btn-gray {
-		background-image: url(bg-low.png);
+		background-image: url(debut_dark.png);
 }
