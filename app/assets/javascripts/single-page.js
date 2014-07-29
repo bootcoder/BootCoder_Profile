@@ -2,13 +2,13 @@
 /// Single Render Site JS ///////////
 /////////////////////////////////////
 
-
 $(document).ready(function() {
 	console.log("singleJS 200");
 	hideSection();
 	hideSpacer();
 	navListener();
 	spacerRotate();
+	console.log("load complete")
 });
 
 
@@ -63,7 +63,6 @@ var navListener = function() {
 		e.preventDefault();
 		hideSection();
 		displayContact();
-		scrollDown();
 	});
 
 };
@@ -92,20 +91,15 @@ var displayHistory = function() {
 
 var displayContact = function() {
 	$("#index-contact").show();
-};
-
-var displayProjects = function() {
-	$("#index-projects").show();
-};
-
-var displayProjects = function() {
-	$("#index-projects").show();
+	scrollDown();
 };
 
 
 
 var scrollDown = function() {
-	$("html, body").delay(1000).animate({scrollTop: $(".single-display-area").offset().top }, 2000);
+	console.log("inside scrollDown");
+	$("html, body").delay(500).animate({scrollTop: $(".single-display-area").offset().top }, 1000);
+	console.log("end scrollDown");
 };
 
 
@@ -118,7 +112,7 @@ var scrollDown = function() {
 var spacerRotate = function() {
 	console.log("spacerRotate 200");
 
-	var displayTime = 10000,
+	var displayTime = 4000,
 			transitionTime = 2000;
 
 	var currentIndex = 0;
