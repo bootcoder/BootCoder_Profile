@@ -14,7 +14,6 @@ $(document).ready(function() {
 
 var hideSection = function() {
 console.log("HIDE THAT SHIT!");
-	$(".index-spacer").hide();
 	$(".index-section").hide();
 };
 
