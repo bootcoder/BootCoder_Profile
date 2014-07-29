@@ -75,6 +75,7 @@ button {
 	-o-user-select: none;
 	user-select: none;
 }
+
 button.navbar-toggle {
 	background: #2b2b2b;
 	border: none;
@@ -118,16 +119,16 @@ Home sections
 
 .home-section {
 	width: 100%;
-	padding: 90px 0px 90px 0px;
+	padding: 2% 0px 2% 0px;
 }
 
 /* --- heading --- */
 .section-heading {
-	margin-bottom: 70px;
+	margin-bottom: 1%;
 }
 	
 .section-heading h2 {
-	font-size: 38px;
+	font-size: 2em;
 	text-transform: uppercase;
 }
 	
@@ -135,10 +136,10 @@ Home sections
 	margin:0 auto;
 	display: block;
 	height: 1px;
-	width: 80px;
+	width: 50%;
 	background: #333;
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-top: .5%;
+	margin-bottom: 1%;
 }
 
 	
@@ -186,22 +187,7 @@ Spacer
 	background-image: url(debut_dark.png);
 }
 
-/*#spacer1{	
-	background-image: url(bg-code.jpeg);
-}
-#spacer2{	
-	background-size: 35%;	
-	background-image: url(bg-awesome.jpg);
-}
 
-#spacer3{
-	background-size: 100%;	
-	background-image: url(mac-spacer.jpg);
-}
-
-#spacer4{
-		
-}*/
 
 /* --- section content general color --- */
 
