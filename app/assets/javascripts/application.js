@@ -17,5 +17,7 @@
 //= require wow.min
 //= require modernizr.custom
 //= require custom
-//
+//= require single-page
 //= require_tree .
+//
+

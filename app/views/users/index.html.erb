@@ -1,12 +1,45 @@
 
+<div class="single-display-area">
 
+	<div id="single-display-spacers">
+		<div class="index-spacer" id="index-spacer4">
+		  <%= render partial: "spacer4" %>
+		</div>
 
-  <%= render partial: "spacer4" %>   
-  <%= render partial: "projects" %>
-  <%= render partial: "spacer1" %>   
-  <%= render partial: "tech" %>
-  <%= render partial: "spacer2" %>
-  <%= render partial: "history" %>
-  <%= render partial: "spacer3" %>
-  <%= render partial: "contact" %>
-  <%= render partial: "footer" %>
+		<div class="index-spacer" id="index-spacer3">
+		  <%= render partial: "spacer3" %>
+		</div>
+
+		<div class="index-spacer" id="index-spacer1">
+		  <%= render partial: "spacer1" %>   
+		</div>
+
+		<div class="index-spacer" id="index-spacer2">
+		  <%= render partial: "spacer2" %>
+		</div>
+	</div>
+
+	<div id="single-display-sections">
+
+		<div class="index-section" id="index-skills">
+		  <%= render partial: "skills" %>
+		</div>
+
+		<div class="index-section" id="index-history">
+		  <%= render partial: "history" %>
+		</div>
+
+		<div class="index-section" id="index-projects">
+		  <%= render partial: "projects" %>
+		</div>
+
+		<div class="index-section" id="index-contact">
+		  <%= render partial: "contact" %>
+		</div>
+	</div>
+	<div id="index-footer">
+	  <%= render partial: "footer" %>
+	</div>
+</div>
+
+<!-- #spacer4, #projects, #spacer1, #tech, #spacer2, #history, #spacer3, #contact, #footer -->
