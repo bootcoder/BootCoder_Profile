@@ -8,7 +8,7 @@ $(document).ready(function() {
 	hideSpacer();
 	navListener();
 	spacerRotate();
-	console.log("load complete")
+	console.log("load complete");
 });
 
 
