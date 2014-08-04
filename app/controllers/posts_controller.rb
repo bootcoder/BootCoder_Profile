@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate, :except => [ :index, :show ]
+  # before_filter :authenticate, :except => [ :index, :show ]
   # GET /posts
   # GET /posts.json
   def index
@@ -24,17 +24,20 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    p "*"*200
+    p post_params
     @post = Post.new(post_params)
 
-    respond_to do |format|
+    # respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        # format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        # format.json { render :show, status: :created, location: @post }
+        redirect_to '/'
+      # else
+        # format.html { render :new }
+        # format.json { render json: @post.errors, status: :unprocessable_entity }
       end
-    end
+    # end
   end
 
   # PATCH/PUT /posts/1
@@ -76,6 +79,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:name,:email, :body)
     end
 end

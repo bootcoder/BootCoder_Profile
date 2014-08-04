@@ -1,29 +1,53 @@
-<!-- Contact -->
-  <div class="centered">
-      
-      <h2 class="glow">Contact me</h2>
-
-      <form class="form-horizontal" role="form">
-        <%= form_for Post.new do |f| %>
-
-          <div class="form-group">
-            <div class="field container-fluid">
-              <%= f.text_field :name, placeholder: "Name:", class: "text-left col-md-8  container-search" %>
+  <!-- Contact -->
+  
+  <div class="bg-site">
+    <section id="contact" class="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <div class="section-heading">
+              <h2 class="glow black">Contact Me</h2>
             </div>
-            <div class="field container-fluid">
-              <%= f.text_field :email, placeholder: "Email:", class: "text-left container-search col-md-8"  %>
-            </div>
-            <div class="field container-fluid wide">
-              <%= f.text_area :body, placeholder: "Message Body:", class: "text-left container-search"  %>
-            </div>
-              <%= submit_tag "Send Message", class: "btn button-purple"  %>
           </div>
-        <% end %>
-      </form>
-
-</div>    
-        
         </div>
+
+        <div class="row spacer curved-2 pad-5">
+          <div class="col-md-offset-1 col-md-10">
+
+        
+          <%= form_for Post.new do |f| %>
+          <div class="form-group">
+            <div class="field container-fluid wide">
+              <%= f.text_field :name, placeholder: "Name:", class: "form-control bg-site text-left col-md-8  container-search teal" %>
+            </div>
+            <br>
+          
+            <div class="col-md-offset-2 col-md-8 field container-fluid wide">
+              <%= f.text_field :email, placeholder: "Email:", class: "form-control bg-site text-left container-search col-md-8 teal"  %>
+            </div>
+            <br>
+          
+          
+            <div class="field container-fluid wide">
+              <%= f.text_area :body, placeholder: "Message Body:", class: "form-control bg-site text-left container-search teal"  %>
+            </div>
+          </div>
+          
+          <div class="col-md-offset-2 col-md-8">
+            <%= submit_tag "Send Message", class: "btn bg-site"  %>
+            <br>
+          </div>
+          
+        </div>
+
+        <% end %>
+        
+  
+          </div>
+        </div>
+  
+
+
       <div class="row mar-top30 ">
         <div class="col-md-offset-2 col-md-8">
           <h5 class="glow black">Find me on these networks</h5>
