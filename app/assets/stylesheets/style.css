@@ -690,6 +690,10 @@ more media queries
 	font-size: 1.5em;
 }
 
+.pad-1 {
+	padding: 1%; 
+}
+
 .pad-5 {
 	padding: 5%;
 }

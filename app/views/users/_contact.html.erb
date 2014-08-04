@@ -17,18 +17,18 @@
         
           <%= form_for Post.new do |f| %>
           <div class="form-group">
-            <div class="field container-fluid wide">
+            <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
               <%= f.text_field :name, placeholder: "Name:", class: "form-control bg-site text-left col-md-8  container-search teal" %>
             </div>
             <br>
           
-            <div class="col-md-offset-2 col-md-8 field container-fluid wide">
+            <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
               <%= f.text_field :email, placeholder: "Email:", class: "form-control bg-site text-left container-search col-md-8 teal"  %>
             </div>
             <br>
           
           
-            <div class="field container-fluid wide">
+            <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
               <%= f.text_area :body, placeholder: "Message Body:", class: "form-control bg-site text-left container-search teal"  %>
             </div>
           </div>
