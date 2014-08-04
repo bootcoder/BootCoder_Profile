@@ -1,51 +1,49 @@
-<!-- Contact -->
+  <!-- Contact -->
+  
   <div class="bg-site">
     <section id="contact" class="home-section">
       <div class="container">
         <div class="row">
           <div class="col-md-offset-2 col-md-8">
-          <div class="section-heading">
-           <h2 class="glow black">Contact Me</h2>
-          </div>
+            <div class="section-heading">
+              <h2 class="glow black">Contact Me</h2>
+            </div>
           </div>
         </div>
 
         <div class="row spacer curved-2 pad-5">
           <div class="col-md-offset-1 col-md-10">
 
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
-            <input type="text" class="form-control bg-site" id="inputName" placeholder="Name">
-          </div>
-          </div>
-          <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
-            <input type="email" class="form-control bg-site" id="inputEmail" placeholder="Email">
-          </div>
-          </div>
-          <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
-            <input type="text" class="form-control bg-site" id="inputSubject" placeholder="Subject">
-          </div>
-          </div>
-          <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
-            <textarea name="message" class="form-control bg-site" rows="3" placeholder="Message"></textarea>
-          </div>
-          </div>
-          <div class="form-group">
-          <div class="col-md-offset-2 col-md-8">
-           <button type="button" class="btn btn-gray gray btn-lg btn-block"># Submission Stubbed #</button>
-           <br>
-          </div>
-          </div>
-        </form>
-  
-          </div>
-      
         
+          <%= form_for Post.new do |f| %>
+          <div class="form-group">
+            <div class="field container-fluid wide">
+              <%= f.text_field :name, placeholder: "Name:", class: "form-control bg-site text-left col-md-8  container-search teal" %>
+            </div>
+            <br>
+          
+            <div class="col-md-offset-2 col-md-8 field container-fluid wide">
+              <%= f.text_field :email, placeholder: "Email:", class: "form-control bg-site text-left container-search col-md-8 teal"  %>
+            </div>
+            <br>
+          
+          
+            <div class="field container-fluid wide">
+              <%= f.text_area :body, placeholder: "Message Body:", class: "form-control bg-site text-left container-search teal"  %>
+            </div>
+          </div>
+          
+          <div class="col-md-offset-2 col-md-8">
+            <%= submit_tag "Send Message", class: "btn bg-site"  %>
+            <br>
+          </div>
+          
         </div>
+        <% end %>
+      </div>
+  
+
+
       <div class="row mar-top30 ">
         <div class="col-md-offset-2 col-md-8">
           <h5 class="glow black">Find me on these networks</h5>
