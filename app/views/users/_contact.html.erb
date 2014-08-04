@@ -1,16 +1,17 @@
 <!-- Contact -->
-  <div class="centered container-trans margin-1">
+  <div class="centered">
       
-      <h1>Compose New Message:</h1>
+      <h2 class="glow">Contact me</h2>
 
       <form class="form-horizontal" role="form">
-        <%= form_for @message, url: user_messages_path(@user) do |f| %>
+        <%= form_for Post.new do |f| %>
+
           <div class="form-group">
             <div class="field container-fluid">
-              <%= f.text_field :to, placeholder: "To whom:", class: "text-left col-md-8  container-search" %>
+              <%= f.text_field :name, placeholder: "Name:", class: "text-left col-md-8  container-search" %>
             </div>
             <div class="field container-fluid">
-              <%= f.text_field :subject, placeholder: "Subject:", class: "text-left container-search col-md-8"  %>
+              <%= f.text_field :email, placeholder: "Email:", class: "text-left container-search col-md-8"  %>
             </div>
             <div class="field container-fluid wide">
               <%= f.text_area :body, placeholder: "Message Body:", class: "text-left container-search"  %>
