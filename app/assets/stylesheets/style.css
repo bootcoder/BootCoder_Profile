@@ -714,6 +714,22 @@ more media queries
 	padding-top: 11%;
 }
 
+.pad-20P-down {
+	padding-top: 20%;
+}
+
+.pad-25P-down {
+	padding-top: 25%;
+}
+
+.pad-30P-down {
+	padding-top: 30%;
+}
+
+.pad-35P-down {
+	padding-top: 35%;
+}
+
 .pad-down-20 {
 	padding-top: 20px;
 }
