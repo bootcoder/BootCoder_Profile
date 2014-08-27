@@ -1,5 +1,5 @@
 module ProjectsHelper
-	def bc-projects
+	def bc_projects
 		@projects = Project.all
 	end
 end
