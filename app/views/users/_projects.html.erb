@@ -1,58 +1,38 @@
 <!-- Projects -->
-  <div class="bg-site">
-    <section id="works" class="home-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-offset-2 col-md-8">
+<div class="bg-site">
+  <section id="works" class="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
-           <h2 class="glow black">Projects</h2>
-           <p class="black glow">I've pushed a commit or two in my day...</p>
-          </div>
+            <h2 class="glow black">Projects</h2>
+            <p class="black glow">I've pushed a commit or two in my day...</p>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-wow-delay="0.2s">
-          <div class="box-team wow bounceInDown">
-            <h4 class="black glow">MetaGame</h4>
-            <%= link_to "Source", "https://github.com/fence-lizards-2014/MetaGame", class: "black glow" %>
-            <br>
-            <%= link_to image_tag("mg-games-grab.jpg", :alt => "MetaGame", class: "image-responsive max-400"), "http://metagame.herokuapp.com" %>
-            <br/>
-            <p class="black glow">An application to bring gamers together on a local level. This group project came together in a single week @ DBC. Our team of 5 put in over 100 hours each. GROUP HIGHFIVES!</p>
-          </div>
-        </div> 
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-wow-delay="0.4s">
-          <div class="box-team wow bounceInDown">
-            <h4 class="black glow">DBCode</h4>
-            <%= link_to "Source", "https://github.com/bootcoder/DBCode", class: "black glow" %>
-            <br>
-            <%= link_to image_tag("dbcode.jpg", :alt => "DBCode", class: "image-responsive max-400"), "http://dbcode.herokuapp.com" %>
-            <br/>
-            <p class="black glow">This project is currently being redeveloped under rails (previously Sinatra). The goal is to create an educational resource that can help students get un-blocked quickly.</p>
-          </div>
-        </div> 
-
-<!-- rails spike -->
+       <!-- dynamic project layout -->
+      <div class="row">
         <% bc_projects %>
         <% @projects.each do |item| %>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bg-dark" data-wow-delay="0.4s">
-          <div class="box-team wow bounceInDown">
-            <h4 class="black glow"><%= item.project_name %></h4>
-            <%= link_to "Source", "#{item.project_source_url}", class: "black glow" %>
-            <br>
-            <%= link_to image_tag(item.project_img, :alt => item.project_name, class: "image-responsive max-400"), item.project_url %>
-            <br/>
-            <p class="black glow"><%= item.project_description %></p>
-            <p class="black glow">Primary Language: <%= item.project_feature_lang %></p>
-            <p class="black glow">Project Status: <%= item.project_state %></p>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-wow-delay="0.4s">
+          <div class="bg-dark curved-3 pad-2">
+            <div class="box-team wow bounceInDown ">
+              <h4 class="black glow"><%= item.project_name %></h4>
+              <% unless item.project_source_url.include? "closed" %>
+              <%= link_to "Source", "#{item.project_source_url}", class: "black glow" %>
+              <% end %>
+              <br>
+              <%= link_to image_tag(item.project_img, :alt => item.project_name, class: "image-responsive max-400"), item.project_url %>
+              <br/>
+              <p class="black glow"><%= item.project_description %></p>
+              <p class="black glow">Primary Language: <%= item.project_feature_lang %></p>
+              <p class="black glow">Project Status: <%= item.project_state %></p>
+            </div>
           </div>
         </div> 
         <% end %>        
-
       </div>    
-    </section>
-  </div>
-  
+    </div>
+  </section>
+</div>

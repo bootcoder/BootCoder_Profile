@@ -23,7 +23,7 @@ Project.create(project_name: "MetaGame",
 							 project_feature_lang: "RoR", 
 							 project_state: "Cold Beta")
 
-Project.create(project_name: "TechLX",
+Project.create(project_name: "TechLX (CLOSED SOURCE)",
 							 project_description: "Educational Outreach Site currently under development. I contributed heavily to the front-end and testing with Rspec. Links available upon completion.", 
 							 project_url: "#", 
 							 project_source_url: "", 
