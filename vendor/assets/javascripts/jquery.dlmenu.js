@@ -45,7 +45,7 @@
 					'OAnimation' : 'oAnimationEnd',
 					'msAnimation' : 'MSAnimationEnd',
 					'animation' : 'animationend'
-				},
+				},`
 				transEndEventNames = {
 					'WebkitTransition' : 'webkitTransitionEnd',
 					'MozTransition' : 'transitionend',
