@@ -38,16 +38,17 @@
 <!-- rails spike -->
         <% bc_projects %>
         <% @projects.each do |item| %>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-wow-delay="0.4s">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bg-dark" data-wow-delay="0.4s">
           <div class="box-team wow bounceInDown">
             <h4 class="black glow"><%= item.project_name %></h4>
-            <%= link_to "Source", item.project_source_url, class: "black glow" %>
+            <%= link_to "Source", "#{item.project_source_url}", class: "black glow" %>
             <br>
             <%= link_to image_tag(item.project_img, :alt => item.project_name, class: "image-responsive max-400"), item.project_url %>
             <br/>
             <p class="black glow"><%= item.project_description %></p>
           </div>
-        </div>         
+        </div> 
+        <% end %>        
 
       </div>    
     </section>
