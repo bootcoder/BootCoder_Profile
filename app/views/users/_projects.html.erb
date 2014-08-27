@@ -46,6 +46,8 @@
             <%= link_to image_tag(item.project_img, :alt => item.project_name, class: "image-responsive max-400"), item.project_url %>
             <br/>
             <p class="black glow"><%= item.project_description %></p>
+            <p class="black glow">Primary Language: <%= item.project_feature_lang %></p>
+            <p class="black glow">Project Status: <%= item.project_state %></p>
           </div>
         </div> 
         <% end %>        
