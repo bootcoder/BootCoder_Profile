@@ -8,7 +8,7 @@
 
 
 Project.create(project_name: "DBCode",
-							 project_description: "This project is currently being redeveloped under rails (previously Sinatra). The goal is to create an educational resource that can help students get un-blocked quickly.", 
+							 project_description: "This was a DBC project written in Sinatra. The goal is to create an educational resource that can help students get un-blocked quickly.", 
 							 project_url: "http://dbcode.herokuapp.com", 
 							 project_source_url: "https://github.com/bootcoder/DBCode", 
 							 project_img: "dbcode.jpg", 
@@ -25,8 +25,8 @@ Project.create(project_name: "MetaGame",
 
 Project.create(project_name: "TechLX (CLOSED SOURCE)",
 							 project_description: "Educational Outreach Site currently under development. I contributed heavily to the front-end and testing with Rspec. Links available upon completion.", 
-							 project_url: "#", 
-							 project_source_url: "", 
+							 project_url: "http://techlx9turfdewosdifddkcmw.herokuapp.com/", 
+							 project_source_url: "closed", 
 							 project_img: "techlx-grab.png", 
 							 project_feature_lang: "Rails", 
 							 project_state: "Active")
