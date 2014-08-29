@@ -21,8 +21,13 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 1.6em;
-	background: url("bg-light4.png");
-	
+	/*background: url("bg-light4.png");*/
+	    background: url('bg-bw3.gif') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
 }
 
 h1 {
@@ -673,6 +678,10 @@ more media queries
 	border-radius: 1em 4em 1em 4em;
 }
 
+.bg-black-border {
+	border: 2px solid black;
+}
+
 .white {
 	color: white;
 }
@@ -755,6 +764,11 @@ more media queries
 .max-300 {
 	max-height: 300px;
 	max-width: 300px;
+}
+
+.max-350 {
+	max-height: 350px;
+	max-width: 350px;
 }
 
 .max-400 {
