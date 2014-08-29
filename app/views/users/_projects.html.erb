@@ -3,7 +3,7 @@
   <section id="works" class="home-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-offset-2 col-md-8">
+        <div class="col-md-offset-0 col-md-12">
           <div class="section-heading">
             <h2 class="glow black">Projects</h2>
             <p class="black glow">I've pushed a commit or two in my day...</p>
@@ -21,7 +21,7 @@
       <div class="row">
         <% bc_projects %>
         <% @projects.each do |item| %>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-wow-delay="0.4s">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" data-wow-delay="0.4s">
           <div class="bg-black-border curved-3 pad-2">
             <div class="box-team wow bounceInDown">
               <h4 class="white glow bg-dark curved-3"><%= item.project_name %></h4>

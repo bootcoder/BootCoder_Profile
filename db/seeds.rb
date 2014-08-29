@@ -7,6 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+Project.create(project_name: "TechLX (CLOSED SOURCE)",
+							 project_description: "Educational Outreach Site currently under development. Contributed heavily to the front-end and testing with Rspec. Links available upon completion.", 
+							 project_url: "http://techlx9turfdewosdifddkcmw.herokuapp.com/", 
+							 project_source_url: "closed", 
+							 project_img: "techlx-grab.png", 
+							 project_feature_lang: "Rails", 
+							 project_state: "Active")
+
 Project.create(project_name: "MetaGame",
 							 project_description: "An application to bring gamers together on a local level. This group project came together in a single week @ DBC. Our team of 5 put in over 100 hours each. GROUP HIGHFIVES!", 
 							 project_url: "http://metagame.herokuapp.com", 
@@ -14,14 +22,6 @@ Project.create(project_name: "MetaGame",
 							 project_img: "mg-games-grab.jpg", 
 							 project_feature_lang: "RoR", 
 							 project_state: "Cold Beta")
-
-Project.create(project_name: "TechLX (CLOSED SOURCE)",
-							 project_description: "Educational Outreach Site currently under development. I contributed heavily to the front-end and testing with Rspec. Links available upon completion.", 
-							 project_url: "http://techlx9turfdewosdifddkcmw.herokuapp.com/", 
-							 project_source_url: "closed", 
-							 project_img: "techlx-grab.png", 
-							 project_feature_lang: "Rails", 
-							 project_state: "Active")
 
 Project.create(project_name: "DBCode",
 							 project_description: "A DBC project written in Sinatra. The goal is to create an educational resource that can help students get un-blocked quickly. Focus on CRUD and API integration.", 
