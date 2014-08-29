@@ -21,7 +21,13 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 1.6em;
-	background: url("bg-light4.png");
+	/*background: url("bg-light4.png");*/
+	    background: url('bg-bw3.gif') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
 }
 
 h1 {
