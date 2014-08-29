@@ -7,14 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Project.create(project_name: "DBCode",
-							 project_description: "This was a DBC project written in Sinatra. The goal is to create an educational resource that can help students get un-blocked quickly.", 
-							 project_url: "http://dbcode.herokuapp.com", 
-							 project_source_url: "https://github.com/bootcoder/DBCode", 
-							 project_img: "dbcode.jpg", 
-							 project_feature_lang: "Sinatra", 
-							 project_state: "Beta")
-
 Project.create(project_name: "MetaGame",
 							 project_description: "An application to bring gamers together on a local level. This group project came together in a single week @ DBC. Our team of 5 put in over 100 hours each. GROUP HIGHFIVES!", 
 							 project_url: "http://metagame.herokuapp.com", 
@@ -31,9 +23,17 @@ Project.create(project_name: "TechLX (CLOSED SOURCE)",
 							 project_feature_lang: "Rails", 
 							 project_state: "Active")
 
+Project.create(project_name: "DBCode",
+							 project_description: "A DBC project written in Sinatra. The goal is to create an educational resource that can help students get un-blocked quickly. Focus on CRUD and API integration.", 
+							 project_url: "http://dbcode.herokuapp.com", 
+							 project_source_url: "https://github.com/bootcoder/DBCode", 
+							 project_img: "dbcode.jpg", 
+							 project_feature_lang: "Sinatra", 
+							 project_state: "Beta")
+
 
 Project.create(project_name: "DoppelTwit",
-							 project_description: "Early attempt at a Twitter Clone. Team of 4 constructed this application in 24 hours. Highlights included a M2M self referential schema and excellent git workflow. ", 
+							 project_description: "Early attempt at a Twitter Clone. Team of 4 constructed this application in 24 hours. Highlights included a M2M self referential schema and an excellent intro to GIT workflow. ", 
 							 project_url: "http://doppeltwit.herokuapp.com/", 
 							 project_source_url: "https://github.com/bootcoder/doppel-clone", 
 							 project_img: "doppel-grab.png", 
