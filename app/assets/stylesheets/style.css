@@ -760,6 +760,11 @@ more media queries
 	max-width: 300px;
 }
 
+.max-350 {
+	max-height: 350px;
+	max-width: 350px;
+}
+
 .max-400 {
 	max-height: 400px;
 	max-width: 400px;
