@@ -33,7 +33,7 @@ Project.create(project_name: "DBCode",
 
 
 Project.create(project_name: "DoppelTwit",
-							 project_description: "Early attempt at a Twitter Clone. Team of 4 constructed this application in 24 hours. Highlights included a M2M self referential schema and an excellent intro to GIT workflow. ", 
+							 project_description: "Early attempt at a Twitter Clone. Team of 4 constructed this application in 24 hours. Contributions include a M2M self referential schema and an excellent intro to GIT workflow. ", 
 							 project_url: "http://doppeltwit.herokuapp.com/", 
 							 project_source_url: "https://github.com/bootcoder/doppel-clone", 
 							 project_img: "doppel-grab.png", 
