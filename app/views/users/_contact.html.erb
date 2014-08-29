@@ -6,30 +6,28 @@
         <div class="row">
         </div>
 
-        <div class="row spacer curved-2 pad-1">
-          <div class="col-md-offset-1 col-md-10">
-            <div class="col-md-offset-2 col-md-8">
-              <div class="section-heading">
+          <div class="col-md-12 col-xs-12">
+            <div class="col-md-offset-3 col-md-6 col-xs-12 section-heading">
                 <h2 class="glow black">Contact Me</h2>
-              </div>
             </div>    
           <%= form_for Post.new do |f| %>
           <div class="form-group">
             <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
-              <%= f.text_field :name, placeholder: "Name:", class: "form-control bg-site text-left col-md-8  container-search teal" %>
+              <%= f.text_field :name, placeholder: "Name:", class: "form-control text-left col-md-8  container-search teal" %>
             </div>
             <br>
           
             <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
-              <%= f.text_field :email, placeholder: "Email:", class: "form-control bg-site text-left container-search col-md-8 teal"  %>
+              <%= f.text_field :email, placeholder: "Email:", class: "form-control text-left container-search col-md-8 teal"  %>
             </div>
             <br>
           
           
             <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
-              <%= f.text_area :body, placeholder: "Message Body:", class: "form-control bg-site text-left container-search teal"  %>
+              <%= f.text_area :body, placeholder: "Message:", class: "form-control text-left container-search teal"  %>
             </div>
           </div>
+          <br>
           
           <div class="col-md-offset-2 col-md-8">
             <%= submit_tag "Send Message", class: "btn bg-black" %> <br>
@@ -38,6 +36,7 @@
         </div>
         <% end %>
       </div>
+      <br><br>
   
 
 
