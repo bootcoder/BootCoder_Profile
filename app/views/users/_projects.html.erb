@@ -22,7 +22,7 @@
         <% bc_projects %>
         <% @projects.each do |item| %>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-wow-delay="0.4s">
-          <div class="bg-dark curved-3 pad-2">
+          <div class="bg-black-border curved-3 pad-2">
             <div class="box-team wow bounceInDown">
               <h4 class="black glow"><%= item.project_name %></h4>
               <% unless item.project_source_url.include? "closed" %>

@@ -672,6 +672,10 @@ more media queries
 	border-radius: 1em 4em 1em 4em;
 }
 
+.bg-black-border {
+	border: 2px solid black;
+}
+
 .white {
 	color: white;
 }
