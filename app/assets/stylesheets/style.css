@@ -175,6 +175,11 @@ Home sections
 	background-image: url(bg-light4.png);
 }
 
+.bg-mac {
+	background-image: url(bg-mac.png);
+	background-size: 50%;
+}
+
 .bg-white-curve {
 	
 }
