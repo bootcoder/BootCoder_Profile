@@ -177,7 +177,11 @@ Home sections
 
 .bg-mac {
 	background-image: url(bg-mac.png);
-	background-size: 50%;
+	background-size: 150%;
+}
+
+.bg-dark-pattern {
+	background-image: url(bg-low.png);
 }
 
 .bg-white-curve {
@@ -678,9 +682,9 @@ more media queries
 }
 
 .curved-3 {
-	margin: 2%;
-	-moz-border-radius: 1em 4em 1em 4em;
-	border-radius: 1em 4em 1em 4em;
+	width: 100%
+	-moz-border-radius: 4em 4em 4em 4em;
+	border-radius: 4em 4em 4em 4em;
 }
 
 .bg-black-border {

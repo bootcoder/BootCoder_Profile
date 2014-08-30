@@ -14,15 +14,16 @@
 
       <!-- dynamic project layout -->
       <!-- slider  -->
-      <div class="container">
-        <div class="row col-md-12" id="owl-slider">
+      <div class="container bg-dark-pattern curved-3 pad-2P">
+      <br>
+        <div class="row col-md-12 col-xs-12" id="owl-slider">
           <% bc_projects %>
           <% @projects.each do |item| %>
           <div class="item">
             <%= link_to image_tag(item.project_img, :alt => item.project_name, class: "image-responsive max-350"), item.project_url %>
             <br>
             <br>
-            <h4 class="black glow"><%= item.project_name %></h4>
+            <h4 class="white glow"><%= item.project_name %></h4>
             <br>
           </div>
           <% end %>        
