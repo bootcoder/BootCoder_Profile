@@ -21,9 +21,9 @@
       <div class="row">
         <% bc_projects %>
         <% @projects.each do |item| %>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" data-wow-delay="0.4s">
-          <div class="bg-black-border curved-3 pad-2">
-            <div class="box-team wow bounceInDown">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="bg-black-border curved-3 pad-2 box-team wow rotateInLeft" data-wow-duration="2s">
+            <div class="">
               <h4 class="white glow bg-dark curved-3"><%= item.project_name %></h4>
               <% unless item.project_source_url.include? "closed" %>
               <%= link_to "Source", "#{item.project_source_url}", class: "black glow" %>
