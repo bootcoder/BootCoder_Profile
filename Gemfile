@@ -36,6 +36,8 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
+gem 'magnific-popup-rails'
+
 
 
 
