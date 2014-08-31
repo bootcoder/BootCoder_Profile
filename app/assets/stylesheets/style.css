@@ -239,7 +239,6 @@ Intro
 #intro{
     height:635px;
     width:100%;
-    background-color: #529abb;
     background-image: url(bg-mac.png);
     background-position:center;
     background-repeat:no-repeat;
@@ -630,8 +629,9 @@ more media queries
 }
 
 @media (max-width:480px){
-	#intro{
-		background-image: none;
+	.xs-screen {
+		max-width: 250px;
+		max-height: 250px;
 	}
 }
 
