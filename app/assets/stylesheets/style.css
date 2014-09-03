@@ -184,13 +184,18 @@ Home sections
 	background-image: url(bg-low.png);
 }
 
-.bg-white-curve {
-	
+.bg-car {
+	background-image: url(bg-bw.gif);
 }
+
 
 .txt-black {
 	color: black;
 }
+
+
+
+
 
 
 
@@ -788,6 +793,15 @@ more media queries
 .max-500 {
 	max-height: 500px;
 	max-width: 500px;
+}
+
+.height1000 { 
+	min-height: 1000px;
+  background: url(bg-bw.gif	) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .btn-gray {
