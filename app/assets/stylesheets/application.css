@@ -12,6 +12,9 @@
  
  *= require bootstrap.css
  *= require font-awesome
+ *= require owl.carousel
+ *= require owl.theme
+ *= require magnific-popup
  *
  *
  *

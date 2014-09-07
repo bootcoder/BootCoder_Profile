@@ -175,13 +175,27 @@ Home sections
 	background-image: url(bg-light4.png);
 }
 
-.bg-white-curve {
-	
+.bg-mac {
+	background-image: url(bg-mac.png);
+	background-size: 150%;
 }
+
+.bg-dark-pattern {
+	background-image: url(bg-low.png);
+}
+
+.bg-car {
+	background-image: url(bg-bw.gif);
+}
+
 
 .txt-black {
 	color: black;
 }
+
+
+
+
 
 
 
@@ -230,7 +244,6 @@ Intro
 #intro{
     height:635px;
     width:100%;
-    background-color: #529abb;
     background-image: url(bg-mac.png);
     background-position:center;
     background-repeat:no-repeat;
@@ -621,8 +634,9 @@ more media queries
 }
 
 @media (max-width:480px){
-	#intro{
-		background-image: none;
+	.xs-screen {
+		max-width: 250px;
+		max-height: 250px;
 	}
 }
 
@@ -673,9 +687,9 @@ more media queries
 }
 
 .curved-3 {
-	margin: 2%;
-	-moz-border-radius: 1em 4em 1em 4em;
-	border-radius: 1em 4em 1em 4em;
+	width: 100%
+	-moz-border-radius: 4em 4em 4em 4em;
+	border-radius: 4em 4em 4em 4em;
 }
 
 .bg-black-border {
@@ -779,6 +793,15 @@ more media queries
 .max-500 {
 	max-height: 500px;
 	max-width: 500px;
+}
+
+.height1000 { 
+	min-height: 1000px;
+  background: url(bg-bw.gif	) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .btn-gray {
