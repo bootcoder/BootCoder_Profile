@@ -9,7 +9,7 @@
 
 Project.create(project_name: "TechLX (CLOSED SOURCE)",
 							 project_description: "Landing page for Non-Profit Educational Outreach. Application currently under development. Contributing heavily to the front-end and testing with Rspec. Links available upon completion.", 
-							 project_url: "http://techlx9turfdewosdifddkcmw.herokuapp.com/", 
+							 project_url: "http://techlx-staging.herokuapp.com/", 
 							 project_source_url: "closed", 
 							 project_img: "techlx-grab.png", 
 							 project_feature_lang: "Rails", 
