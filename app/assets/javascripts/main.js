@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	console.log("Document Ready");
 	var owl = $("#owl-slider");
+  var gallery = $("#gallery-slider")
  
   owl.owlCarousel({
       items : 2, 
@@ -10,4 +11,13 @@ $(document).ready(function(){
       itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
       autoPlay: true
 	});
+
+  gallery.owlCarousel({
+      items : 1, 
+      itemsDesktop : [1199,1],
+      itemsDesktopSmall : [900,1], // betweem 900px and 601px
+      itemsTablet: [600,1], //1 item between 600 and 0
+      itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+      autoPlay: true
+  });
 });

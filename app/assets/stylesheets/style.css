@@ -807,3 +807,7 @@ more media queries
 .btn-gray {
 		background-image: url(debut_dark.png);
 }
+
+.float-right {
+	float: right;
+}
