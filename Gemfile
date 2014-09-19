@@ -33,7 +33,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 
-gem 'unicorn'
+# gem 'unicorn'
 gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
 gem 'magnific-popup-rails'
