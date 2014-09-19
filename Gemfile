@@ -37,9 +37,7 @@ gem 'unicorn'
 gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
 gem 'magnific-popup-rails'
-
-
-
+gem 'newrelic_rpm'
 
 
 group :production  do
