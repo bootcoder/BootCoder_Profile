@@ -20,7 +20,7 @@
           <% bc_projects %>
           <% @projects.each do |item| %>
           <div class="item">
-            <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-350"), item.project_url, target: '_blank' %>
+            <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500"), item.project_url, target: '_blank' %>
             <br>
             <br>
             <h4 class="white glow"><%= item.project_name %></h4>
