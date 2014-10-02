@@ -13,8 +13,9 @@ $(document).ready(function(){
 	});
 
   gallery.owlCarousel({
-      items : 1, 
-      itemsDesktop : [1199,1],
+      transitionStyle: "goDown",
+      items : 2, 
+      itemsDesktop : [1199,2],
       itemsDesktopSmall : [900,1], // betweem 900px and 601px
       itemsTablet: [600,1], //1 item between 600 and 0
       itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option

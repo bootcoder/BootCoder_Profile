@@ -188,6 +188,9 @@ Home sections
 	background-image: url(bg-bw.gif);
 }
 
+.bg-trans {
+	opacity: 0.6;
+}
 
 .txt-black {
 	color: black;
@@ -692,6 +695,11 @@ more media queries
 	border-radius: 4em 4em 4em 4em;
 }
 
+.curved-4 {
+	-moz-border-radius: 4em 4em 4em 4em;
+	border-radius: 4em 4em 4em 4em;
+}
+
 .bg-black-border {
 	border: 2px solid black;
 }
@@ -803,6 +811,7 @@ more media queries
   -o-background-size: cover;
   background-size: cover;
 }
+
 
 .btn-gray {
 		background-image: url(debut_dark.png);
