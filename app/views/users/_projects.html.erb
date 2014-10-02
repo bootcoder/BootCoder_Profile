@@ -20,7 +20,13 @@
           <% bc_projects %>
           <% @projects.each do |item| %>
           <div class="item">
-            <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500"), item.project_url, target: '_blank' %>
+            <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500"), item.project_url %>
+            <%= link_to( "LINKME", item.project_url , class: "popup", remote: true ) %>
+            <div class="window" id="<% item.project_name %>">
+            <%= item.project_description %>
+
+            </div>
+            <%= link_to "Detail", item.project_url, onclick: "javascript:window.open('page.html','popup','width=400,height=200');", remote: true, class: "popup" %>
             <br>
             <br>
             <h4 class="white glow"><%= item.project_name %></h4>

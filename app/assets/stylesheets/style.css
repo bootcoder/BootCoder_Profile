@@ -14,20 +14,18 @@ Imports
 /* ================================
 General
 ================================= */
-body{
+body {
 	margin:0;
 	padding:0;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	line-height: 1.6em;
-	/*background: url("bg-light4.png");*/
-	    background: url('bg-bw3.gif') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-
+  background: url('bg-bw3.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1 {
@@ -209,7 +207,7 @@ Spacer
 
 .spacer {
 	/*background-image: url(bg-pat-dark.png);*/
-	background-image: url(debut_dark.png);
+	background-image: url("debut_dark.png");
 }
 
 /*#spacer1{	
@@ -609,8 +607,23 @@ more media queries
 ================================= */
 
 @media (max-width:768px) {
+
+	body {
+		margin:0;
+		padding:0;
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		line-height: 1.6em;
+    background: #000000;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+	}
+
 	#intro{
-		background-image: url(../images/bg-mac.png);
+		background: #000000;
 		background-size:100%;
 	}
 	.box-team, .box-team img {
@@ -819,4 +832,10 @@ more media queries
 
 .float-right {
 	float: right;
+}
+
+
+
+.window {
+	display: none;
 }

@@ -21,4 +21,11 @@ $(document).ready(function(){
       itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
       autoPlay: true
   });
+
+  $(".popup").on("click", function(event){
+    console.log("CLICK ME CLICK ME CLICK ME NOWWW!");
+    $(".window").show();
+    event.preventDefault();
+  });
+  $('.popup').magnificPopup({type:'iframe'});
 });
