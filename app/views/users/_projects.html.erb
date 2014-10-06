@@ -1,3 +1,25 @@
+<!-- Dynamic Modal -->
+<% bc_projects %>
+<% @projects.each do |mod_item| %>
+  <div class="modal fade" id="<%= mod_item.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel"><%= mod_item.project_name %></h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <!-- Projects -->
 <div class="bg-site">
   <section id="works" class="home-section">
@@ -19,7 +41,6 @@
       <div class="container bg-dark-pattern curved-3 pad-2P">
       <br>
         <div class="row col-md-12 col-xs-12" id="owl-slider">
-          <% bc_projects %>
           <% @projects.each do |item| %>
           <div class="item popup">
             <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500 popup"), item.project_url, remote: true %>
@@ -39,24 +60,3 @@
     </div>
   </section>
 </div>
-
-<!-- Dynamic Modal -->
-<% @projects.each do |mod_item| %>
-  <div class="modal fade" id="<%= mod_item.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel"><%= bc_projects[1].project_name %></h4>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
