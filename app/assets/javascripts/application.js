@@ -11,14 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require bootstrap.min
-//= require jquery.smooth-scroll.min
-//= require jquery.dlmenu
+//= require bootstrap
 //= require wow.min
-//= require modernizr.custom
 //= require custom
 //= require owl.carousel
-//= require magnific-popup
 //= require main
 //
 //= require_tree .
