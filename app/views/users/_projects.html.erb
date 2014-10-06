@@ -12,17 +12,6 @@
         </div>
       </div>
 
-      <!-- dynamic project layout -->
-      <!-- slider  -->
-      <div class="container bg-dark-pattern curved-3 pad-2P">
-      <br>
-        <div class="row col-md-12 col-xs-12" id="owl-slider">
-          <% bc_projects %>
-          <% @projects.each do |item| %>
-          <div class="item popup">
-            <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500 popup"), item.project_url, remote: true %>
-
-
             <!-- Button trigger modal -->
             <br>
             <button class="btn btn-theme btn-lg pad2 curved-4" data-toggle="modal" data-target="#myModal">
@@ -47,6 +36,18 @@
                 </div>
               </div>
             </div>
+        </div>    
+      </div>
+      <!-- dynamic project layout -->
+      <!-- slider  -->
+      <div class="container bg-dark-pattern curved-3 pad-2P">
+      <br>
+        <div class="row col-md-12 col-xs-12" id="owl-slider">
+          <% bc_projects %>
+          <% @projects.each do |item| %>
+          <div class="item popup">
+            <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500 popup"), item.project_url, remote: true %>
+
             
             <br>
             <br>
@@ -54,8 +55,7 @@
             <br>
           </div>
           <% end %>        
-        </div>    
-      </div>
+
 
     </div>
   </section>
