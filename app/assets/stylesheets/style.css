@@ -822,6 +822,10 @@ more media queries
 	max-width: 500px;
 }
 
+.width-100P {
+	width: 100%;
+}
+
 .height1000 { 
 	min-height: 1000px;
   background: url(bg-bw.gif	) no-repeat center center fixed; 

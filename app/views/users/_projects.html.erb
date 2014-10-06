@@ -3,27 +3,27 @@
 <% @projects.each do |mod_item| %>
   <div class="modal fade" id="<%= mod_item.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content bg-site">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
           <h4 class="modal-title" id="myModalLabel"><%= mod_item.project_name %></h4>
         </div>
         <div class="modal-body black">
-          <%= link_to image_tag(mod_item.project_img, alt: mod_item.project_name, class: "image-responsive curved-2"), mod_item.project_url %>
+          <%= link_to image_tag(mod_item.project_img, alt: mod_item.project_name, class: "image-responsive width-100P"), mod_item.project_url %>
           <br>
           <br>
           <p><%= mod_item.project_description  %></p>
           <br>
           <p>Featured Language: <%= mod_item.project_feature_lang  %></p>
-          <p>Current Status: <%= mod_item.project_state  %>
           <% unless mod_item.project_source_url == "closed" %>
-            <p><%= link_to "Source Link:", mod_item.project_source_url  %></p>
+            <p><%= link_to "Source Link", mod_item.project_source_url  %> • <%= link_to " Project Link", mod_item.project_url  %></p>
+          <% else %>
+            <p>Source Closed • <%= link_to "Project Link", mod_item.project_url  %></p>
           <% end %>
-          <p><%= link_to "Project Link:", mod_item.project_url  %></p>
-
+          <p>Current Status: <%= mod_item.project_state  %>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-site black" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
             <br>
             <br>
             <!-- Button trigger modal -->
-            <button class="btn btn-theme btn-lg pad2 curved-5" data-toggle="modal" data-target="#<%= item.id %>">
+            <button class="btn btn-theme btn-lg pad2 curved-5 black" data-toggle="modal" data-target="#<%= item.id %>">
               INFO
             </button>
           </div>
