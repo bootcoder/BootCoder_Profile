@@ -36,7 +36,7 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'font-awesome-rails'
 gem 'owlcarousel-rails'
-gem 'magnific-popup-rails'
+# gem 'magnific-popup-rails'
 gem 'newrelic_rpm'
 # gem 'bootstrap-modal-rails'
 
