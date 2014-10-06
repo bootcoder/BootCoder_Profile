@@ -11,8 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require bootstrap.min
+//= require bootstrap
 //= require wow.min
+//= require custom
 //= require owl.carousel
 //= require main
 //
