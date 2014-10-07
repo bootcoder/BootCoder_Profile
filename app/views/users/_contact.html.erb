@@ -1,90 +1,83 @@
   <!-- Contact -->
-  
-  
-    <section id="contact" class="home-section">
-      <div class="container">
-        <div class="row">
+
+
+<section id="contact" class="home-section">
+  <div class="container">
+    <div class="col-md-12 col-xs-12">
+      <div class="col-md-offset-3 col-md-6 col-xs-12 section-heading">
+          <h2 class="glow white">Contact Me</h2>
+      </div>    
+      <div class="form-group">
+        <%= form_for Post.new do |f| %>
+        <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
+          <%= f.text_field :name, placeholder: "Name:", class: "form-control text-left col-md-8  container-search teal" %>
         </div>
-
-          <div class="col-md-12 col-xs-12">
-            <div class="col-md-offset-3 col-md-6 col-xs-12 section-heading">
-                <h2 class="glow white">Contact Me</h2>
-            </div>    
-          <%= form_for Post.new do |f| %>
-          <div class="form-group">
-            <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
-              <%= f.text_field :name, placeholder: "Name:", class: "form-control text-left col-md-8  container-search teal" %>
-            </div>
-            <br>
-          
-            <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
-              <%= f.text_field :email, placeholder: "Email:", class: "form-control text-left container-search col-md-8 teal"  %>
-            </div>
-            <br>
-          
-          
-            <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
-              <%= f.text_area :body, placeholder: "Message:", class: "form-control text-left container-search teal"  %>
-            </div>
-          </div>
-          <br>
-          
-          <div class="col-md-offset-2 col-md-8">
-            <%= submit_tag "Send Message", class: "black btn bg-white" %> <br>
-          </div>
-          
+        <br>
+      
+        <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
+          <%= f.text_field :email, placeholder: "Email:", class: "form-control text-left container-search col-md-8 teal"  %>
         </div>
-        <% end %>
+        <br>
+      
+      
+        <div class="col-md-offset-2 col-md-8 field container-fluid wide pad-1">
+          <%= f.text_area :body, placeholder: "Message:", class: "form-control text-left container-search teal"  %>
+        </div>
       </div>
-      <br><br>
+      <br>
+      
+      <div class="col-md-offset-2 col-md-8">
+        <%= submit_tag "Send Message", class: "black btn bg-white" %> <br>
+      <% end %>
+      </div>  
+    </div>
+  </div>
+  <br><br>
   
 
 
-      <div class="row mar-top30 ">
-        <div class="col-md-offset-2 col-md-8">
-          <h5 class="glow white">Find me on these networks</h5>
-          <ul class="social-network">
-            <li><a href="https://github.com/bootcoder" target="_blank">
-            <span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-            </span></a>
-            </li>
-            <li><a href="http://www.linkedin.com/in/bootcoder/" target="_blank">
-            <span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-            </span></a>
-            </li>
-            <li><a href="https://twitter.com/BootCoder" target="_blank">
-            <span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-            </span></a>
-            </li>
-            <li><a href="https://www.facebook.com/BlueTyGator" target="_blank">
-            <span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-            </span></a>
-            </li>
-            <li><a href="https://plus.google.com/103574033267788117799" target="_blank">
-            <span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-            </span></a>
-            </li>
-            <br>
-            <br>
-            <li>
-              <h5 class="glow white"><a class="white" href="https://www.dropbox.com/s/rz5j09uqvxgsfmb/Resume-14-W9-Master.pdf?dl=0" target="_blank">Resume on Dropbox</a></h5>
-            </li>
-          </ul>
-
-        </div>        
-      </div>
-
-      </div>
-    </section>  
+  <div class="row mar-top30 ">
+    <div class="col-md-offset-2 col-md-8">
+      <h5 class="glow white">Find me on these networks</h5>
+      <ul class="social-network">
+        <li><a href="https://github.com/bootcoder" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span></a>
+        </li>
+        <li><a href="http://www.linkedin.com/in/bootcoder/" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span></a>
+        </li>
+        <li><a href="https://twitter.com/BootCoder" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span></a>
+        </li>
+        <li><a href="https://www.facebook.com/BlueTyGator" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span></a>
+        </li>
+        <li><a href="https://plus.google.com/103574033267788117799" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+          </span></a>
+        </li>
+        <br>
+        <br>
+        <li>
+          <h5 class="glow white"><a class="white" href="https://www.dropbox.com/s/rz5j09uqvxgsfmb/Resume-14-W9-Master.pdf?dl=0" target="_blank">Resume on Dropbox</a></h5>
+        </li>
+      </ul>      
+    </div>
+  </div>
+</section>  
     
   

@@ -20,9 +20,9 @@
           <% elsif  mod_item.project_url == "none" %>
             <p><%= link_to "Source Link", mod_item.project_source_url  %> • URL not available </p>
           <% end %>
-          <div class="col-md-12">
-            <p class="col-md-6">Featured Language:<br><span class="glow2"><%= mod_item.project_feature_lang  %></span></p>
-            <p class="col-md-6">Current Status:<br><span class="glow2"><%= mod_item.project_state  %></p>
+          <div class="col-md-12 bg-dark-pattern white curved-3 pad-5P-down">
+            <p class="col-md-6">Featured Language:<br><span class="glow2 white"><%= mod_item.project_feature_lang  %></span></p>
+            <p class="col-md-6">Current Status:<br><span class="glow2 white"><%= mod_item.project_state  %></p>
           </div>
           <p>Contributions:<br><span class="glow2"><%= mod_item.project_stack %></span></p>
         </div>

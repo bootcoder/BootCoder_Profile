@@ -13,7 +13,7 @@ Project.create(project_name: "TechLX",
 							 project_url: "http://www.techlx.com/", 
 							 project_source_url: "closed", 
 							 project_img: "techlx-grab2.png", 
-							 project_feature_lang: "Rails", 
+							 project_feature_lang: "Ruby on Rails", 
 							 project_state: "Active")
 
 Project.create(project_name: "MetaGame",
