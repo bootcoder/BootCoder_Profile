@@ -9,7 +9,7 @@
 
 Project.create(project_name: "TechLX",
 							 project_description: "Landing page for Non-Profit Educational Outreach. Application currently under development. Contributing heavily to the front-end. Also implementing Rspec tests and Stripe API.", 
-							 project_stack: "Ruby On Rails, HTML, CSS, Bootstrap, Responsive Design, JS, jQuery, Stripe API",
+							 project_stack: "Ruby On Rails, HTML, CSS, Bootstrap, Responsive Design, JS, jQuery, Stripe Payments API",
 							 project_url: "http://www.techlx.com/", 
 							 project_source_url: "closed", 
 							 project_img: "techlx-grab2.png", 
