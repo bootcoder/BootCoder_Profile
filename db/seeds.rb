@@ -8,7 +8,7 @@
 
 
 Project.create(project_name: "TechLX",
-							 project_description: "Landing page for Non-Profit Educational Outreach. Application currently under development. Contributing heavily to the front-end and testing with Rspec. Links available upon completion.", 
+							 project_description: "Landing page for Non-Profit Educational Outreach. Application currently under development. Contributing heavily to the front-end. Also implementing Rspec tests and Stripe API.", 
 							 project_stack: "Ruby On Rails, HTML, CSS, Bootstrap, Responsive Design, JS, jQuery, Stripe API",
 							 project_url: "http://www.techlx.com/", 
 							 project_source_url: "closed", 
@@ -22,7 +22,7 @@ Project.create(project_name: "MetaGame",
 							 project_url: "http://metagame.herokuapp.com", 
 							 project_source_url: "https://github.com/fence-lizards-2014/MetaGame", 
 							 project_img: "mg-games-grab.jpg", 
-							 project_feature_lang: "RoR", 
+							 project_feature_lang: "Ruby on Rails", 
 							 project_state: "Cold Beta")
 
 Project.create(project_name: "DBCode",

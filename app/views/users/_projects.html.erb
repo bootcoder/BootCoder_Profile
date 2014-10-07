@@ -13,8 +13,6 @@
           <br>
           <br>
           <p><%= mod_item.project_description  %></p>
-          <br>
-          <p>Featured Language: <%= mod_item.project_feature_lang  %></p>
           <% if mod_item.project_source_url != "closed" && mod_item.project_url != "none" %>
             <p><%= link_to "Source Link", mod_item.project_source_url  %> • <%= link_to " Project Link", mod_item.project_url  %></p>
           <% elsif  mod_item.project_source_url == "closed" %>
@@ -22,7 +20,11 @@
           <% elsif  mod_item.project_url == "none" %>
             <p><%= link_to "Source Link", mod_item.project_source_url  %> • URL not available </p>
           <% end %>
-          <p>Current Status: <%= mod_item.project_state  %>
+          <div class="col-md-12">
+            <p class="col-md-6">Featured Language:<br><span class="glow2"><%= mod_item.project_feature_lang  %></span></p>
+            <p class="col-md-6">Current Status:<br><span class="glow2"><%= mod_item.project_state  %></p>
+          </div>
+          <p>Contributions:<br><span class="glow2"><%= mod_item.project_stack %></span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-site black" data-dismiss="modal">Close</button>
