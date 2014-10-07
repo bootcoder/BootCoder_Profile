@@ -32,7 +32,7 @@ Project.create(project_name: "DBCode",
 							 project_state: "Beta")
 
 Project.create(project_name: "DoppelTwit",
-							 project_description: "Early attempt at a Twitter Clone. Team of 4 constructed this application in 24 hours. Contributions include a M2M self referential schema and an excellent intro to GIT workflow. ", 
+							 project_description: "Early attempt at a Twitter Clone. Team of 4 constructed this application in 24 hours. Contributions include a M2M self referential schema and an excellent intro to GIT work flow. ", 
 							 project_url: "http://doppeltwit.herokuapp.com/", 
 							 project_source_url: "https://github.com/bootcoder/doppel-clone", 
 							 project_img: "doppel-grab.png", 
@@ -41,12 +41,20 @@ Project.create(project_name: "DoppelTwit",
 
 
 Project.create(project_name: "HomeBase",
-							 project_description: "Application to allow communities of renters to quickly share and digest lastest listings. Hackathon app created in 12 hours. Uses Kimono API", 
+							 project_description: "Application to allow communities of renters to quickly share and digest latest listings. Hackathon app created in 12 hours. Uses Kimono API", 
 							 project_url: "none", 
 							 project_source_url: "https://github.com/dstavis/homebase-hackathon", 
 							 project_img: "homebase-grab.png", 
 							 project_feature_lang: "Sinatra", 
 							 project_state: "Cold Alpha")
+
+Project.create(project_name: "This Very Site!",
+							 project_description: "Well, I needed a place: to let you know a smidge or so about me, a place I can practice my stack, and a metric by which to measure my progress moving forward. Viola! Three birds one site.", 
+							 project_url: "http://bootcoder.herokuapp.com", 
+							 project_source_url: "https://github.com/bootcoder/BootCoder_Profile", 
+							 project_img: "bootcoder-grab.png", 
+							 project_feature_lang: "Ruby On Rails", 
+							 project_state: "Active")
 
 # Project.create(project_name: "",
 # 							 project_description: "", 
