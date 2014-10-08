@@ -53,17 +53,13 @@
       <br>
         <div class="row col-md-12 col-xs-12" id="owl-slider">
           <% @projects.each do |item| %>
-          <div class="item">
+          <div class="item"><a href="#" data-toggle="modal" data-target="#<%= item.id %>">
             <h4 class="white glow"><%= item.project_name %></h4>
             <br>
-            <%= link_to image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500"), item.project_url %>
+            <%= image_tag(item.project_img, alt: item.project_name, class: "image-responsive max-500") %>
             <br>
             <br>
-            <!-- Button trigger modal -->
-            <button class="btn btn-theme btn-lg pad2 curved-5 black" data-toggle="modal" data-target="#<%= item.id %>">
-              INFO
-            </button>
-          </div>
+          </a></div>
           <% end %>        
         </div>    
       </div>

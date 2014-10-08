@@ -840,6 +840,15 @@ more media queries
 	max-width: 500px;
 }
 
+
+.max-75P {
+	max-width: 75%;
+}
+
+.max-90P {
+	max-width: 90%;
+}
+
 .width-100P {
 	width: 100%;
 }
