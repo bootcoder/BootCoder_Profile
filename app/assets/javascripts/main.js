@@ -27,7 +27,7 @@ $(document).ready(function(){
     event.preventDefault();
   })
 
-  if ( $(window).width() < 1000 ) {
+  if ( $(window).width() < 1024 ) {
     $('.box-team').removeClass('wow')
     $('.name-badge').removeClass('max-400')
     $('.name-badge').addClass('max-350')
