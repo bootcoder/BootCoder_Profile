@@ -1,7 +1,7 @@
 /** {
 	border: 1px solid red;
-}*/
-
+}
+*/
 /* ================================
 Imports
 ================================= */
@@ -815,6 +815,12 @@ more media queries
 .pad-down-20 {
 	padding-top: 20px;
 }
+
+.max-100 {
+	max-height: 100px;
+	max-width: 100px;
+}
+
 .max-200 {
 	max-height: 200px;
 	max-width: 200px;
@@ -860,6 +866,11 @@ more media queries
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
 }
 
 
