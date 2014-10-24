@@ -870,6 +870,10 @@ more media queries
 	float: right;
 }
 
+.float-left {
+	float: left;
+}
+
 
 
 .window {
