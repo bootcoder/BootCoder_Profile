@@ -709,7 +709,7 @@ more media queries
 }
 
 .curved-3 {
-	width: 100%
+	width: 100%;
 	-moz-border-radius: 4em 4em 4em 4em;
 	border-radius: 4em 4em 4em 4em;
 }
