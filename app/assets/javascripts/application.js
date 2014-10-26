@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.easing
 //= require bootstrap
 //= require wow.min
 //= require custom

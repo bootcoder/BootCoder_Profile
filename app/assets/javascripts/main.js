@@ -9,7 +9,12 @@ $(document).ready(function(){
       itemsDesktopSmall : [900,1], // betweem 900px and 601px
       itemsTablet: [600,1], //1 item between 600 and 0
       itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
-      autoPlay: true
+      autoPlay: true,
+      navigation: true,
+      paginationSpeed: 800,
+      slideSpeed: 200,
+      rewindSpeed: 4000,
+      stopOnHover: true
   });
 
   gallery.owlCarousel({
@@ -26,5 +31,14 @@ $(document).ready(function(){
     console.log("CLICKDD ME!");
     event.preventDefault();
   })
-    
+
+  if ( $(window).width() < 1023 ) {
+    $('.box-team').removeClass('wow')
+    $('.mobile-js').removeClass('max-400')
+    $('.mobile-js').removeClass('max-500')
+    $('.mobile-js').addClass('max-90P')
+
+  }
+
 });
+    

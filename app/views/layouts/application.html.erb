@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag "application", media: "all" %>
   	<%= javascript_include_tag "application" %>
   	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/htc.ico" type="image/x-icon">
+    <link rel="icon" href="assets/htc.ico" type="image/x-icon">
   	<%= csrf_meta_tags %>
     
 
@@ -25,9 +27,12 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
+    
+    
     <%= yield %>
     <%= render "layouts/footer" %>
+
   </body>
+
  
 </html>

@@ -1,11 +1,12 @@
 BootCoder_Profile_Rails
 =======================
 
-New repo of profile application for ninefold deployment  --heroku depreciated
+
 ## Landing Page Version 2.0 
-## Developed as my first project post DBC
+### Initial development started immediately after graduating DBC. I'd like to think the quality of my commits has grown with time.
 
 ### Will contain 
 workups on my personal projects
-posts and comments
 general info about me
+functional cms-esque back-end
+clean maintainable code base

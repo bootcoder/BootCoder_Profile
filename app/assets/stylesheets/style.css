@@ -1,7 +1,7 @@
 /** {
 	border: 1px solid red;
-}*/
-
+}
+*/
 /* ================================
 Imports
 ================================= */
@@ -690,6 +690,12 @@ more media queries
  0 20px 20px rgba(0,0,0,.15);
 }
 
+.glow2 {
+ font:normal 18pt Arial;
+ color: black;
+}
+
+
 .curved-1 {
 	width: 100%;
 	-moz-border-radius: 1em 4em 1em 4em;
@@ -703,7 +709,7 @@ more media queries
 }
 
 .curved-3 {
-	width: 100%
+	width: 100%;
 	-moz-border-radius: 4em 4em 4em 4em;
 	border-radius: 4em 4em 4em 4em;
 }
@@ -797,6 +803,12 @@ more media queries
 .pad-down-20 {
 	padding-top: 20px;
 }
+
+.max-100 {
+	max-height: 100px;
+	max-width: 100px;
+}
+
 .max-200 {
 	max-height: 200px;
 	max-width: 200px;
@@ -822,6 +834,15 @@ more media queries
 	max-width: 500px;
 }
 
+
+.max-75P {
+	max-width: 75%;
+}
+
+.max-90P {
+	max-width: 90%;
+}
+
 .width-100P {
 	width: 100%;
 }
@@ -835,6 +856,11 @@ more media queries
   background-size: cover;
 }
 
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
 
 .btn-gray {
 		background-image: url(debut_dark.png);
@@ -842,6 +868,10 @@ more media queries
 
 .float-right {
 	float: right;
+}
+
+.float-left {
+	float: left;
 }
 
 
