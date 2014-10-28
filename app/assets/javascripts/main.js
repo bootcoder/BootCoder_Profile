@@ -32,7 +32,10 @@ $(document).ready(function(){
     event.preventDefault();
   })
 
+
   if ( $(window).width() < 1023 ) {
+    $('.bg-space').removeClass('bg-space black')
+    $('.bg-space').addClass('gray')
     $('.box-team').removeClass('wow')
     $('.mobile-js').removeClass('max-400')
     $('.mobile-js').removeClass('max-500')
