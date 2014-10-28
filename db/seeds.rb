@@ -25,6 +25,15 @@ Project.create(project_name: "TechLX",
 							 project_feature_lang: "Ruby on Rails", 
 							 project_state: "Active")
 
+Project.create(project_name: "Qu-est",
+							 project_description: "Mobile First Application to enable Professors to assign knowledge review quizzes on the fly. Stretch goals include the ability to track student-class progress over a semester via Chart.js as well as an anonymous post quiz discussion board. SalesForce 2014 HackaThon Submission.",
+						   project_stack: "Ruby On Rails, Foundation CSS, JS, jQuery, postgreSQL", 
+							 project_url: "http://qu-est.herokuapp.com", 
+							 project_source_url: "https://github.com/bootcoder/Qu-est", 
+							 project_img: "project_screenshots/grab-quest.png", 
+							 project_feature_lang: "Ruby On Rails", 
+							 project_state: "Active Alpha")
+
 Project.create(project_name: "DBCode",
 							 project_description: "SOLO DBC project started in June. The goal is to create an educational resource that can help students get un-blocked quickly. Focus on CRUD and API integration. Future plans include folding in modules from other DBC related apps to create a student resource hub.", 
 							 project_stack: "Sinatra, Ruby, JS, CSS, HTML, Bootstrap, Oauth",
@@ -61,15 +70,6 @@ Project.create(project_name: "This Very Site!",
 							 project_img: "project_screenshots/grab-bootcoder.png", 
 							 project_feature_lang: "Ruby On Rails", 
 							 project_state: "Active")
-
-Project.create(project_name: "Qu-est",
-							 project_description: "Mobile First Application to enable Professors to assign knowledge review quizzes on the fly. Stretch goals include the ability to track student-class progress over a semester via Chart.js as well as an anonymous post quiz discussion board. SalesForce 2014 HackaThon Submission.",
-						   project_stack: "Ruby On Rails, Foundation CSS, JS, jQuery, postgreSQL", 
-							 project_url: "http://qu-est.herokuapp.com", 
-							 project_source_url: "https://github.com/bootcoder/Qu-est", 
-							 project_img: "project_screenshots/grab-quest.png", 
-							 project_feature_lang: "Ruby On Rails", 
-							 project_state: "Active Alpha")
 
 # Project.create(project_name: "",
 # 							 project_description: "",
