@@ -88,6 +88,10 @@ Project.create(project_name: "This Very Site!",
 #     <p class="black glow">Rock solid foundation<br>of my personal code base.</p>
 #   </div>
 
+# Tech.create(tech_img: "",
+# 						tech_title: "",
+# 						tech_copy: "")
+
 # </div>
 # <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 pad-5P-LR">
 #   <div class="service-box wow bounceInUp" data-wow-delay="0.3s">
