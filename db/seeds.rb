@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 
 Project.create(project_name: "MetaGame",
 							 project_description: "An application to bring gamers together on a local level. This group project came together in a single week @ DBC. Our team of 5 put in over 100 hours each. GROUP HIGHFIVES!", 
@@ -95,6 +87,10 @@ Project.create(project_name: "This Very Site!",
 #     <h4 class="black glow text-center">The<br>Base</h4>
 #     <p class="black glow">Rock solid foundation<br>of my personal code base.</p>
 #   </div>
+
+# Tech.create(tech_img: "",
+# 						tech_title: "",
+# 						tech_copy: "")
 
 # </div>
 # <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 pad-5P-LR">
