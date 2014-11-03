@@ -4,6 +4,8 @@ class ContactMailer < ActionMailer::Base
 
   def send_email(user_info)
   	p "^" * 50
+  	p ENV['SENDGRID_USERNAME']
+  	p "^" * 50
   	@body = user_info.body
   	mail(email: user_info.email, subject: "Profile MSG from #{user_info.name}")
   end
