@@ -9,7 +9,7 @@
           <h4 class="modal-title" id="myModalLabel"><%= mod_item.project_name %></h4>
         </div>
         <div class="modal-body black">
-          <%= link_to image_tag(mod_item.project_img, alt: mod_item.project_name, class: "image-responsive width-100P"), mod_item.project_url %>
+          <%= link_to image_tag(mod_item.project_img, alt: mod_item.project_name, class: "image-responsive width-100P"), mod_item.project_url, target: '_blank' %>
           <br>
           <br>
           <p><%= mod_item.project_description  %></p>
