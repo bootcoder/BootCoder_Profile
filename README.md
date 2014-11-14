@@ -11,4 +11,5 @@ BootCoder_Profile_Rails
 workups on my personal projects
 general info about me
 functional cms-esque back-end
-clean maintainable code base
+
+
