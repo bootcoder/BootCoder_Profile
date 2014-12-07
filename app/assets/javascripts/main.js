@@ -37,6 +37,7 @@ $(document).ready(function(){
     $('.bg-space').removeClass('bg-space black')
     $('.bg-space').addClass('gray')
     $('.box-team').removeClass('wow')
+    $('.service-box').removeClass('wow')
     $('.mobile-js').removeClass('max-400')
     $('.mobile-js').removeClass('max-500')
     $('.mobile-js').addClass('max-90P')
