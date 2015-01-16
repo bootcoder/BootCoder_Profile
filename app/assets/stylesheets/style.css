@@ -128,12 +128,12 @@ Home sections
 .section-heading {
 	margin-bottom: 70px;
 }
-	
+
 .section-heading h2 {
 	font-size: 38px;
 	text-transform: uppercase;
 }
-	
+
 .section-heading .heading-line {
 	margin:0 auto;
 	display: block;
@@ -144,7 +144,7 @@ Home sections
 	margin-bottom: 20px;
 }
 
-	
+
 /* --- section bg var --- */
 
 .bg-white {
@@ -210,21 +210,21 @@ Spacer
 	background-image: url("debut_dark.png");
 }
 
-/*#spacer1{	
+/*#spacer1{
 	background-image: url(bg-code.jpeg);
 }
-#spacer2{	
-	background-size: 35%;	
+#spacer2{
+	background-size: 35%;
 	background-image: url(bg-awesome.jpg);
 }
 
 #spacer3{
-	background-size: 100%;	
+	background-size: 100%;
 	background-image: url(mac-spacer.jpg);
 }
 
 #spacer4{
-		
+
 }*/
 
 /* --- section content general color --- */
@@ -268,10 +268,10 @@ Intro
 	color:#fff;
 	text-align:center;
 	font-weight: 700;
-	font-size: 40px; 
+	font-size: 40px;
 	line-height:1.1em;
 	padding-top:30px;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 .intro-text h1 a:hover {
 	text-decoration: none;
@@ -488,13 +488,13 @@ Works
 	width: 260px;
 }
 .lb-overlay a.lb-close{
-	
+
 	z-index: 1001;
 	color: #fff;
 	position: absolute;
 	top: 43px;
 	left: 50%;
-	
+
 	font-size: 28px;
 	line-height: 26px;
 	text-align: center;
@@ -560,9 +560,9 @@ Works
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* 
-	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
-	http://bricss.net/post/11230266445/css-hack-to-target-opera 
+/*
+	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens
+	http://bricss.net/post/11230266445/css-hack-to-target-opera
 */
 x:-o-prefocus, .lb-overlay img {
     height: 100%;
@@ -577,7 +577,7 @@ Contact
 /* ================================
 Bottom widget
 ================================= */
-ul.social-network {	
+ul.social-network {
 	margin: 0;
 	margin-left:0;
 	padding-left: 0;
@@ -632,12 +632,12 @@ more media queries
 	.box-team img {
 		float: none;
 		margin:0 auto;
-	}	
+	}
 	.box-team {
 		margin-bottom: 30px;
 	}
 
-	
+
 }
 
 @media (max-width:992px) {
@@ -757,11 +757,11 @@ more media queries
 }
 
 .pad-1 {
-	padding: 1%; 
+	padding: 1%;
 }
 
 .pad-2 {
-	padding: 2%; 
+	padding: 2%;
 }
 
 .pad-5 {
@@ -781,7 +781,7 @@ more media queries
 }
 
 .pad-10P-down {
-	padding-top: 11%;
+	padding-top: 10%;
 }
 
 .pad-20P-down {
@@ -847,9 +847,9 @@ more media queries
 	width: 100%;
 }
 
-.height1000 { 
+.height1000 {
 	min-height: 1000px;
-  background: url(bg-bw.gif	) no-repeat center center fixed; 
+  background: url(bg-bw.gif	) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
