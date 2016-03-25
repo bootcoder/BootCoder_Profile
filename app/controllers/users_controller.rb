@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   def gallery
   end
-  
+
 
   # GET /users/new
   def new
