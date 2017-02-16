@@ -78,6 +78,7 @@ button {
 	-o-user-select: none;
 	user-select: none;
 }
+
 button.navbar-toggle {
 	background: #2b2b2b;
 	border: none;
