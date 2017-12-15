@@ -59,8 +59,8 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-spork'
   gem 'ruby_gntp'
-  gem 'spork', :github => 'sporkrb/spork'
-  gem 'spork-rails', :github => 'sporkrb/spork-rails'
+  gem 'spork', '~> 1.0rc'
+  gem 'spork-rails'
 end
 
 group :test do
