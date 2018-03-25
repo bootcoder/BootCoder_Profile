@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
     # respond_to do |format|
       if @post.save
-        ContactMailer.send_email(@post).deliver
+        ContactMailer.send_email(@post).deliver_now
         # format.html { redirect_to @post, notice: 'Post was successfully created.' }
         # format.json { render :show, status: :created, location: @post }
         redirect_to '/'

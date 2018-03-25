@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: "bootcoder@gmail.com"
+  default from: "huntercanhas@gmail.com"
   default to: "bootcoder@gmail.com"
 
   def send_email(user_info)
