@@ -40,6 +40,7 @@ gem 'owlcarousel-rails'
 # gem 'magnific-popup-rails'
 gem 'newrelic_rpm'
 gem 'dotenv'
+gem 'extra_print'
 # gem 'bootstrap-modal-rails'
 
 
