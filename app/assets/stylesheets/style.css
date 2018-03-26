@@ -207,6 +207,14 @@ Home sections
 Spacer
 ============================= */
 
+.spacer-footer {
+	height: 55%;
+}
+
+.spacer-footer h2 {
+	padding-top: 5%;
+}
+
 .spacer {
 	/*background-image: url(bg-pat-dark.png);*/
 	background-image: url("debut_dark.png");
