@@ -10,10 +10,19 @@ Project.create(project_name: "Schema Designer",
 Project.create(project_name: "Extra Print",
 							 project_description: "A simple tool that addresses a big problem among developers, many bugs are generated due to some disconnect between what they think something is and the actual value. This gem adds a highly visual and informative wrapper to variable inspection. Also great for seeing a particular line was executed from the console. By invoking the method without an argument you get a line of random emoji’s as output.",
 						   project_stack: "Ruby",
-							 project_url: "http://www.schema-designer.com",
+							 project_url: "https://rubygems.org/gems/extra_print/versions/1.1.5",
 							 project_source_url: "https://github.com/bootcoder/extra_print",
 							 project_img: "project_screenshots/grab-extra_print.png",
 							 project_feature_lang: "Ruby",
+							 project_state: "Production")
+
+Project.create(project_name: "BootBadger",
+							 project_description: "This emergency clone of a student superlative voting system was built in a day (during my spare time), because it had to be. Users login and see a list of peers. Add a slogan for that person or up/down vote existing slogans. At graduation we read off the slogans while introducing each student. Lots of fun ones like, ‘Most likely to say, “I’m sure we can solve this algorithm… with more boba tea”’ or ‘Most likely to hulk smash their desk when reading errors’. A quick and functional mobile first MVP, this provides a great example of getting it done when the chips are down. You can log in as me and give it a shot but you won’t be able to see my slogans because current user can’t see their own. It’s supposed to be a surprise!  Email: tom@tom.com   PW: tomtom",
+						   project_stack: "React Ruby on Rails",
+							 project_url: "http://bootbadger-sf.herokuapp.com",
+							 project_source_url: "https://github.com/bootcoder/bootbadger-frontend",
+							 project_img: "project_screenshots/grab-boot-badger.png",
+							 project_feature_lang: "React",
 							 project_state: "Production")
 
 Project.create(project_name: "DBC InfoWall",
@@ -23,16 +32,7 @@ Project.create(project_name: "DBC InfoWall",
 							 project_source_url: "https://github.com/bootcoder/dbc-infowall-api",
 							 project_img: "project_screenshots/grab-infowall.png",
 							 project_feature_lang: "Rails",
-							 project_state: "Production")
-
-Project.create(project_name: "BootBadger",
-							 project_description: "This emergency clone of a student superlative voting system was built in a day (during my spare time), because it had to be. Users login and see a list of peers. Add a slogan for that person or up/down vote existing slogans. At graduation we read off the slogans while introducing each student. Lots of fun ones like, ‘Most likely to say, “I’m sure we can solve this algorithm… with more boba tea”’ or ‘Most likely to hulk smash their desk when reading errors’. A quick and functional mobile first MVP, this provides a great example of getting it done when the chips are down. You can log in as me and give it a shot but you won’t be able to see my slogans because current user can’t see their own. It’s supposed to be a surprise!  Email: tom@tom.com   PW: tomtom",
-						   project_stack: "React Ruby on Rails",
-							 project_url: "http://bootbadger-sf.herokuapp.com",
-							 project_source_url: "https://github.com/bootcoder/bootbadger-frontend",
-							 project_img: "project_screenshots/grab-extra_print.png",
-							 project_feature_lang: "React",
-							 project_state: "Production")
+							 project_state: "Stale Production")
 
 Project.create(project_name: "MetaGame",
 							 project_description: "The original app!!! This application is designed to brings gamers together on a local level. A group project, we came together to produce this in a single week @ DBC with just enough knowledge under our belts to be dangerous. Our team of 5 put in over 100 hours each. GROUP HIGHFIVES!",
@@ -78,7 +78,6 @@ Project.create(project_name: "DoppelTwit",
 							 project_img: "project_screenshots/grab-doppel.png",
 							 project_feature_lang: "Sinatra",
 							 project_state: "Cold Alpha")
-
 
 Project.create(project_name: "HomeBase",
 							 project_description: "Application to allow communities of renters to quickly share and digest latest listings. Hackathon app created in 12 hours. Uses Kimono API",

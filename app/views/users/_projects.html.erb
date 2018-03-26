@@ -19,9 +19,9 @@
           </div>
           <p>Contributions:<br><span class="glow2"><%= mod_item.project_stack %></span></p>
           <% if mod_item.project_source_url != "closed" && mod_item.project_url != "none" %>
-            <p><%= link_to "Source Link", mod_item.project_source_url  %> • <%= link_to " Project Link", mod_item.project_url  %></p>
+            <p><%= link_to "Source Link", mod_item.project_source_url, target: :_blank  %> • <%= link_to " Project Link", mod_item.project_url, target: :_blank  %></p>
           <% elsif  mod_item.project_source_url == "closed" %>
-            <p>Source Closed • <%= link_to "Project Link", mod_item.project_url  %></p>
+            <p>Source Closed • <%= link_to "Project Link", mod_item.project_url %></p>
           <% elsif  mod_item.project_url == "none" %>
             <p><%= link_to "Source Link", mod_item.project_source_url  %> • URL not available </p>
           <% end %>
@@ -35,7 +35,7 @@
 <div class="bg-site">
   <section id="works" class="home-section">
     <div class="container">
-      
+
       <div class="row">
         <div class="col-md-offset-0 col-md-12">
           <div class="section-heading">
@@ -46,7 +46,7 @@
       </div>
 
 
-      
+
       <!-- dynamic project layout -->
       <!-- slider  -->
       <div class="container bg-dark-pattern curved-3 pad-2P">
@@ -60,8 +60,8 @@
             <br>
             <br>
           </a></div>
-          <% end %>        
-        </div>    
+          <% end %>
+        </div>
       </div>
     </div>
   </section>
