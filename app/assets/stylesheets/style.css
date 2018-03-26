@@ -770,6 +770,10 @@ more media queries
 	padding: 5%;
 }
 
+.pad-2P-down {
+	padding-top: 2%;
+}
+
 .pad-5P-down {
 	padding-top: 5%;
 }
