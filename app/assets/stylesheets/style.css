@@ -10,6 +10,8 @@ Imports
 @import url('overwrite.css');
 @import url('dlmenu.css');
 @import url('animate.css');
+@import url('owl.carousel.css');
+@import url('owl.theme.css');
 
 /* ================================
 General
@@ -578,6 +580,34 @@ x:-o-prefocus, .lb-overlay img {
     height: 100%;
 }
 
+/* ================================
+Projects
+================================= */
+/* .project-item {
+	margin: 30px;
+}
+.project-item img {
+	width: 100%;
+	height: auto;
+} */
+
+.owl-carousel .owl-item {
+	/* margin: 10px; */
+}
+
+@media (max-width: 768px) {
+	.owl-carousel .owl-item {
+		/* margin: 5px; */
+		min-width: 200px;
+	}
+	/* .project-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+	max-width: 100%;
+	} */
+}
+
 
 /* ================================
 Contact
@@ -646,17 +676,12 @@ more media queries
 	.box-team {
 		margin-bottom: 30px;
 	}
-
-
 }
 
 @media (max-width:992px) {
-
-
 	.service p{
 			margin-bottom: 60px;
 	}
-
 }
 
 @media (max-width:480px){

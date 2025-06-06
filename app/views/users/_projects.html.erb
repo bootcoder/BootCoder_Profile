@@ -40,7 +40,7 @@
         <div class="col-md-offset-0 col-md-12">
           <div class="section-heading">
             <h2 class="glow black">Projects</h2>
-            <p class="black glow">I've pushed a commit or two so far...Only 42,000 to go!</p>
+            <p class="black glow">Pushed a few commits or so far... Only 42,000 to go!</p>
           </div>
         </div>
       </div>
@@ -51,15 +51,12 @@
       <!-- slider  -->
       <div class="container bg-dark-pattern curved-3 pad-2P">
       <br>
-        <div class="col-md-12 col-xs-12" id="owl-slider">
+        <div class="col-md-12 col-xs-12 owl-carousel" id="owl-slider">
           <% @projects.each do |item| %>
-          <div class="item"><a href="#" data-toggle="modal" data-target="#<%= item.id %>">
-            <h4 class="white glow"><%= item.project_name %></h4>
-            <br>
-            <%= image_tag(item.project_img, alt: item.project_name, class: "mobile-js image-responsive max-500") %>
-            <br>
-            <br>
-          </a></div>
+            <div class="item project-item"><a href="#" data-toggle="modal" data-target="#<%= item.id %>">
+              <%= image_tag(item.project_img, alt: item.project_name, class: "mobile-js image-responsive max-500 project-img") %>
+              <h3 class="white glow"><%= item.project_name %></h3>
+            </a></div>
           <% end %>
         </div>
       </div>

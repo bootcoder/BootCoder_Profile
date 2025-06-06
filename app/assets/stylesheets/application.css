@@ -9,15 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- 
+
  *= require bootstrap.css
  *= require font-awesome
  *= require owl.carousel
- *= require owl.theme
  *
  *
  *
  *
  *= require_tree .
- 
+
  */
