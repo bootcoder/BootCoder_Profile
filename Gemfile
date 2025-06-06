@@ -48,7 +48,7 @@ group :development, :test do
   # gem 'debugger'
 	gem 'pry'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'launchy'
   gem 'guard-rspec'
