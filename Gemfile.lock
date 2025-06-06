@@ -268,6 +268,8 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
+    puma (6.5.0)
+      nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.16)
     rack-session (2.1.1)
@@ -436,6 +438,7 @@ DEPENDENCIES
   owlcarousel-rails
   pg
   pry
+  puma
   rails
   rspec-rails
   ruby_gntp
