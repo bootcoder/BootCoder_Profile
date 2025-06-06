@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 
-ruby '2.7.1'
+ruby '3.2.5'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -43,11 +43,6 @@ gem 'dotenv'
 gem 'extra_print'
 # gem 'bootstrap-modal-rails'
 
-
-group :production  do
-  gem 'rails_12factor'
-end
-
 group :development, :test do
   gem 'capistrano-rails'
   # gem 'debugger'
@@ -60,8 +55,8 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-spork'
   gem 'ruby_gntp'
-  gem 'spork', '~> 1.0rc'
-  gem 'spork-rails'
+  # gem 'spork', '~> 1.0rc'
+  # gem 'spork-rails'
 end
 
 group :test do
