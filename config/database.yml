@@ -6,12 +6,15 @@ default: &default
 
 development:
   <<: *default
-  database: bootcoder_development
+  database: bootcore_development
+
 test:
   <<: *default
-  database: bootcoder_test
+  database: bootcore_test
+
 production:
-  <<: *default
-  database: bootcoder_production
-  username: #Set these when you deploy
-  password:
+  database: bootcore_prod
+  username: <%= ENV["RDS_USERNAME"] %>
+  password: <%= ENV["RDS_PASSWORD"] %>
+  host: <%= ENV["RDS_HOST"] %>
+  port: 5432
