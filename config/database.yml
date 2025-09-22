@@ -18,4 +18,5 @@ production:
   username: <%= ENV["RDS_USERNAME"] %>
   password: <%= ENV["RDS_PASSWORD"] %>
   host: <%= ENV["RDS_HOST"] %>
+  sslmode: <%= ENV.fetch("RDS_SSLMODE", "require") %>
   port: 5432
