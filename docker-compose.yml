@@ -4,6 +4,8 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails -v && bundle exec rails s -b 0.0.0.0 -e production"
     ports:
       - "3000:3000"
+    env_file:
+      - .env.prod
     environment:
       RAILS_ENV: production
       RACK_ENV: production
@@ -11,8 +13,6 @@ services:
       SECRET_KEY_BASE: <%= ENV["RAILS_SECRET"] %>
       # AWS_ACCESS_KEY_ID: <%= optional if using S3 >
       # AWS_SECRET_ACCESS_KEY: <%= optional if using S3 >
-    env_file:
-      - .env.prod
     volumes:
       - .:/app
     restart: always
