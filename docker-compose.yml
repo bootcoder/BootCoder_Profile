@@ -5,8 +5,8 @@ services:
     image: postgres:16
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: <%= ENV["RDS_USERNAME"] %>
+      POSTGRES_PASSWORD: <%= ENV["RDS_PASSWORD"] %>
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -15,7 +15,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: postgres://postgres:password@db:5432/postgres
+      DATABASE_URL: <%= ENV["RDS_HOST"] %>
     depends_on:
       - db
 
