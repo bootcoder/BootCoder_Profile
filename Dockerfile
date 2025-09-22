@@ -1,11 +1,11 @@
 FROM ruby:3.2
 
-# Install OS dependencies
+# Install OS packages
 RUN apt-get update -qq && apt-get install -y \
-  curl gnupg build-essential libpq-dev nodejs
+  curl build-essential libpq-dev nodejs npm
 
-# Install Yarn
-RUN npm install -g corepack
+# Enable Corepack to install Yarn
+RUN npm install -g corepack && corepack enable && corepack prepare yarn@stable --activate
 
 WORKDIR /app
 
