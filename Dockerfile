@@ -1,4 +1,4 @@
-FROM ruby:3.2
+FROM ruby:3.2.5
 
 # Install OS packages
 RUN apt-get update -qq && apt-get install -y \
@@ -10,7 +10,8 @@ RUN npm install -g corepack && corepack enable && corepack prepare yarn@stable -
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock ./
-RUN bundle install --without development test
+RUN bundle config set without 'development test'
+RUN bundle install
 
 COPY . .
 
