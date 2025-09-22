@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0 -e production"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails -v && bundle exec rails s -b 0.0.0.0 -e production"
     ports:
       - "3000:3000"
     environment:
