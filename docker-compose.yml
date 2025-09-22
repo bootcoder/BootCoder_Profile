@@ -9,8 +9,8 @@ services:
     environment:
       RAILS_ENV: production
       RACK_ENV: production
-      DATABASE_URL: <%= ENV["RDS_HOST"] %>
-      SECRET_KEY_BASE: <%= ENV["RAILS_SECRET"] %>
+      # DATABASE_URL: <%= ENV["RDS_HOST"] %>
+      # SECRET_KEY_BASE: <%= ENV["RAILS_SECRET"] %>
       # AWS_ACCESS_KEY_ID: <%= optional if using S3 >
       # AWS_SECRET_ACCESS_KEY: <%= optional if using S3 >
     volumes:
