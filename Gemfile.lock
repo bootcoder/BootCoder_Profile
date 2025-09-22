@@ -121,7 +121,10 @@ GEM
     database_cleaner-core (2.0.1)
     date (3.4.1)
     diff-lcs (1.6.2)
-    dotenv (3.1.8)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.2.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -422,7 +425,7 @@ DEPENDENCIES
   capybara
   coffee-rails
   database_cleaner
-  dotenv
+  dotenv-rails
   extra_print
   factory_bot_rails
   faker
@@ -455,4 +458,4 @@ RUBY VERSION
    ruby 3.2.5p208
 
 BUNDLED WITH
-   2.6.9
+   2.7.1
