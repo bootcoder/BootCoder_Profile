@@ -1,23 +1,18 @@
 version: '3.8'
 
 services:
-  db:
-    image: postgres:16
-    restart: always
-    environment:
-      POSTGRES_USER: <%= ENV["RDS_USERNAME"] %>
-      POSTGRES_PASSWORD: <%= ENV["RDS_PASSWORD"] %>
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
   web:
     build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0 -e production"
     ports:
       - "3000:3000"
     environment:
+      RAILS_ENV: production
+      RACK_ENV: production
       DATABASE_URL: <%= ENV["RDS_HOST"] %>
-    depends_on:
-      - db
-
-volumes:
-  pgdata:
+      SECRET_KEY_BASE: <%= ENV["RAILS_SECRET"] %>
+      # AWS_ACCESS_KEY_ID: <%= optional if using S3 >
+      # AWS_SECRET_ACCESS_KEY: <%= optional if using S3 >
+    volumes:
+      - .:/app
+    restart: always
