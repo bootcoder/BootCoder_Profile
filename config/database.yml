@@ -13,6 +13,7 @@ test:
   database: bootcore_test
 
 production:
+  <<: *default
   database: bootcore_prod
   username: <%= ENV["RDS_USERNAME"] %>
   password: <%= ENV["RDS_PASSWORD"] %>
