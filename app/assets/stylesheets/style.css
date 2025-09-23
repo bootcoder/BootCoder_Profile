@@ -922,3 +922,109 @@ more media queries
 .window {
 	display: none;
 }
+
+/* ================================
+Modern Responsive Enhancements
+================================= */
+
+/* Base - make images and sections fluid */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#intro {
+  min-height: 60vh; /* was fixed 635px */
+  height: auto;
+  background-size: cover;
+}
+
+.service .screenshot img {
+  width: 100%;
+  max-width: 400px;
+  padding-left: 0;
+}
+
+.lb-album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.lb-album li {
+  float: none;
+  flex: 1 1 120px;
+  max-width: 150px;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+
+  .home-section {
+    padding: 60px 20px;
+  }
+
+  .service p {
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    background-size: cover;
+  }
+
+  #intro .intro-text {
+    margin-top: 100px;
+    padding: 0 15px;
+  }
+
+  .intro-text h1 a {
+    font-size: 28px;
+  }
+  .intro-text p span {
+    font-size: 18px;
+  }
+
+  .box-team {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    padding: 30px 0 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+
+  .service .screenshot img {
+    max-width: 100%;
+  }
+
+  .lb-album li > a {
+    width: 100px;
+    height: 100px;
+  }
+
+  .xs-screen {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+.image-meme {
+	max-width: 95%;
+}
