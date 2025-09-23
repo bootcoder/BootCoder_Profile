@@ -1,3 +1,5 @@
+Project.destroy_all
+
 Project.create(project_name: "Schema Designer",
 							 project_description: "The quest to build a better tool is something many developers can identify with. Mine was Schema Designer. I love visual schema but online tools are lacking key features. So I set out to make my own. I felt bad about not just contributing to a particular open source project, but I needed more than just a fancy frontend. Future goals include authoring a gem integration which allows spinning up a new rails app from the command line with models and migrations generated based on designed schema, as well as a Github integration allowing a user to import schema directly from an existing repo. This project isn’t complete, but it represents what I’m doing now so it deserves top billing here.",
 						   project_stack: "Mongo Express React Redux Node",
