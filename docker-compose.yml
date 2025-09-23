@@ -16,4 +16,3 @@ services:
       # AWS_SECRET_ACCESS_KEY: <%= optional if using S3 >
     volumes:
       - .:/app
-    restart: always
