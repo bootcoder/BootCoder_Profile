@@ -65,3 +65,5 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
 end
+
+gem "ruby_llm", "~> 1.8"
