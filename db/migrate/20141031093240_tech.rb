@@ -1,4 +1,4 @@
-class Tech < ActiveRecord::Migration
+class Tech < ActiveRecord::Migration[7.1]
   def change
   	create_table :techs do |t|
   		t.string :tech_img

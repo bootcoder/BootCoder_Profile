@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2014_10_31_093240) do
+ActiveRecord::Schema[7.1].define(version: 2014_10_31_093240) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_catalog.plpgsql"
+  enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.integer "post_id"
+    t.bigint "post_id"
     t.text "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
@@ -26,8 +26,8 @@ ActiveRecord::Schema[8.0].define(version: 2014_10_31_093240) do
     t.string "name"
     t.string "email"
     t.text "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -39,8 +39,8 @@ ActiveRecord::Schema[8.0].define(version: 2014_10_31_093240) do
     t.string "project_img"
     t.string "project_feature_lang"
     t.string "project_state"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "techs", force: :cascade do |t|
@@ -54,7 +54,8 @@ ActiveRecord::Schema[8.0].define(version: 2014_10_31_093240) do
     t.string "password"
     t.string "user_avatar"
     t.boolean "user_admin"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end
