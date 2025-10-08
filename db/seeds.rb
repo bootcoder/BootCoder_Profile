@@ -102,6 +102,7 @@ Project.create(project_name: "HomeBase",
 
 Tech.destroy_all
 
+# => #<Tech:0x000000010e9784e8 id: nil, tech_img: nil, tech_title: nil, tech_copy: nil, rating: nil, tag_line: nil>
 Tech.create(
 
 )

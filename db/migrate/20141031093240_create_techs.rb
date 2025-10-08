@@ -1,9 +1,11 @@
-class Tech < ActiveRecord::Migration[7.1]
+class CreateTechs < ActiveRecord::Migration[7.1]
   def change
   	create_table :techs do |t|
   		t.string :tech_img
   		t.string :tech_title
   		t.string :tech_copy
+
+			t.timestamps
   	end
   end
 end
