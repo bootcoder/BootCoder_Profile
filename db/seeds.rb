@@ -98,3 +98,10 @@ Project.create(project_name: "HomeBase",
 							 project_img: "project_screenshots/grab-homebase.png",
 							 project_feature_lang: "Sinatra",
 							 project_state: "Cold Alpha")
+
+
+Tech.destroy_all
+
+Tech.create(
+
+)
