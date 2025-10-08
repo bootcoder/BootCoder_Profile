@@ -1,5 +1,3 @@
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
 	has_many :comments
 end
-
-
