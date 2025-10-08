@@ -1,4 +1,4 @@
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
     validates :project_description, presence: true, uniqueness: true
     validates :project_url, presence: true, uniqueness: true
     validates :project_source_url, presence: true, uniqueness: true
