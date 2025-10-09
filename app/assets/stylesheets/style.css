@@ -593,6 +593,14 @@ Techs
 .tech-tag-line {
 	min-height: 55px;
 }
+
+.tech-tag-line hr {
+   border: none;
+		height: 2px;
+		color: #c80b0b;  /* old IE */
+		background-color: #b00909;  /* Modern Browsers */
+		margin: 0
+}
 /* ================================
 Projects
 ================================= */

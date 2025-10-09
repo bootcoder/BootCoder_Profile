@@ -114,15 +114,15 @@ Tech.create(
 Tech.create(
 	title: 'React',
 	tag_line: 'Virtual Domtastic',
-	copy: 'Keeping components super clean and legit since 2013',
+	copy: 'Legit super clean components since 2013',
 	img: 'techs_2025/react.png',
 	rating: 3
 )
 
 Tech.create(
 	title: 'Rails',
-	tag_line: "Good ol' GOAT API",
-	copy: 'Postgres & REST This solid backend gets it done',
+	tag_line: "Convention<hr>configuration",
+	copy: 'G.O.A.T. API<br>This backend gets it done',
 	img: 'techs_2025/rails.png',
 	rating: 5
 )
@@ -130,7 +130,7 @@ Tech.create(
 Tech.create(
 	title: 'jQuery',
 	tag_line: "Wizz, Bang, HAZZA!",
-	copy: 'Look Mom, I can do magic things on the internet',
+	copy: 'Look Mom!<br>I can do sorta magical things on the internet',
 	img: 'techs_2025/jquery.png',
 	rating: 4
 )
@@ -146,7 +146,7 @@ Tech.create(
 Tech.create(
 	title: 'Git',
 	tag_line: "No Commitment Issues Here",
-	copy: 'History should tell a story. Piece by atomic piece',
+	copy: 'History tells a tale.<br>Piece by piece',
 	img: 'techs_2025/git.png',
 	rating: 5
 )
@@ -154,7 +154,7 @@ Tech.create(
 Tech.create(
 	title: 'SASS',
 	tag_line: "Awesome Styles",
-	copy: 'Mixing in visual appeal gets a lot easier with variables',
+	copy: 'Mixing in visual appeal is way easier with variables',
 	img: 'techs_2025/sass.png',
 	rating: 4
 )
@@ -162,28 +162,28 @@ Tech.create(
 Tech.create(
 	title: 'Sinatra',
 	tag_line: "Don't rock the Bloat -Frank",
-	copy: 'Ruby is more than Rails. Simple, clean DSL',
+	copy: 'Ruby !== Rails<br>Simple, clean DSL',
 	img: 'techs_2025/sinatra.png',
 	rating: 5
 )
 
 Tech.create(
 	title: 'Agile / SCRUM',
-	tag_line: "Don't Go Chasing Waterfalls",
-	copy: 'Build → Ship → Iterate<br>This is the way',
+	tag_line: "Not Chasing Waterfalls",
+	copy: 'Build → Ship →<br>Review → Iterate<br>This is the way',
 	img: 'techs_2025/agile.png',
 	rating: 5
 )
 Tech.create(
 	title: 'Next.js',
-	tag_line: "Making Lighthouse Wins",
-	copy: 'Finally a solid answer to \'What JS Framework comes Next?\'',
+	tag_line: "Prod Ready React",
+	copy: 'Age old question:<br>What JS Framework comes Next?',
 	img: 'techs_2025/next_js.png',
 	rating: 3
 )
 Tech.create(
 	title: 'Sidekiq',
-	tag_line: "Batman had Robin",
+	tag_line: "Even Batman<br>had Robin",
 	copy: 'It\'s dangerous to go alone, bring a Sidekiq',
 	img: 'techs_2025/sidekiq.png',
 	rating: 5
@@ -191,14 +191,14 @@ Tech.create(
 Tech.create(
 	title: 'AWS',
 	tag_line: "IAM Legend",
-	copy: 'EC2 / RDS / ECS / ECR / S3 / CF / VPC<br>No-one knows all the things',
+	copy: 'EC2 / RDS / ECS / ECR / S3 / CF / VPC<br>No one knows it all',
 	img: 'techs_2025/aws.png',
 	rating: 3
 )
 Tech.create(
 	title: 'NGINX',
-	tag_line: "Speed, Scale, Security, Simplified",
-	copy: 'Server, R-Proxy, Load Balancer and Caching All in a single blazing fast package',
+	tag_line: "Gateway to the Internet",
+	copy: 'Speed, Scale, Security, Simplified',
 	img: 'techs_2025/nginx.png',
 	rating: 5
 )
@@ -212,56 +212,56 @@ Tech.create(
 Tech.create(
 	title: 'Bash / Shell',
 	tag_line: "Jason Bourne Again",
-	copy: 'Solving life\'s little problems w/ proper Shell Scripts',
+	copy: 'Solving life\'s little problems... One Shell Script at a time',
 	img: 'techs_2025/bash_shell.png',
 	rating: 3
 )
 Tech.create(
 	title: 'oAuth',
 	tag_line: "Awake feeling refresh_token",
-	copy: 'Can\'t auth via blood sample so... This is the next best thing',
+	copy: 'Can\'t auth via blood marker just yet so...<br>Next best thing',
 	img: 'techs_2025/oauth.png',
 	rating: 4
 )
 Tech.create(
 	title: 'RSpec',
 	tag_line: "Don\'t Mock my Stubby Spy",
-	copy: 'Refactoring code in a well tested green suite ... So Satisfying',
+	copy: 'Refactoring with a well tested green suite ... So Satisfying',
 	img: 'techs_2025/rspec.png',
 	rating: 4
 )
 Tech.create(
 	title: 'SSH',
-	tag_line: "No Home Server,<br>No Problem",
-	copy: 'Remote access: The true \'keys\' to the castle',
+	tag_line: "No HomeLab<br>No Problem",
+	copy: 'Remote access:<br>The \'keys\' to the castle',
 	img: 'techs_2025/ssh.png',
 	rating: 5
 )
 Tech.create(
 	title: 'CI / CD',
 	tag_line: "Ship it fast<br>Ship it good",
-	copy: 'Who has time to run the entire test suite locally at this point',
+	copy: 'Who has time to run the entire test suite locally these days?',
 	img: 'techs_2025/ci_cd.png',
 	rating: 4
 )
 Tech.create(
 	title: 'MarkDown',
 	tag_line: "Up Your Doc Game",
-	copy: 'Strong MD skills will pay super strong dividends for your team long term',
+	copy: 'Yeilds longterm dividends for both product & team',
 	img: 'techs_2025/markdown.png',
 	rating: 5
 )
 Tech.create(
 	title: 'postgreSQL',
 	tag_line: "Relationships are easy",
-	copy: 'When the JOINs hit your eye like a WHERE GROUP_BY, that\'s Aurora',
+	copy: 'When the JOIN hits your eye like GROUP_BY ...That\'s Aurora',
 	img: 'techs_2025/postgresql.png',
 	rating: 3
 )
 Tech.create(
 	title: 'TypeScript',
-	tag_line: "JavaScript that Scales w/ Confidence",
-	copy: 'Signuture Says: Modern JS Now w/ 100% less undefined',
+	tag_line: "JS that Scales w/ Confidence",
+	copy: 'Modern JS: Now with 100% less undefined',
 	img: 'techs_2025/typescript.png',
 	rating: 2
 )
@@ -274,7 +274,7 @@ Tech.create(
 )
 Tech.create(
 	title: 'NewRelic',
-	tag_line: "Insight Complexity meets Clarity",
+	tag_line: "Complexity meets Clarity",
 	copy: 'Built for uptime Optimized for excellence',
 	img: 'techs_2025/newrelic.png',
 	rating: 4
@@ -282,14 +282,28 @@ Tech.create(
 Tech.create(
 	title: 'VirtualBox',
 	tag_line: "One Machine Every OS",
-	copy: 'When you absolutley, positivley must test something in Windows...',
+	copy: 'When you absolutley, positivley must test Windows...',
 	img: 'techs_2025/virtual_box.png',
 	rating: 3
 )
 Tech.create(
 	title: 'Jira',
 	tag_line: "Tickets Please",
-	copy: 'Seriously though, Why Epics instead of Marathons?',
+	copy: 'Seriously, Why Epics instead of Marathons...?',
 	img: 'techs_2025/jira.png',
+	rating: 3
+)
+Tech.create(
+	title: 'Python',
+	tag_line: "Everything\'s Zen",
+	copy: 'First Impression:<br>Whitespace enforced Ruby... I\'m in love',
+	img: 'techs_2025/python.png',
+	rating: 3
+)
+Tech.create(
+	title: 'Linux',
+	tag_line: "Do it yourself!",
+	copy: 'So many flavors<br>Gotta try em all',
+	img: 'techs_2025/linux.png',
 	rating: 3
 )
