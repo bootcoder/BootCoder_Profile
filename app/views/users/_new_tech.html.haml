@@ -13,7 +13,7 @@
               .service-box.wow.bounceInUp.pad-5P-LR{"data-wow-delay" => "0.#{idx * 2 + 1}s"}
                 = image_tag(tech.img, :alt => tech.title, class: "image-responsive max-200")
                 %br
-                %h4.black.glow.text-center
+                %h4.black.glow.text-center.tech-tag-line
                   = raw(tech.tag_line)
-                %p.black.glow
+                %p.black.glow.d-none.d-md-block
                   = raw(tech.copy)
