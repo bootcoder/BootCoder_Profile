@@ -6,14 +6,14 @@
           .section-heading
             %h2.black.glow The Stack
             %p.black.glow In all my life I've never seen a list I was so sure would be growing...Quickly
-      - techs.in_groups_of(4, false).each_with_index do |group, idx|
+      - techs.in_groups_of(4, false).each do |group|
         .row
-          - group.each do |tech|
+          - group.each_with_index do |tech, idx|
             .col-xs-12.col-sm-6.col-md-3.col-lg-3
-              .service-box.wow.bounceInUp.pad-5P-LR{"data-wow-delay" => "0.1s"}
+              .service-box.wow.bounceInUp.pad-5P-LR{"data-wow-delay" => "0.#{idx * 2 + 1}s"}
                 = image_tag(tech.img, :alt => tech.title, class: "image-responsive max-200")
                 %br
                 %h4.black.glow.text-center
-                  = tech.tag_line
+                  = raw(tech.tag_line)
                 %p.black.glow
-                  = tech.copy
+                  = raw(tech.copy)
