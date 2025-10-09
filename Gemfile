@@ -41,6 +41,7 @@ gem 'owlcarousel-rails'
 gem 'dotenv-rails'
 gem 'extra_print'
 gem 'puma'
+gem 'haml-rails'
 # gem 'bootstrap-modal-rails'
 
 group :development, :test do

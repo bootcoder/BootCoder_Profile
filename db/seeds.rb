@@ -102,7 +102,19 @@ Project.create(project_name: "HomeBase",
 
 Tech.destroy_all
 
-# => #<Tech:0x000000010e9784e8 id: nil, tech_img: nil, tech_title: nil, tech_copy: nil, rating: nil, tag_line: nil>
+#<Tech img: nil, title: nil, copy: nil, rating: nil, tag_line: nil>
 Tech.create(
+	title: 'Ruby',
+	copy: '',
+	tag_line: '',
+	img: 'techs_2025/ruby.png',
+	rating: 5
+)
 
+Tech.create(
+	title: 'React',
+	copy: 'Keeping components<br>super clean and legit<br>since 2013.',
+	tag_line: 'Virtual<br>Domtastic',
+	img: 'techs_2025/react.png',
+	rating: 3
 )
