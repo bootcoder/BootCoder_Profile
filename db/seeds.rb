@@ -105,24 +105,24 @@ Tech.destroy_all
 #<Tech img: nil, title: nil, copy: nil, rating: nil, tag_line: nil>
 Tech.create(
 	title: 'Ruby',
-	tag_line: 'The Base',
-	copy: 'Rock solid foundation of<br>my personal coding journey',
+	tag_line: 'Home Base',
+	copy: 'Solid foundation of my coding journey',
 	img: 'techs_2025/ruby.png',
 	rating: 5
 )
 
 Tech.create(
 	title: 'React',
-	copy: 'Keeping components<br>super clean and legit<br>since 2013',
-	tag_line: 'Virtual<br>Domtastic',
+	tag_line: 'Virtual Domtastic',
+	copy: 'Keeping components super clean and legit since 2013',
 	img: 'techs_2025/react.png',
 	rating: 3
 )
 
 Tech.create(
 	title: 'Rails',
-	tag_line: "ol' GOAT API",
-	copy: 'Postgres & REST<br>This solid backend<br>gets it done',
+	tag_line: "Good ol' GOAT API",
+	copy: 'Postgres & REST This solid backend gets it done',
 	img: 'techs_2025/rails.png',
 	rating: 5
 )
@@ -130,23 +130,23 @@ Tech.create(
 Tech.create(
 	title: 'jQuery',
 	tag_line: "Wizz, Bang, HAZZA!",
-	copy: 'Look Mom,<br>I can do magic<br>things on the internet',
+	copy: 'Look Mom, I can do magic things on the internet',
 	img: 'techs_2025/jquery.png',
 	rating: 4
 )
 
 Tech.create(
 	title: 'Javascript',
-	tag_line: "Frameworks a Plenty",
-	copy: 'Practicing vanilla<br>JS will render<br>you agnostic',
+	tag_line: "A Framework a Day...",
+	copy: 'Vanilla JS skills render you agnostic',
 	img: 'techs_2025/javascript.png',
 	rating: 4
 )
 
 Tech.create(
 	title: 'Git',
-	tag_line: "Strong<br>Commit History",
-	copy: 'Should tell a story. Piece by tiny piece',
+	tag_line: "No Commitment Issues Here",
+	copy: 'History should tell a story. Piece by atomic piece',
 	img: 'techs_2025/git.png',
 	rating: 5
 )
@@ -154,135 +154,142 @@ Tech.create(
 Tech.create(
 	title: 'SASS',
 	tag_line: "Awesome Styles",
-	copy: 'Mixing in visual appeal<br>gets a lot easier<br>with variables',
+	copy: 'Mixing in visual appeal gets a lot easier with variables',
 	img: 'techs_2025/sass.png',
 	rating: 4
 )
 
 Tech.create(
 	title: 'Sinatra',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Don't rock the Bloat -Frank",
+	copy: 'Ruby is more than Rails. Simple, clean DSL',
 	img: 'techs_2025/sinatra.png',
 	rating: 5
 )
 
 Tech.create(
 	title: 'Agile / SCRUM',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Don't Go Chasing Waterfalls",
+	copy: 'Build → Ship → Iterate<br>This is the way',
 	img: 'techs_2025/agile.png',
 	rating: 5
 )
 Tech.create(
 	title: 'Next.js',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Making Lighthouse Wins",
+	copy: 'Finally a solid answer to \'What JS Framework comes Next?\'',
 	img: 'techs_2025/next_js.png',
-	rating: 5
+	rating: 3
 )
 Tech.create(
 	title: 'Sidekiq',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Batman had Robin",
+	copy: 'It\'s dangerous to go alone, bring a Sidekiq',
 	img: 'techs_2025/sidekiq.png',
 	rating: 5
 )
 Tech.create(
 	title: 'AWS',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "IAM Legend",
+	copy: 'EC2 / RDS / ECS / ECR / S3 / CF / VPC<br>No-one knows all the things',
 	img: 'techs_2025/aws.png',
-	rating: 5
+	rating: 3
 )
 Tech.create(
 	title: 'NGINX',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Speed, Scale, Security, Simplified",
+	copy: 'Server, R-Proxy, Load Balancer and Caching All in a single blazing fast package',
 	img: 'techs_2025/nginx.png',
 	rating: 5
 )
 Tech.create(
 	title: 'REST APIs',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Make CRUD Cool Again",
+	copy: 'A uniform interface a day Keeps the hackers at bay',
 	img: 'techs_2025/rest_api.png',
 	rating: 5
 )
 Tech.create(
 	title: 'Bash / Shell',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Jason Bourne Again",
+	copy: 'Solving life\'s little problems w/ proper Shell Scripts',
 	img: 'techs_2025/bash_shell.png',
-	rating: 5
+	rating: 3
 )
 Tech.create(
 	title: 'oAuth',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Awake feeling refresh_token",
+	copy: 'Can\'t auth via blood sample so... This is the next best thing',
 	img: 'techs_2025/oauth.png',
-	rating: 5
+	rating: 4
 )
 Tech.create(
 	title: 'RSpec',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Don\'t Mock my Stubby Spy",
+	copy: 'Refactoring code in a well tested green suite ... So Satisfying',
 	img: 'techs_2025/rspec.png',
-	rating: 5
+	rating: 4
 )
 Tech.create(
 	title: 'SSH',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "No Home Server,<br>No Problem",
+	copy: 'Remote access: The true \'keys\' to the castle',
 	img: 'techs_2025/ssh.png',
 	rating: 5
 )
 Tech.create(
 	title: 'CI / CD',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Ship it fast<br>Ship it good",
+	copy: 'Who has time to run the entire test suite locally at this point',
 	img: 'techs_2025/ci_cd.png',
-	rating: 5
+	rating: 4
 )
 Tech.create(
 	title: 'MarkDown',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Up Your Doc Game",
+	copy: 'Strong MD skills will pay super strong dividends for your team long term',
 	img: 'techs_2025/markdown.png',
 	rating: 5
 )
 Tech.create(
 	title: 'postgreSQL',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Relationships are easy",
+	copy: 'When the JOINs hit your eye like a WHERE GROUP_BY, that\'s Aurora',
 	img: 'techs_2025/postgresql.png',
-	rating: 5
+	rating: 3
 )
 Tech.create(
 	title: 'TypeScript',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "JavaScript that Scales w/ Confidence",
+	copy: 'Signuture Says: Modern JS Now w/ 100% less undefined',
 	img: 'techs_2025/typescript.png',
-	rating: 5
+	rating: 2
 )
 Tech.create(
 	title: 'Docker',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "It Work's on my Machine",
+	copy: 'Security Tip: Containers, Don\'t Contain',
 	img: 'techs_2025/docker.png',
-	rating: 5
+	rating: 3
 )
 Tech.create(
 	title: 'NewRelic',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "Insight Complexity meets Clarity",
+	copy: 'Built for uptime Optimized for excellence',
 	img: 'techs_2025/newrelic.png',
-	rating: 5
+	rating: 4
 )
 Tech.create(
 	title: 'VirtualBox',
-	tag_line: "Like Frank Said",
-	copy: 'Ruby is more than just Rails. Simple & clean, I has the hearts',
+	tag_line: "One Machine Every OS",
+	copy: 'When you absolutley, positivley must test something in Windows...',
 	img: 'techs_2025/virtual_box.png',
-	rating: 5
+	rating: 3
+)
+Tech.create(
+	title: 'Jira',
+	tag_line: "Tickets Please",
+	copy: 'Seriously though, Why Epics instead of Marathons?',
+	img: 'techs_2025/jira.png',
+	rating: 3
 )
