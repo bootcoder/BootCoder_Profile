@@ -9,9 +9,9 @@
       - techs.in_groups_of(4, false).each do |group|
         .row
           - group.each_with_index do |tech, idx|
-            .col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .mx-auto.col-xs-12.col-sm-6.col-md-3.col-lg-3
               .service-box.wow.bounceInUp.pad-5P-LR{"data-wow-delay" => "0.#{idx * 2 + 1}s"}
-                = image_tag(tech.img, :alt => tech.title, class: "image-responsive max-200")
+                = image_tag(tech.img, :alt => tech.title, class: "image-responsive")
                 %br
                 %h4.black.glow.text-center.tech-tag-line
                   = raw(tech.tag_line)

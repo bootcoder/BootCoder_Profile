@@ -129,7 +129,7 @@ Tech.create(
 
 Tech.create(
 	title: 'jQuery',
-	tag_line: "Wizz, Bang, HAZZA!",
+	tag_line: "Wizz, Bang<br>HAZZA!",
 	copy: 'Look Mom!<br>I can do sorta magical things on the internet',
 	img: 'techs_2025/jquery.png',
 	rating: 4
@@ -190,7 +190,7 @@ Tech.create(
 )
 Tech.create(
 	title: 'AWS',
-	tag_line: "IAM Legend",
+	tag_line: "IAM<br>Legend",
 	copy: 'EC2 / RDS / ECS / ECR / S3 / CF / VPC<br>No one knows it all',
 	img: 'techs_2025/aws.png',
 	rating: 3
@@ -302,7 +302,7 @@ Tech.create(
 )
 Tech.create(
 	title: 'Linux',
-	tag_line: "Do it yourself!",
+	tag_line: "Do it<br>yourself!",
 	copy: 'So many flavors<br>Gotta try em all',
 	img: 'techs_2025/linux.png',
 	rating: 3
