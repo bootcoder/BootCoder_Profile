@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="assets/htc.ico" type="image/x-icon">
     <link rel="icon" href="assets/htc.ico" type="image/x-icon">
   	<%= csrf_meta_tags %>
-    
+
 
     <!-- Google Analytics -->
     <script>
@@ -27,12 +27,12 @@
   </head>
 
   <body>
-    
-    
-    <%= yield %>
-    <%= render "layouts/footer" %>
+
+      <%= yield %>
+      <%= render 'layouts/bs_bugger' %>
+      <%= render "layouts/footer" %>
 
   </body>
 
- 
+
 </html>
