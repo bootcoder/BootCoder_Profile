@@ -1235,13 +1235,24 @@ img {
     margin: 0;
   }
 
-  html {
+  #tech-list {
     block-size: 100%;
     color-scheme: dark light;
   }
 
-  body {
+  #tech-list {
     min-block-size: 400vh;
     font-family: system-ui, sans-serif;
   }
+}
+
+.scrollable {
+		/* For Webkit browsers (Chrome, Safari) */
+		scrollbar-width: none; /* Hide scrollbar in Firefox */
+		-ms-overflow-style: none;  /* Hide scrollbar in IE/Edge */
+		max-height: 500px;
+}
+
+.scrollable::-webkit-scrollbar {
+		display: none; /* Hide scrollbar in Webkit */
 }
