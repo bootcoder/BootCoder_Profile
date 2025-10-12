@@ -1,0 +1,13 @@
+.bg-site
+  %section#services.home-section
+    .container
+      .row
+        .mx-auto.d-block.col-md-8
+          .section-heading
+            %h2.black.glow The Stack
+            %p.black.glow In all my life I've never seen a list I was so sure would be growing...Quickly
+      .row
+        #tech-list.stuck-grid
+          - techs.each_with_index do |tech, idx|
+            .grid-item
+              = image_tag(tech.img, :alt => tech.title, class: "image-responsive")
