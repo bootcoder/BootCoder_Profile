@@ -13,7 +13,7 @@
               .col-xs-12.col-sm-6.col-md-3.col-lg-3
                 .tech-container.pad-5P-LR
                   = image_tag(tech.img, :alt => tech.title, id: "tech-img-#{oidx}#{idx}", class: "tech-item tech-img image-responsive")
-                  .tech-item.tech-tip.d-none{ id: "tech-tip-#{oidx}#{idx}" }
+                  .tech-item.tech-tip{ id: "tech-tip-#{oidx}#{idx}" }
                     %br
                     %h4.black.glow.text-center.tech-tag-line
                       = raw(tech.tag_line)

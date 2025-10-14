@@ -45,7 +45,7 @@ $(document).ready(function(){
       var techImg = $(`#tech-img-${techId}`);
 
       techImg.addClass('tech-img-shrunken')
-      techTip.removeClass('d-none');
+      techTip.addClass('tech-tip-enlarged');
     },
 
     function(){
@@ -53,7 +53,7 @@ $(document).ready(function(){
       var techTip = $(`#tech-tip-${techId}`);
       var techImg = $(`#tech-img-${techId}`);
 
-      techTip.addClass('d-none');
+      techTip.removeClass('tech-tip-enlarged');
       techImg.removeClass('tech-img-shrunken')
     }
   )

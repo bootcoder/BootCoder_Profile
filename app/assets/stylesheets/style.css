@@ -596,7 +596,6 @@ x:-o-prefocus, .lb-overlay img {
 Techs
 ================================= */
 .tech-container {
-	background-color: cyan;
 	height: 300px;
 }
 
@@ -608,7 +607,13 @@ Techs
 .tech-tip {
 	top: 0;
 	z-index: 100;
-	background-image: radial-gradient(circle at 50% 50%, rgba(32, 150, 158, 1) 0%, rgba(22, 161, 179, 1) 34%, rgba(190, 190, 190, 0) 82%);
+	opacity: 0.0;
+	transition: opacity 0.75s;
+	/* background-image: radial-gradient(circle at 50% 50%, rgba(32, 150, 158, 1) 0%, rgba(22, 161, 179, 1) 34%, rgba(190, 190, 190, 0) 82%); */
+}
+
+.tech-tip-enlarged {
+	opacity: 1.0;
 }
 
 .tech-tag-line {
@@ -623,16 +628,15 @@ Techs
 		margin: 0
 }
 
-
 .tech-img {
 	top: 0;
 	left: 0;
 	z-index: 90;
-	transition: transform 1.5s ease-in-out;
+	transition: transform 0.75s ease-in-out;
 }
 
 .tech-img-shrunken {
-	transform: scale(0.85);
+	transform: scale(0.0);
   background-size: 80%;
   background-position: 50% 100%;
   background-repeat: no-repeat;
