@@ -284,21 +284,21 @@ Tech.create(
 	tag_line: "One Machine Every OS",
 	copy: 'When you absolutley, positivley must test Windows...',
 	img: 'techs_2025/virtual_box.png',
-	rating: 3
+	rating: 2
 )
 Tech.create(
 	title: 'Jira',
 	tag_line: "Tickets Please",
 	copy: 'Seriously, Why Epics instead of Marathons...?',
 	img: 'techs_2025/jira.png',
-	rating: 3
+	rating: 4
 )
 Tech.create(
 	title: 'Python',
 	tag_line: "Everything\'s Zen",
 	copy: 'First Impression:<br>Whitespace enforced Ruby... I\'m in love',
 	img: 'techs_2025/python.png',
-	rating: 3
+	rating: 2
 )
 Tech.create(
 	title: 'Linux',

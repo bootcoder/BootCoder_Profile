@@ -11,11 +11,16 @@
           .row
             - group.each_with_index do |tech, idx|
               .col-xs-12.col-sm-6.col-md-3.col-lg-3
-                .tech-container.pad-5P-LR
+                .tech-container
                   = image_tag(tech.img, :alt => tech.title, id: "tech-img-#{oidx}#{idx}", class: "tech-item tech-img image-responsive")
                   .tech-item.tech-tip{ id: "tech-tip-#{oidx}#{idx}" }
                     %br
                     %h4.black.glow.text-center.tech-tag-line
                       = raw(tech.tag_line)
+                    .star-rating
+                      %p.black.glow
+                        Skill Rating:
+                        - 5.times do |i|
+                          %span{class: (i < tech.rating) ? 'fa fa-star gold-star' : 'fa fa-star white-star'}
                     %p.black.glow.d-none.d-md-block
                       = raw(tech.copy)
