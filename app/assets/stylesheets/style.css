@@ -725,18 +725,19 @@ Contact
 Bottom widget
 ================================= */
 ul.social-network {
-	margin: 0;
-	margin-left:0;
-	padding-left: 0;
 	list-style: none;
 }
+
 ul.social-network li {
 	display: inline;
-	margin: 5px 5px;
+}
+
+ul.social-network li a:hover {
+	color: #01a0b5;
 }
 
 ul.social-network li a:hover span .fa-circle {
-	color: #2b2b2b;
+	color: #757272;
 }
 
 /* ================================
