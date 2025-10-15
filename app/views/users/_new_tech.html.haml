@@ -13,7 +13,7 @@
               .tech-container
                 = image_tag(tech.img, :alt => tech.title, id: "tech-img-#{oidx}#{idx}", class: "tech-item tech-img img-fluid")
                 .tech-item.tech-tip{ id: "tech-tip-#{oidx}#{idx}" }
-                  .h4.black.glow.tech-tag-line
+                  .h4.black.glow
                     = raw(tech.title)
                   .star-rating.pad-5P-up
                     .black.glow

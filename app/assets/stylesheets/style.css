@@ -666,15 +666,21 @@ Techs
 @media (max-width: 768px) {
 	.tech-container {
 		height: 100px;
+		padding-right: 50%;
 	}
 
 	.tech-img {
 		max-height: 100px;
 	}
+
 	.tech-tip {
 		opacity: 1.0;
 		left: 35%;
 		top: 15%;
+	}
+
+	.white h2 {
+		color: white;
 	}
 }
 
