@@ -1,26 +1,26 @@
 .bg-site
-  %section#services.home-section
-    .container
-      .row
-        .mx-auto.d-block.col-md-8
-          .section-heading
-            %h2.black.glow The Stack
-            %p.black.glow In all my life I've never seen a list I was so sure would be growing...Quickly
-      .scrollable.overflow-auto
-        - techs.in_groups_of(4, false).each_with_index do |group, oidx|
-          .row
-            - group.each_with_index do |tech, idx|
-              .col-xs-12.col-sm-6.col-md-3.col-lg-3
-                .tech-container
-                  = image_tag(tech.img, :alt => tech.title, id: "tech-img-#{oidx}#{idx}", class: "tech-item tech-img image-responsive")
-                  .tech-item.tech-tip{ id: "tech-tip-#{oidx}#{idx}" }
-                    %br
-                    %h4.black.glow.text-center.tech-tag-line
-                      = raw(tech.tag_line)
-                    .star-rating
-                      %p.black.glow
-                        Skill Rating:
-                        - 5.times do |i|
-                          %span{class: (i < tech.rating) ? 'fa fa-star gold-star' : 'fa fa-star white-star'}
-                    %p.black.glow.d-none.d-md-block
-                      = raw(tech.copy)
+  %section#services.home-section.container
+    .row
+      .mx-auto.d-block.col-md-8
+        .section-heading
+          %h2.black.glow The Stack
+          %p.black.glow In all my life I've never seen a list I was so sure would be growing...Quickly
+    .container.scrollable.overflow-auto
+      - techs.in_groups_of(4, false).each_with_index do |group, oidx|
+        .row
+          - group.each_with_index do |tech, idx|
+            .container.col-xs-6.col-sm-6.col-md-3.col-lg-3
+              .tech-container
+                = image_tag(tech.img, :alt => tech.title, id: "tech-img-#{oidx}#{idx}", class: "tech-item tech-img image-responsive")
+                .tech-item.tech-tip{ id: "tech-tip-#{oidx}#{idx}" }
+                  .h4.black.glow.tech-tag-line
+                    = raw(tech.title)
+                  .star-rating.pad-5P-up
+                    .black.glow
+                      XP:
+                      - 5.times do |i|
+                        %span{class: (i < tech.rating) ? 'fa fa-star gold-star' : 'fa fa-star white-star'}
+                  .h5.tech-tag-line.d-none.d-md-block
+                    = raw(tech.tag_line)
+                  %p.tech-copy.d-none.d-lg-block
+                    = raw(tech.copy)

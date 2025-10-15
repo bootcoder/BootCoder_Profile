@@ -595,19 +595,41 @@ x:-o-prefocus, .lb-overlay img {
 /* ================================
 Techs
 ================================= */
+
 .tech-container {
+	position: relative;
 	height: 300px;
+	/* background-color: cyan; */
 }
 
+/* Mobile screens */
+/* @media (max-width: 768px) {
+	.tech-container {
+		height: 120px;
+	}
+} */
+
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+	.tech-container {
+		height: 150px;
+		font-size: 65%;
+	}
+}
+
+
 .tech-item {
-	/* top: 0;
-	left: 0; */
-	position: absolute;
+	font-size: 80%;
+	/* background-color: green; */
 }
 
 .tech-tip {
+	/* background-color: white; */
+	position: absolute;
 	top: 0;
-	width: 250px;
+	left: 0;
+	width: 100%;
 	z-index: 100;
 	opacity: 0.0;
 	transition: opacity 0.75s;
@@ -615,24 +637,26 @@ Techs
 
 .tech-tip-enlarged {
 	opacity: 1.0;
-	/* background-image: radial-gradient(circle at 50% 50%, rgba(32, 150, 158, 1) 0%, rgba(22, 161, 179, 1) 34%, rgba(190, 190, 190, 0) 82%); */
 }
 
 .tech-tag-line {
-	/* min-height: 55px; */
+	font-style: italic;
+}
+
+.tech-copy {
+	color: black;
 }
 
 .tech-tag-line hr {
-   border: none;
-		height: 2px;
-		color: #c80b0b;  /* old IE */
-		background-color: #b00909;  /* Modern Browsers */
-		/* margin: 0 */
+	border: none;
+	height: 2px;
+	margin: 0;
+	color: #c80b0b;  /* old IE */
+	background-color: #b00909;  /* Modern Browsers */
 }
 
 .tech-img {
-	top: 0;
-	left: 0;
+	/* background-color: red; */
 	z-index: 90;
 	transition: transform 0.75s ease-in-out;
 }
@@ -661,11 +685,6 @@ Projects
 	height: auto;
 } */
 
-@media (max-width: 768px) {
-	.owl-carousel .owl-item {
-		/* margin: 5px; */
-		min-width: 200px;
-	}
 	/* .project-item img {
 	width: 100%;
 	height: auto;
@@ -741,6 +760,9 @@ more media queries
 	}
 	.box-team {
 		margin-bottom: 30px;
+	}
+	.tech-item {
+		max-width: 90%;
 	}
 }
 
@@ -841,7 +863,6 @@ more media queries
 .black {
 	color: black;
 	text-shadow: 0px 1px 2px #666;
-
 }
 
 .red {
@@ -1096,10 +1117,12 @@ img {
 }
 
 .scrollable {
-		/* For Webkit browsers (Chrome, Safari) */
-		scrollbar-width: none; /* Hide scrollbar in Firefox */
-		-ms-overflow-style: none;  /* Hide scrollbar in IE/Edge */
-		max-height: 500px;
+	height: 500px;
+	width: 100%;
+	/* For Webkit browsers (Chrome, Safari) */
+	scrollbar-width: none; /* Hide scrollbar in Firefox */
+	-ms-overflow-style: none;  /* Hide scrollbar in IE/Edge */
+	max-height: 500px;
 }
 
 .scrollable::-webkit-scrollbar {

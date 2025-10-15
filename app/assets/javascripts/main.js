@@ -40,18 +40,18 @@ $(document).ready(function(){
 
   $('.tech-item').hover(
     function(){
-      var techId = this.id.split('-').at(-1);
-      var techTip = $(`#tech-tip-${techId}`);
-      var techImg = $(`#tech-img-${techId}`);
+      let techId = this.id.split('-').at(-1);
+      let techTip = $(`#tech-tip-${techId}`);
+      let techImg = $(`#tech-img-${techId}`);
 
       techImg.addClass('tech-img-shrunken')
       techTip.addClass('tech-tip-enlarged');
     },
 
     function(){
-      var techId = this.id.split('-').at(-1);
-      var techTip = $(`#tech-tip-${techId}`);
-      var techImg = $(`#tech-img-${techId}`);
+      let techId = this.id.split('-').at(-1);
+      let techTip = $(`#tech-tip-${techId}`);
+      let techImg = $(`#tech-img-${techId}`);
 
       techTip.removeClass('tech-tip-enlarged');
       techImg.removeClass('tech-img-shrunken')
