@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   end
 
   def resume
+    User.
     eap
     p params
   end
