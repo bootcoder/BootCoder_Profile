@@ -1,0 +1,21 @@
+= render partial: "layouts/sub_header"
+
+%h4.glow.white
+  Access Restriction: Human's Only
+%h4.glow.white
+  Apologies for the delay
+
+.container
+  .img-container
+    = image_tag 'no_bots.png', alt: 'no_bots_allowed', class: 'img-fluid centered curved-5'
+
+  %p.white
+    Access to personal information requires minimal verification
+  = form_tag '/resume' do
+    = label_tag(:soundcloud_url, "Please enter a valid email address to access:")
+    = text_field_tag(:soundcloud_url)
+    -# .w-50.mx-auto.p-3
+    .h-100.d-flex.align-items-center.justify-content-center
+      = recaptcha_tags
+    = button_tag(type: "submit", class: "btn btn-info") do
+      Give Resume NOW!

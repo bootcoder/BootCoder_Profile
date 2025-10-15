@@ -16,6 +16,12 @@ class UsersController < ApplicationController
   def gallery
   end
 
+  def resume_recaptcha
+  end
+
+  def resume
+  end
+
 
   # GET /users/new
   def new
