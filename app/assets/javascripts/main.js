@@ -70,6 +70,7 @@ $(document).ready(function(){
     // $('.mobile-js').addClass('max-75P')
     $('.mobile-js').addClass('pad-5')
     $('.mobile-js').addClass('white')
+    $('.gallery').removeClass('bg-site')
 
   }
 

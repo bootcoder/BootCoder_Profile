@@ -1006,14 +1006,29 @@ more media queries
 	width: 100%;
 }
 
-.height1000 {
+.gallery-bg {
+  min-height: 100vh; /* fills full viewport height */
+  background: url('bg-bw.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Mobile-friendly fallback */
+@media (max-width: 768px) {
+  .gallery-bg {
+    background: url('mac-spacer.jpg') no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* .gallery-bg {
 	min-height: 1000px;
   background: url(bg-bw.gif	) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 .col-centered {
 	float: none;
