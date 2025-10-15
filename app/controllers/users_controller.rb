@@ -20,15 +20,20 @@ class UsersController < ApplicationController
   end
 
   def resume
-    eap
-    p params
     email_param = resume_params[:request_email]
-    eap email_param
     @user = User.find_or_initialize_by(email: email_param)
+    @user.source = 'resume' unless @user.persisted?
+
     if verify_recaptcha(model: @user) && @user.save
-      redirect_to I18n.t('resume_link')
+      require 'open-uri'
+      URI.open(I18n.t('resume_link')) {|pdf|
+        tmpfile = Tempfile.new("tmp.pdf")
+        File.open(tmpfile.path, 'wb') { |f| f.write(pdf.read) }
+        send_file(tmpfile.path, :filename => "non_standard_resume_hunter_chapman.pdf")
+      }
+      redirect_to(root_path)
     else
-      render
+      render(file: "public/412.html", layout: false)
     end
   end
 
