@@ -684,6 +684,17 @@ Techs
 	}
 }
 
+/* ================================
+Resume / Recaptcha
+================================= */
+.verification-container {
+	outline: 1px solid gray;
+}
+
+.recaptcha-form-height {
+	height: 110px;
+}
+
 
 /* ================================
 Projects
@@ -855,6 +866,13 @@ more media queries
 
 .curved-5 {
 	width: 20%;
+	-moz-border-radius: 1em 4em 1em 4em;
+	border-radius: 1em 4em 1em 4em;
+}
+
+.curved-6 {
+	width: 50%;
+	outline: 2px solid gray;
 	-moz-border-radius: 1em 4em 1em 4em;
 	border-radius: 1em 4em 1em 4em;
 }
