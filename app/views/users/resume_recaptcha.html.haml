@@ -5,19 +5,24 @@
 %h4.glow.white
   Access Restricted: Human's Only
 
+%h4.glow.white
+  Apologies for the delay. Personal data requires minimal verification
+
 .container
   .img-container
     = image_tag 'no_bots.png', alt: 'no_bots_allowed', class: 'img-fluid centered curved-5'
 
-  %p.white
-    Access to personal information requires minimal verification
   = form_tag '/resume' do
-    .glow
-      = label_tag(:request_email, "Please enter a valid email address to access:")
-      = text_field_tag(:request_email)
-    .h-100.d-flex.align-items-center.justify-content-center.pad-5
-      = recaptcha_tags
+    .verification-container
+      .glow
+        = label_tag(:request_email, "Step 1: Please enter a valid email address:")
+        = text_field_tag(:request_email)
+      .h-100.d-flex.align-items-center.justify-content-center.pad-5
+        .glow.pad-5
+          = label_tag(:recaptcha_copy, "Step 2: Verify humanity via reCaptcha")
+        = recaptcha_tags
     = button_tag(type: "submit", class: "btn btn-info") do
       Give Resume NOW!
-%h4.glow.white
-  Apologies for the delay
+
+- space_rand = rand(1..5)
+= render partial: "spacer#{space_rand}"
