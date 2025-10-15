@@ -684,6 +684,17 @@ Techs
 	}
 }
 
+/* ================================
+Resume / Recaptcha
+================================= */
+.verification-container {
+	outline: 1px solid gray;
+}
+
+.recaptcha-form-height {
+	height: 110px;
+}
+
 
 /* ================================
 Projects
@@ -714,18 +725,19 @@ Contact
 Bottom widget
 ================================= */
 ul.social-network {
-	margin: 0;
-	margin-left:0;
-	padding-left: 0;
 	list-style: none;
 }
+
 ul.social-network li {
 	display: inline;
-	margin: 5px 5px;
+}
+
+ul.social-network li a:hover {
+	color: #01a0b5;
 }
 
 ul.social-network li a:hover span .fa-circle {
-	color: #2b2b2b;
+	color: #757272;
 }
 
 /* ================================
@@ -859,6 +871,13 @@ more media queries
 	border-radius: 1em 4em 1em 4em;
 }
 
+.curved-6 {
+	width: 50%;
+	outline: 2px solid gray;
+	-moz-border-radius: 1em 4em 1em 4em;
+	border-radius: 1em 4em 1em 4em;
+}
+
 .bg-black-border {
 	border: 2px solid black;
 }
@@ -988,14 +1007,29 @@ more media queries
 	width: 100%;
 }
 
-.height1000 {
+.gallery-bg {
+  min-height: 100vh; /* fills full viewport height */
+  background: url('bg-bw.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Mobile-friendly fallback */
+@media (max-width: 768px) {
+  .gallery-bg {
+    background: url('mac-spacer.jpg') no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* .gallery-bg {
 	min-height: 1000px;
   background: url(bg-bw.gif	) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 .col-centered {
 	float: none;
