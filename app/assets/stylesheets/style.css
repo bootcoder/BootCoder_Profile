@@ -1,6 +1,6 @@
-* {
+/* * {
 	outline: 1px solid blue;
-}
+} */
 /* ================================
 Imports
 ================================= */
@@ -9,8 +9,6 @@ Imports
 @import url('overwrite.css');
 @import url('dlmenu.css');
 @import url('animate.css');
-@import url('owl.carousel.css');
-@import url('owl.theme.css');
 
 /* ================================
 General
@@ -602,14 +600,6 @@ Techs
 	/* background-color: cyan; */
 }
 
-/* Mobile screens */
-/* @media (max-width: 768px) {
-	.tech-container {
-		height: 120px;
-	}
-} */
-
-
 /* Tablet screens */
 @media (max-width: 1024px) {
 	.tech-container {
@@ -618,6 +608,12 @@ Techs
 	}
 }
 
+/* Mobile screens */
+@media (max-width: 768px) {
+	.tech-container {
+		height: 100px;
+	}
+}
 
 .tech-item {
 	font-size: 80%;

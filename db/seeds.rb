@@ -121,8 +121,8 @@ Tech.create(
 
 Tech.create(
 	title: 'Rails',
-	tag_line: "Convention<hr>configuration",
-	copy: 'G.O.A.T. API<br>This backend gets it done',
+	tag_line: "Convention<hr>Configuration",
+	copy: 'The G.O.A.T. API<br>This backend gets it done',
 	img: 'techs_2025/rails.png',
 	rating: 5
 )
@@ -145,7 +145,7 @@ Tech.create(
 
 Tech.create(
 	title: 'Git',
-	tag_line: "No Commitment Issues Here",
+	tag_line: "No Commitment Issues",
 	copy: 'History tells a tale.<br>Piece by piece',
 	img: 'techs_2025/git.png',
 	rating: 5
@@ -161,7 +161,7 @@ Tech.create(
 
 Tech.create(
 	title: 'Sinatra',
-	tag_line: "Don't rock the Bloat -Frank",
+	tag_line: "Don't rock the Bloat<br>-Frank",
 	copy: 'Ruby !== Rails<br>Simple, clean DSL',
 	img: 'techs_2025/sinatra.png',
 	rating: 5
@@ -169,7 +169,7 @@ Tech.create(
 
 Tech.create(
 	title: 'Agile / SCRUM',
-	tag_line: "Not Chasing Waterfalls",
+	tag_line: "Don't Go<br>Chasing Waterfalls",
 	copy: 'Build → Ship →<br>Review → Iterate<br>This is the way',
 	img: 'techs_2025/agile.png',
 	rating: 5
@@ -177,7 +177,7 @@ Tech.create(
 Tech.create(
 	title: 'Next.js',
 	tag_line: "Prod Ready React",
-	copy: 'Age old question:<br>What JS Framework comes Next?',
+	copy: 'Final Answer to...<br>What framework comes Next?',
 	img: 'techs_2025/next_js.png',
 	rating: 3
 )
@@ -191,7 +191,7 @@ Tech.create(
 Tech.create(
 	title: 'AWS',
 	tag_line: "IAM<br>Legend",
-	copy: 'EC2 / RDS / ECS / ECR / S3 / CF / VPC<br>No one knows it all',
+	copy: 'EC2 / RDS / ECS / ECR / S3 / CF / VPC / AMIs<br>No one knows it all',
 	img: 'techs_2025/aws.png',
 	rating: 3
 )
@@ -218,8 +218,8 @@ Tech.create(
 )
 Tech.create(
 	title: 'oAuth',
-	tag_line: "Awake feeling refresh_token",
-	copy: 'Can\'t auth via blood marker just yet so...<br>Next best thing',
+	tag_line: "You awake feeling<br>refresh_token",
+	copy: 'Can\'t auth via blood sample just yet so... Next best thing',
 	img: 'techs_2025/oauth.png',
 	rating: 4
 )
@@ -260,7 +260,7 @@ Tech.create(
 )
 Tech.create(
 	title: 'TypeScript',
-	tag_line: "JS that Scales w/ Confidence",
+	tag_line: "JS that Scales<br>with Confidence",
 	copy: 'Modern JS: Now with 100% less undefined',
 	img: 'techs_2025/typescript.png',
 	rating: 2
@@ -268,20 +268,20 @@ Tech.create(
 Tech.create(
 	title: 'Docker',
 	tag_line: "It Work's on my Machine",
-	copy: 'Security Tip: Containers, Don\'t Contain',
+	copy: 'Security Tip:<br>Containers. Don\'t Contain',
 	img: 'techs_2025/docker.png',
 	rating: 3
 )
 Tech.create(
 	title: 'NewRelic',
 	tag_line: "Complexity meets Clarity",
-	copy: 'Built for uptime Optimized for excellence',
+	copy: 'Built for uptime<br>Optimized for excellence',
 	img: 'techs_2025/newrelic.png',
 	rating: 4
 )
 Tech.create(
 	title: 'VirtualBox',
-	tag_line: "One Machine Every OS",
+	tag_line: "One Machine - Every OS",
 	copy: 'When you absolutley, positivley must test Windows...',
 	img: 'techs_2025/virtual_box.png',
 	rating: 2
@@ -296,13 +296,13 @@ Tech.create(
 Tech.create(
 	title: 'Python',
 	tag_line: "Everything\'s Zen",
-	copy: 'First Impression:<br>Whitespace enforced Ruby... I\'m in love',
+	copy: 'First Impression:<br>Whitespace sensitive Ruby... I\'m in love',
 	img: 'techs_2025/python.png',
 	rating: 2
 )
 Tech.create(
 	title: 'Linux',
-	tag_line: "Do it<br>yourself!",
+	tag_line: "Do It Yourself!",
 	copy: 'So many flavors<br>Gotta try em all',
 	img: 'techs_2025/linux.png',
 	rating: 3
