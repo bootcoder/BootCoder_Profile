@@ -1,9 +1,11 @@
 = render partial: "layouts/sub_header"
 
-%h4.glow.white
-  Access Restriction: Human's Only
+%h2.glow.white
+  GET/Resume
 %h4.glow.white
   Apologies for the delay
+%h4.glow.white
+  Access Restricted: Human's Only
 
 .container
   .img-container
@@ -12,10 +14,10 @@
   %p.white
     Access to personal information requires minimal verification
   = form_tag '/resume' do
-    = label_tag(:soundcloud_url, "Please enter a valid email address to access:")
-    = text_field_tag(:soundcloud_url)
-    -# .w-50.mx-auto.p-3
-    .h-100.d-flex.align-items-center.justify-content-center
+    .glow
+      = label_tag(:request_email, "Please enter a valid email address to access:")
+      = text_field_tag(:request_email)
+    .h-100.d-flex.align-items-center.justify-content-center.pad-5
       = recaptcha_tags
     = button_tag(type: "submit", class: "btn btn-info") do
       Give Resume NOW!
