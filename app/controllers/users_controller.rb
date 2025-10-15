@@ -20,9 +20,16 @@ class UsersController < ApplicationController
   end
 
   def resume
-    User.
     eap
     p params
+    email_param = resume_params[:request_email]
+    eap email_param
+    @user = User.find_or_initialize_by(email: email_param)
+    if verify_recaptcha(model: @user) && @user.save
+      redirect_to I18n.t('resume_link')
+    else
+      render
+    end
   end
 
 
@@ -84,5 +91,9 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       # params.require(:user).permit(:username, :password, :user_avatar, :user_admin)
+    end
+
+    def resume_params
+      params.permit(:request_email, 'g-recaptcha-response')
     end
 end

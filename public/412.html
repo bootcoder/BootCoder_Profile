@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>412 Precondition Failed — BootCoder.net</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #eaeaea;
+      --muted: #b0b0b0;
+      --accent: #7cfcff; /* aqua */
+      --accent2: #ff5f9e; /* pink */
+      --maxw: 56rem;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+                   Roboto, Helvetica, Arial, "Apple Color Emoji",
+                   "Segoe UI Emoji", "Segoe UI Symbol";
+      line-height: 1.6;
+    }
+
+    /* Layout */
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(2px);
+    }
+
+    .header-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    header a {
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: baseline;
+      transition: text-shadow 200ms ease;
+    }
+
+    header a:hover,
+    header a:focus {
+      text-shadow: 0 0 10px var(--accent);
+      outline: none;
+    }
+
+    main {
+      display: grid;
+      place-items: center;
+      padding: 3.5rem 1.25rem 2rem;
+    }
+
+    .card {
+      max-width: var(--maxw);
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .link {
+      color: gainsboro;
+    }
+
+    .mag {
+      color: magenta;
+    }
+
+    .status {
+      display: inline-block;
+      font-size: clamp(1rem, 1.4vw + .8rem, 1.1rem);
+      padding: 0.35rem 0.6rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px;
+      color: var(--muted);
+      user-select: none;
+    }
+
+    .title {
+      margin: 0.9rem 0 1.2rem;
+      font-size: clamp(1.6rem, 3.4vw + 1rem, 2.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      text-wrap: balance;
+      text-shadow:
+        0 0 12px rgba(124, 252, 255, 0.25),
+        0 0 24px rgba(255, 95, 158, 0.15);
+      animation: glow 6s ease-in-out infinite alternate;
+    }
+
+    .desc {
+      margin: 0 auto 1.75rem;
+      max-width: 48rem;
+      font-size: clamp(1rem, 0.7vw + 0.9rem, 1.125rem);
+      color: var(--muted);
+      text-wrap: pretty;
+    }
+
+    /* Image + fun effects */
+    .img-wrap {
+      display: grid;
+      place-items: center;
+      margin: 1.25rem auto 1.75rem;
+      perspective: 1000px;
+    }
+
+    .image {
+      width: min(420px, 80vw);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 10px 24px rgba(124, 252, 255, 0.22))
+              drop-shadow(0 0 6px rgba(255, 95, 158, 0.18));
+      transform-style: preserve-3d;
+      animation: float 8s ease-in-out infinite;
+      transition: transform 350ms ease, filter 250ms ease;
+    }
+
+    .image:hover {
+      transform: translateZ(12px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+      filter:
+        drop-shadow(0 18px 42px rgba(124, 252, 255, 0.32))
+        drop-shadow(0 0 14px rgba(255, 95, 158, 0.30));
+    }
+
+    /* CTA link back home (optional but handy) */
+    .actions {
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 0.95rem;
+      border-radius: 0.6rem;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: var(--fg);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 140ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      box-shadow:
+        0 0 0 rgba(124, 252, 255, 0),
+        inset 0 0 0 rgba(255, 95, 158, 0);
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: translateY(-1px);
+      border-color: rgba(124, 252, 255, 0.6);
+      box-shadow:
+        0 10px 28px rgba(124, 252, 255, 0.15),
+        inset 0 0 20px rgba(255, 95, 158, 0.15);
+      outline: none;
+    }
+
+    footer {
+      color: #777;
+      font-size: 0.875rem;
+      padding: 2rem 1rem 2.25rem;
+      text-align: center;
+    }
+
+    /* Keyframes */
+    @keyframes float {
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow:
+          0 0 10px rgba(124, 252, 255, 0.18),
+          0 0 20px rgba(255, 95, 158, 0.10);
+      }
+      100% {
+        text-shadow:
+          0 0 20px rgba(124, 252, 255, 0.35),
+          0 0 38px rgba(255, 95, 158, 0.25);
+      }
+    }
+
+    /* Respect users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .image { animation: none; }
+      .title { animation: none; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header aria-label="Site">
+      <div class="header-inner">
+        <a href="https://bootcoder.net" rel="noopener">
+          <span>BootCoder.net</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" aria-labelledby="status-title">
+        <span class="status">HTTP 412 • Precondition Failed</span>
+        <h1 id="status-title" class="title">Request preconditions weren’t met.</h1>
+
+        <div class="img-wrap">
+          <!-- Image is expected in the same folder as this HTML file -->
+          <img class="image" src="412.jpg" alt="412 Precondition Failed" />
+          <p>Image courtesy of <a class='link' href="https://twitter.com/mikeleeorg">@mikeleeorg</a> over at <a class='link' href="https://httpstatusdogs.com">HTTP Status Dogs</a></p>
+        </div>
+
+        <p class="desc">
+          Server couldn’t process the request because one or more preconditions
+          evaluated to <em>false</em>. (Example: Google <code class="mag">reCaptcha validation</code> failed)
+          <br>Refresh, update your conditional headers, or try again later.
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="https://bootcoder.net">Go to homepage</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; <span id="year"></span> BootCoder.net</small>
+    </footer>
+  </div>
+
+  <script>
+    // Keep it static-friendly: tiny enhancement for the year.
+    (function () {
+      try {
+        document.getElementById('year').textContent = new Date().getFullYear();
+      } catch (_) {}
+    })();
+  </script>
+</body>
+</html>
