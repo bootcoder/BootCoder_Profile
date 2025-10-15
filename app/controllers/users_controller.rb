@@ -21,6 +21,8 @@ class UsersController < ApplicationController
 
   def resume
     email_param = resume_params[:request_email]
+    Rails.logger.info("Resume Requested: Email: #{email_param}")
+
     @user = User.find_or_initialize_by(email: email_param)
     @user.source = 'resume' unless @user.persisted?
 
@@ -36,7 +38,6 @@ class UsersController < ApplicationController
       render(file: "public/412.html", layout: false)
     end
   end
-
 
   # GET /users/new
   def new

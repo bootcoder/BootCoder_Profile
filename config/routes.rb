@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :projects
 
   get 'gallery', to: 'users#gallery'
-  get 'resume', to: 'users#resume_recaptcha'
+  get 'resume', to: 'users#resume_recaptcha', as: :resume
   post 'resume', to: 'users#resume'
 
   # The priority is based upon order of creation: first created -> highest priority.

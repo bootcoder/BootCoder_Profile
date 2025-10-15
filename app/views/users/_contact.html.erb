@@ -10,7 +10,7 @@
       <div class="form-group">
         <%= form_for Post.new do |f| %>
         <div class="mx-auto d-block col-md-8 field container-fluid wide pad-1">
-        <p><%= link_to("Resume", t('resume_link'), target: :blank) %>, or just drop me a line below</p>
+        <p><%= link_to("Resume", resume_path) %>, or just drop me a line below</p>
         <%= f.text_field :name, placeholder: "Name:", class: "form-control text-left col-md-8  container-search teal" %>
         </div>
         <br>
