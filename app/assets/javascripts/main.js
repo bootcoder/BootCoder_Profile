@@ -60,13 +60,17 @@ $(document).ready(function(){
 
 
   if ( $(window).width() < 1023 ) {
-    $('.bg-space').removeClass('bg-space black')
+    // $('.bg-space').removeClass('bg-space black')
     $('.bg-space').addClass('gray')
     $('.box-team').removeClass('wow')
     $('.service-box').removeClass('wow')
     $('.mobile-js').removeClass('max-400')
     $('.mobile-js').removeClass('max-500')
-    $('.mobile-js').addClass('max-90P')
+    // $('.mobile-js').addClass('max-90P')
+    // $('.mobile-js').addClass('max-75P')
+    $('.mobile-js').addClass('pad-5')
+    $('.mobile-js').addClass('white')
+
   }
 
 });

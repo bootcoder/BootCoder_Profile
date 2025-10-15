@@ -600,21 +600,6 @@ Techs
 	/* background-color: cyan; */
 }
 
-/* Tablet screens */
-@media (max-width: 1024px) {
-	.tech-container {
-		height: 150px;
-		font-size: 65%;
-	}
-}
-
-/* Mobile screens */
-@media (max-width: 768px) {
-	.tech-container {
-		height: 100px;
-	}
-}
-
 .tech-item {
 	font-size: 80%;
 	/* background-color: green; */
@@ -667,6 +652,30 @@ Techs
 
 .white-star {
 	color: white;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+	.tech-container {
+		height: 150px;
+		font-size: 65%;
+	}
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+	.tech-container {
+		height: 100px;
+	}
+
+	.tech-img {
+		max-height: 100px;
+	}
+	.tech-tip {
+		opacity: 1.0;
+		left: 35%;
+		top: 15%;
+	}
 }
 
 

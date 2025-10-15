@@ -130,7 +130,7 @@ Tech.create(
 Tech.create(
 	title: 'jQuery',
 	tag_line: "Wizz, Bang<br>HAZZA!",
-	copy: 'Look Mom!<br>I can do sorta magical things on the internet',
+	copy: 'Look Mom! I can do sorta magical things on the internet',
 	img: 'techs_2025/jquery.png',
 	rating: 4
 )
@@ -145,7 +145,7 @@ Tech.create(
 
 Tech.create(
 	title: 'Git',
-	tag_line: "No Commitment Issues",
+	tag_line: "What Commitment Issues?",
 	copy: 'History tells a tale.<br>Piece by piece',
 	img: 'techs_2025/git.png',
 	rating: 5
@@ -153,8 +153,8 @@ Tech.create(
 
 Tech.create(
 	title: 'SASS',
-	tag_line: "Awesome Styles",
-	copy: 'Mixing in visual appeal is way easier with variables',
+	tag_line: "Variable Styles",
+	copy: 'Mixing Nested Funcs...<br>Approaching a \'real\' language',
 	img: 'techs_2025/sass.png',
 	rating: 4
 )
