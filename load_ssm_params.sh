@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 SSM_PATH="/prod/bootcore/"
 ENV_DIR="/home/ec2-user/BootCoder_Profile"
@@ -9,21 +9,20 @@ FINAL_FILE="$ENV_DIR/.env.production"
 echo "AWS SSM: Pulling Params from $SSM_PATH"
 
 # clear tmp file first
-> "$TMP_FILE"
+: > "$TMP_FILE"
 
-aws ssm get-parameters-by-path \
-  --path "$SSM_PATH" \
-  --with-decryption \
-  --recursive \
-  --query "Parameters[*].{Name:Name,Value:Value}" \
-  --output text | while read NAME VALUE; do
-
-  VAR_NAME=$(echo "$NAME" | awk -F'/' '{print toupper($NF)}')
+while IFS=$'\t' read -r NAME VALUE; do
+  VAR_NAME=$(awk -F'/' '{print toupper($NF)}' <<<"$NAME")
   echo -e "\e[0;36;1mProcessing $VAR_NAME\e[0m"
-  export $VAR_NAME=$VALUE
-  echo "$VAR_NAME=$VALUE" >> "$TMP_FILE"
+  export "$VAR_NAME=$VALUE"                 # quote to preserve spaces/equals
+  printf '%s=%s\n' "$VAR_NAME" "$VALUE" >> "$TMP_FILE"
+done < <(
+  aws ssm get-parameters-by-path \
+    --path "$SSM_PATH" \
+    --with-decryption \
+    --recursive \
+    --query "Parameters[*].[Name,Value]" \
+    --output text
+)
 
-done
-
-# Deduplicate into final
 sort -u "$TMP_FILE" > "$FINAL_FILE"
