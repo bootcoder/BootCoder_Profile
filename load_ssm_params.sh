@@ -14,7 +14,6 @@ echo "AWS SSM: Pulling Params from $SSM_PATH"
 while IFS=$'\t' read -r NAME VALUE; do
   VAR_NAME=$(awk -F'/' '{print toupper($NF)}' <<<"$NAME")
   echo -e "\e[0;36;1mProcessing $VAR_NAME\e[0m"
-  export "$VAR_NAME=$VALUE"                 # quote to preserve spaces/equals
   printf '%s=%s\n' "$VAR_NAME" "$VALUE" >> "$TMP_FILE"
 done < <(
   aws ssm get-parameters-by-path \
