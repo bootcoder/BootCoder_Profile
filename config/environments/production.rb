@@ -46,7 +46,25 @@ Rails.application.configure do
   # config.force_ssl = true
 
   # Set to :debug to see everything in the log.
-  config.log_level = :info
+  config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info").to_sym
+
+  # Send logs to STDOUT in containers
+  logger            = ActiveSupport::Logger.new($stdout)
+  logger.formatter  = config.log_formatter # keep Rails’ default formatter
+  config.logger     = ActiveSupport::TaggedLogging.new(logger)
+
+  # Helpful tags
+  config.log_tags = [
+    :request_id,
+    ->(req) { "ip=#{req.ip}" }
+  ]
+
+  # Filter secrets
+  config.filter_parameters += %i[password token Authorization]
+
+  config.lograge.enabled = true
+  config.lograge.formatter = Lograge::Formatters::Json.new
+  config.lograge.custom_options = ->(event) { { params: event.payload[:params].except('controller','action') } }
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]

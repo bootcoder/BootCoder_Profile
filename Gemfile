@@ -43,6 +43,8 @@ gem 'extra_print'
 gem 'puma'
 gem 'haml-rails'
 gem "recaptcha"
+gem 'lograge'
+
 # gem 'bootstrap-modal-rails'
 
 group :development, :test do

@@ -1,18 +1,29 @@
 FROM ruby:3.2.5
 
-# Install OS packages
-RUN apt-get update -qq && apt-get install -y \
-  curl build-essential libpq-dev nodejs npm
+# Install OS packages (and clean up lists to save space)
+RUN apt-get update -qq && apt-get install -y --no-install-recommends \
+  curl build-essential libpq-dev nodejs npm \
+  && rm -rf /var/lib/apt/lists/*
 
-# Enable Corepack to install Yarn
+# Enable Yarn via Corepack
 RUN npm install -g corepack && corepack enable && corepack prepare yarn@stable --activate
 
 WORKDIR /app
 
+# Bundle install in production mode
+ENV RAILS_ENV=production
+ENV BUNDLE_WITHOUT="development test"
 COPY Gemfile Gemfile.lock ./
-RUN bundle config set without 'development test'
-RUN bundle install
+RUN bundle install --jobs 4 --retry 3
 
+# App code
 COPY . .
 
-CMD ["bash", "-c", "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0"]
+# (Optional) If this is not an API-only app and you serve assets, precompile here:
+# RUN bundle exec rake assets:precompile
+
+# Expose Rails/Puma port
+EXPOSE 3000
+
+# Run Puma with your config; keep logs on STDOUT
+CMD ["bash", "-lc", "rm -f tmp/pids/server.pid && bundle exec puma -C config/puma.rb"]
