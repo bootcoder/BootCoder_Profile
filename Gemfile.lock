@@ -434,6 +434,8 @@ GEM
       ostruct
     stringio (3.1.7)
     temple (0.10.3)
+    terser (1.2.6)
+      execjs (>= 0.3.0, < 3)
     thor (1.4.0)
     tilt (2.6.0)
     timeout (0.4.3)
@@ -443,8 +445,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    uglifier (4.2.1)
-      execjs (>= 0.3.0, < 3)
     unicorn (6.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -501,8 +501,8 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   spring
+  terser
   turbolinks
-  uglifier
   unicorn
 
 RUBY VERSION

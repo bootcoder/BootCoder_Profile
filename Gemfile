@@ -9,8 +9,8 @@ gem "rails", "~> 7.1.3"
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
+# Use terser as compressor for JavaScript assets
+gem 'terser' # terser-ruby
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
