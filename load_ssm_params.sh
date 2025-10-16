@@ -19,6 +19,8 @@ aws ssm get-parameters-by-path \
   --output text | while read NAME VALUE; do
 
   VAR_NAME=$(echo "$NAME" | awk -F'/' '{print toupper($NF)}')
+  echo "Processing $VAR_NAME"
+  export $VAR_NAME=$VALUE
   echo "$VAR_NAME=$VALUE" >> "$TMP_FILE"
 
 done
