@@ -14,9 +14,10 @@ test:
 
 production:
   <<: *default
-  database: bootcore_prod
-  username: <%= ENV["RDS_USERNAME"] %>
+  database: <%= ENV.fetch("RDS_NAME", 'bootcore_prod') %>
+  host: <%= ENV["RDS_HOST"] %>
   password: <%= ENV["RDS_PASSWORD"] %>
-  # host: <%= ENV["RDS_HOST"] %>
-  # sslmode: <%= ENV.fetch("RDS_SSLMODE", "require") %>
-  # port: 5432
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  port: <%= ENV.fetch("RDS_PORT", 5432) %>
+  sslmode: <%= ENV.fetch("RDS_SSLMODE", "require") %>
+  username: <%= ENV["RDS_USERNAME"] %>
