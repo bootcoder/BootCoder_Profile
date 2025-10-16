@@ -1,5 +1,77 @@
 # .bashrc
 
+# $VARIABLE will render before the rest of the command is executed
+echo "Logged in as $USER at $(hostname)"
+
+# COLORS
+# A more colorful prompt
+# \[\e[0m\] resets the color to default color
+c_reset='\[\e[0m\]'
+#  \e[0;31m\ sets the color to red
+c_red='\[\e[0;31m\]'
+# \e[0;32m\ sets the color to green
+c_green='\[\e[0;32m\]'
+# \e[0;31m\ sets the color to red
+c_yellow='\[\e[0;33m\]'
+# PS1 is the variable for the prompt you see everytime you hit enter
+PROMPT_COMMAND='PS1="${c_red}\W${c_reset}$(git_prompt) :> "'
+export PS1='\n\[\033[0;31m\]\W\[\033[0m\]$(git_prompt)\[\033[0m\]:> '
+
+# Determines if the git branch you are on is clean or dirty
+git_prompt ()
+{
+  if ! git rev-parse --git-dir > /dev/null 2>&1; then
+    return 0
+  fi
+  # Grab working branch name
+  git_branch=$(Git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
+  # Clean or dirty branch
+  if git diff --quiet 2>/dev/null >&2; then
+    git_color="${c_green}"
+  else
+    git_color=${c_red}
+  fi
+  echo " [$git_color$git_branch${c_reset}]"
+}
+
+# Colors ls should use for folders, files, symlinks etc.
+# see `man ls` and search for LSCOLORS
+export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
+
+
+# Force ls to use colors (G) and use humanized file sizes (h)
+alias ls='ls -Gh'
+alias docker-clean=' \
+  docker container prune -f ; \
+  docker image prune -f ; \
+  docker network prune -f ; \
+  docker volume prune -f '
+
+# Git related aliases
+alias g=git
+alias gd='git checkout develop && git pull'
+alias gm='git checkout master && git pull'
+alias gti="git"
+alias gits="git s"
+alias gst="git status"
+alias gap="git add -p"
+alias gav="git commit -v"
+alias gco="git checkout"
+alias gb="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias gp="git pull"
+alias gs="git stash"
+alias gcp="git cherry-pick"
+alias gpo="git push origin"
+alias gph="git push heroku"
+alias pick="git cherry-pick"
+alias grac="git add . && git rebase --continue"
+
+
+
+
+
+
+
 export RAILS_ENV=production
 
 alias bcdb="psql -h bootcore-prod.cgh8sy4w2396.us-east-1.rds.amazonaws.com -U bootcore_user -d bootcore_prod -p 5432"
