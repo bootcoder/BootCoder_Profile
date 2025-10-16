@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails -v && bundle exec rails s -b 0.0.0.0 -e production"
+    command: bash -lc "rm -f tmp/pids/server.pid && bundle exec puma -C config/puma.rb"
     ports:
       - "3000:3000"
     restart: unless-stopped
@@ -10,9 +10,15 @@ services:
     environment:
       RAILS_ENV: production
       RACK_ENV: production
-      # DATABASE_URL: <%= ENV["RDS_HOST"] %>
-      # SECRET_KEY_BASE: <%= ENV["RAILS_SECRET"] %>
-      # AWS_ACCESS_KEY_ID: <%= optional if using S3 >
-      # AWS_SECRET_ACCESS_KEY: <%= optional if using S3 >
-    volumes:
-      - .:/app
+      RAILS_LOG_TO_STDOUT: "1"
+      RAILS_LOG_LEVEL: ${RAILS_LOG_LEVEL:-info}
+      PORT: "3000"
+    # In production, avoid bind-mounting the whole app (uses disk, breaks immutability)
+    # Remove this line unless you truly need live code edits on the server:
+    # volumes:
+    #   - .:/app
+    logging:
+      driver: local
+      options:
+        max-size: "10m"
+        max-file: "3"
