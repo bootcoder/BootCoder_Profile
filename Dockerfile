@@ -20,7 +20,8 @@ RUN bundle install --jobs 4 --retry 3
 COPY . .
 
 # (Optional) If this is not an API-only app and you serve assets, precompile here:
-# RUN bundle exec rake assets:precompile
+RUN bundle exec rake assets:clobber
+RUN bundle exec rake assets:precompile
 
 # Expose Rails/Puma port
 EXPOSE 3000
