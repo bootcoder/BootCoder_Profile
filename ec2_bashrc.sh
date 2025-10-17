@@ -92,6 +92,8 @@ function deploy() {
   echo -e "\e[0;36;1mExecuting BootCore Deploy Script\e[0m"
   docker-compose down
   docker system prune -f --filter 'until=24h'
+  docker system prune -a -f --volumes
+  docker builder prune -a -f
   ./load_ssm_params.sh
   set -a
   . /home/ec2-user/BootCoder_Profile/.env.production
