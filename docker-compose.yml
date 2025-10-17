@@ -15,11 +15,6 @@ services:
       RAILS_LOG_TO_STDOUT: "1"
       RAILS_LOG_LEVEL: ${RAILS_LOG_LEVEL:-info}
       PORT: "3000"
-      RDS_HOST: host.docker.internal
-      RDS_PORT: ${RDS_PORT:-5432}
-      RDS_NAME: ${RDS_DB}
-      RDS_USER: ${RDS_USERNAME}
-      RDS_PASSWORD: ${RDS_PASSWORD}
 
     # In production, avoid bind-mounting the whole app (uses disk, breaks immutability)
     # Remove this line unless you truly need live code edits on the server:
