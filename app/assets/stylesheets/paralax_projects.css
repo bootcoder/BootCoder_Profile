@@ -1,0 +1,72 @@
+#paralax_projects {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#paralax_projects html {
+  overflow: hidden;
+}
+
+#paralax_projects .project-container {
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Verdana, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  background-color: #512d33;
+  background: linear-gradient(#512d33, #264063, #512d33, #a79519);
+}
+
+#paralax_projects section {
+  position: relative;
+  transform-style: inherit;
+  min-width: 80vw;
+  min-height: 80vh;
+}
+
+#paralax_projects section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* PARALLAX SECTIONS*/
+
+#paralax_projects section.hero > .container {
+  padding: 40vh 0;
+  text-align: center;
+  font-size: 5rem;
+  color: whitesmoke;
+  opacity: 0.8;
+  font-weight: 900;
+}
+
+#paralax_projects section.hero > .container > span {
+  font-size: 3.4rem;
+  font-weight: 100;
+  opacity: 0.6;
+}
+
+/* CONTENT SECTIONS*/
+#paralax_projects section.content {
+  text-align: center;
+}
+#paralax_projects section.content > .container {
+  font-size: 2.4rem;
+  color: white;
+  padding: 25vh 0;
+  opacity: 0.6;
+}
+#paralax_projects #content-2 {
+  padding: 0;
+}
+#paralax_projects #content-2 > .container {
+  padding: 90vh 0 0 0;
+}

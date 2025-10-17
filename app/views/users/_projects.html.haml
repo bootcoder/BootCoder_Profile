@@ -1,0 +1,16 @@
+- bc_projects
+#paralax_projects
+  .project-container
+    - @projects.each_with_index do |pj, idx|
+      - bg_url = image_path(pj.project_img)
+      - base = ''
+      - row_style = ''
+      - base  = "background-image: url('#{bg_url}'); background-size: cover; z-index: -#{idx};"
+      - row_style = '' if idx == 0
+      - row_style = ' transform: translateZ(-1px) scale(2);' if idx.even? && idx != 0
+      - row_style = ' background-attachment: fixed;' if idx.odd?
+      - style = base.concat(row_style)
+      = "STYLEs: IDX:#{idx} B:#{base.length} -- R:#{row_style.length}"
+      %section.hero{ id: "hero-#{idx+1}", style: "#{style}" }
+        .container
+          = pj.project_name
