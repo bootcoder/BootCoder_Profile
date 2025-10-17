@@ -13,10 +13,7 @@
 
       <div class='row'>
         <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-          <% dir = 'app/assets/images/giggles/' %>
-          <% count = Dir[File.join(dir, '**', '*')].count { |file| File.file?(file) } %>
-          <% giggle_img = "giggles/giggle_#{rand(0...count)}.png" %>
-          <%= image_tag(giggle_img, alt: giggle_img, class: 'image-meme image-responsive max-500 pad-5P') %>
+          <%= random_giggle_image_tag(class: 'image-meme image-responsive max-500 pad-5P') %>
         </div>
       </div>
     </div>
