@@ -2,20 +2,20 @@
 
 # $VARIABLE will render before the rest of the command is executed
 echo "Logged in as $USER at $(hostname)"
+cd BootCoder_Profile
 
-# COLORS
-# A more colorful prompt
+# COLORS - A more colorful prompt
 # \[\e[0m\] resets the color to default color
 c_reset='\[\e[0m\]'
-#  \e[0;31m\ sets the color to red
 c_red='\[\e[0;31m\]'
-# \e[0;32m\ sets the color to green
 c_green='\[\e[0;32m\]'
-# \e[0;31m\ sets the color to red
 c_yellow='\[\e[0;33m\]'
+c_cyan='\[\e[0;36m\]'
+c_purple='\[\e[0;35m\]'
 # PS1 is the variable for the prompt you see everytime you hit enter
-PROMPT_COMMAND='PS1="${c_red}\W${c_reset}$(git_prompt) :> "'
-export PS1='\n\[\033[0;31m\]\W\[\033[0m\]$(git_prompt)\[\033[0m\]:> '
+PROMPT_COMMAND='PS1="${c_purple}$(whoami):${c_cyan}\W${c_reset}$(git_prompt) :> "'
+# export PS1='\n\[\033[0;31m\]\W\[\033[0m\]$(git_prompt)\[\033[0m\]:> '
+export PS1=PROMPT_COMMAND
 
 # Determines if the git branch you are on is clean or dirty
 git_prompt ()
@@ -24,7 +24,7 @@ git_prompt ()
     return 0
   fi
   # Grab working branch name
-  git_branch=$(Git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
+  git_branch=$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
   # Clean or dirty branch
   if git diff --quiet 2>/dev/null >&2; then
     git_color="${c_green}"
