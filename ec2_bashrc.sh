@@ -1,17 +1,20 @@
 # .bashrc
 
-# $VARIABLE will render before the rest of the command is executed
-echo "Logged in as $USER at $(hostname)"
-cd BootCoder_Profile
-
 # COLORS - A more colorful prompt
 # \[\e[0m\] resets the color to default color
-c_reset='\[\e[0m\]'
-c_red='\[\e[0;31m\]'
-c_green='\[\e[0;32m\]'
-c_yellow='\[\e[0;33m\]'
-c_cyan='\[\e[0;36m\]'
-c_purple='\[\e[0;35m\]'
+c_reset='\e[0m'
+
+c_red='\e[31m'
+c_green='\e[32m'
+c_yellow='\e[33m'
+c_purple='\e[35m'
+c_cyan='\e[36m'
+
+# $VARIABLE will render before the rest of the command is executed
+echo -e "Logged in as ${c_purple}$USER${c_reset} at ${c_cyan}$(hostname)${c_reset}"
+echo -e "Directory set to ${c_green}BootCoder_Profile${c_reset} and loading ${c_purple}repo bashrc${c_reset}"
+cd BootCoder_Profile
+
 # PS1 is the variable for the prompt you see everytime you hit enter
 PROMPT_COMMAND='PS1="${c_purple}$(whoami):${c_cyan}\W${c_reset}$(git_prompt) :> "'
 # export PS1='\n\[\033[0;31m\]\W\[\033[0m\]$(git_prompt)\[\033[0m\]:> '
