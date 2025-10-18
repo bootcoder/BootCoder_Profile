@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @techs = Tech.all.order(:title)
+    @projects = Project.all
   end
 
   # GET /users/1

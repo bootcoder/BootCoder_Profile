@@ -1,72 +1,37 @@
-#paralax_projects {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
+/* ---- BootCoder Projects (namespaced) ---- */
+.bc-projects {
+  /* section spacing */
+  &.py-6 { padding-top: 4.5rem; padding-bottom: 4.5rem; }
 
-#paralax_projects html {
-  overflow: hidden;
-}
+  .bc-parallax-row { will-change: transform; }
 
-#paralax_projects .project-container {
-  font-size: 18px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Verdana, sans-serif;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  background-color: #512d33;
-  background: linear-gradient(#512d33, #264063, #512d33, #a79519);
-}
+  /* horizontal scroll niceties on mobile */
+  .row.flex-nowrap {
+    scroll-snap-type: x mandatory;
+  }
+  .row.flex-nowrap > [class*="col-"] {
+    scroll-snap-align: start;
+  }
 
-#paralax_projects section {
-  position: relative;
-  transform-style: inherit;
-  min-width: 80vw;
-  min-height: 80vh;
-}
+  /* 3D card tilt */
+  .project-3d {
+    transform-style: preserve-3d;
+    transform: perspective(900px) rotateX(0) rotateY(0);
+    transition: transform .2s ease, box-shadow .2s ease;
+    will-change: transform;
+  }
+  .project-3d .card-img-top {
+    object-fit: cover;
+  }
+  @media (hover:hover) {
+    .project-3d:hover {
+      box-shadow: 0 .75rem 2rem rgba(0,0,0,.15);
+    }
+  }
 
-#paralax_projects section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-/* PARALLAX SECTIONS*/
-
-#paralax_projects section.hero > .container {
-  padding: 40vh 0;
-  text-align: center;
-  font-size: 5rem;
-  color: whitesmoke;
-  opacity: 0.8;
-  font-weight: 900;
-}
-
-#paralax_projects section.hero > .container > span {
-  font-size: 3.4rem;
-  font-weight: 100;
-  opacity: 0.6;
-}
-
-/* CONTENT SECTIONS*/
-#paralax_projects section.content {
-  text-align: center;
-}
-#paralax_projects section.content > .container {
-  font-size: 2.4rem;
-  color: white;
-  padding: 25vh 0;
-  opacity: 0.6;
-}
-#paralax_projects #content-2 {
-  padding: 0;
-}
-#paralax_projects #content-2 > .container {
-  padding: 90vh 0 0 0;
+  /* respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .bc-parallax-row { transform: none !important; }
+    .project-3d { transition: none !important; transform: none !important; }
+  }
 }
