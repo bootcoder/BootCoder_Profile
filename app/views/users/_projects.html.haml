@@ -1,8 +1,8 @@
 - bc_projects
 #paralax_projects
   .project-container
-    - @projects.each_with_index do |pj, idx|
-      - bg_url = image_path(pj.project_img)
+    - @projects.each_with_index do |item, idx|
+      - bg_url = image_path(item.project_img)
       - base = ''
       - row_style = ''
       - base  = "background-image: url('#{bg_url}'); background-size: cover; z-index: -#{idx};"
@@ -13,4 +13,4 @@
       = "STYLEs: IDX:#{idx} B:#{base.length} -- R:#{row_style.length}"
       %section.hero{ id: "hero-#{idx+1}", style: "#{style}" }
         .container
-          = pj.project_name
+          = item.project_name
