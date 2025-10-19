@@ -4,4 +4,10 @@ class Tech < ApplicationRecord
 
   has_many :project_techs
   has_many :projects, through: :project_techs
+
+  def self.smart_find(identifier)
+    return nil if identifier.blank? || identifier.nil?
+
+    find_by('lower(title) = ?', identifier)
+  end
 end
