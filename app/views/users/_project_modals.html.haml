@@ -6,8 +6,6 @@
 
 -# Render modals once per project (outside rows for cleanliness)
 %section#projects.bc-projects.py-6{ data: { row_count: row_count } }
-  .container-xxl
-    %h2.display-6.fw-bold.mb-4.text-center Project MODALS
   - projects.each do |project|
     - modal_id = "projectModal-#{project.id}"
     .modal.fade.project-modal{ id: modal_id, tabindex: "-1", aria: { hidden: "true", labelledby: "#{modal_id}-label" } }
@@ -16,17 +14,17 @@
           .modal-header
             %h5.modal-title{ id: "#{modal_id}-label" }= project.project_name
             %button.close{ type: "button", "data-dismiss" => "modal", "aria-label" => "Close" }
-            %span{ "aria-hidden" => "true" } ×
+              %span{ "aria-hidden" => "true" } ×
           .modal-body
             .ratio.ratio-16x9.mb-3
               %img.img-fluid.w-100.h-100{ src: image_path(project.project_img), alt: "#{project.project_name} full screenshot" }
+            - if project.project_url.present?
+              %a.btn.btn-info{ href: project.project_url, target: "_blank", rel: "noopener" } Visit
+            - if project.project_source_url.present?
+              %a.btn.btn-success{ href: project.project_source_url, target: "_blank", rel: "noopener" } Source
             %p.mb-3= project.project_description
-            .d-flex.flex-wrap.gap-2
-              - if project.project_url.present?
-                %a.btn.btn-primary{ href: project.project_url, target: "_blank", rel: "noopener" } Visit
-              - if project.project_source_url.present?
-                %a.btn.btn-outline-secondary{ href: project.project_source_url, target: "_blank", rel: "noopener" } Source
-              - if project.project_stack.present?
-                %span.badge.bg-secondary.align-self-center= project.project_stack
+            - if project.project_stack.present?
+              - stack = project.project_stack.split(',')
+              %span.badge.bg-secondary.align-self-center= project.project_stack
           .modal-footer
-            %button.close{ type: "button", "data-dismiss" => "modal", "aria-label" => "Close" } Close
+            %button.close{ type: "button", "data-dismiss" => "modal", "aria-label" => "Close" } ×
