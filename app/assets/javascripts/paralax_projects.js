@@ -65,9 +65,33 @@
 
   // Bootstrap 5 and Turbolinks/Hotwire friendly init
   if (document.readyState === 'loading') {
+    console.log('DOM Loading')
     document.addEventListener('DOMContentLoaded', init);
   } else {
+    console.log('DOM Loaded')
     init();
   }
   document.addEventListener('turbo:load', init);
+// Delegated modal opener that works on BS 5.0+ (no getOrCreateInstance required)
+  document.addEventListener('click', function (e) {
+    console.log("Project Click Event");
+    const trigger = e.target.closest('[data-bs-toggle="modal"][data-bs-target]');
+    if (!trigger) return;
+
+    const targetSel = trigger.getAttribute('data-bs-target');
+    const modalEl = document.querySelector(targetSel);
+    if (!modalEl) return;
+
+    // Prevent the #hash jump on <a href="#...">
+    e.preventDefault();
+
+    // Bootstrap version-agnostic instance getter/creator
+    const Modal = bootstrap.Modal;
+    let instance = (Modal.getInstance && Modal.getInstance(modalEl)) || null;
+    if (!instance) {
+      instance = new Modal(modalEl); // works in 5.0+
+    }
+    if (!modalEl.classList.contains('show')) instance.show();
+  }, { passive: false });
+
 })();

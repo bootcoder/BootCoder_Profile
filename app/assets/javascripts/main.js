@@ -2,7 +2,7 @@ $(document).ready(function(){
   console.log("Document Ready");
 
   $('.popup').on('click', function(event){
-    console.log("CLICKDD ME!");
+    console.log("CLICKED Popup!");
     event.preventDefault();
   })
 
