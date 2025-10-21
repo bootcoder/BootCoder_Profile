@@ -1,6 +1,6 @@
-* {
+/* * {
 	outline: 1px solid blue;
-}
+} */
 /* ================================
 Imports
 ================================= */
@@ -871,10 +871,15 @@ more media queries
 }
 
 .curved-6 {
-	width: 50%;
+	width: 85%;
 	outline: 2px solid gray;
+	overflow: hidden;
 	-moz-border-radius: 1em 4em 1em 4em;
 	border-radius: 1em 4em 1em 4em;
+}
+
+.curved-6:hover {
+	outline: 4px solid cyan;
 }
 
 .bg-black-border {

@@ -20,8 +20,10 @@
               %img.img-fluid.w-100.h-100{ src: image_path(project.project_img), alt: "#{project.project_name} full screenshot" }
             - if project.project_url.present?
               %a.btn.btn-info{ href: project.project_url, target: "_blank", rel: "noopener" } Visit
-            - if project.project_source_url.present?
+            - if project.project_source_url.present? && project.project_source_url != 'closed'
               %a.btn.btn-success{ href: project.project_source_url, target: "_blank", rel: "noopener" } Source
+            - else
+              %a.btn.btn-primary Closed Source
             %p.mb-3= project.project_description
             - project.techs.each do |tech|
               %span.badge.bg-secondary.align-self-center= tech.title
