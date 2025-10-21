@@ -23,9 +23,10 @@
             - if project.project_source_url.present? && project.project_source_url != 'closed'
               %a.btn.btn-success{ href: project.project_source_url, target: "_blank", rel: "noopener" } Source
             - else
-              %a.btn.btn-primary Closed Source
-            %p.mb-3= project.project_description
-            - project.techs.each do |tech|
-              %span.badge.bg-secondary.align-self-center= tech.title
+              %a.btn.btn-danger Closed Source
+            %p.mb-3
+              - project.techs.each do |tech|
+                %span.badge.bg-secondary.align-self-center= tech.title
+            %p.mb-3.txt-black= project.project_description
           .modal-footer
             %button.close{ type: "button", "data-dismiss" => "modal", "aria-label" => "Close" } ×
