@@ -130,7 +130,7 @@ Tech.create(
 )
 Tech.create(
 	title: 'RSpec',
-	tag_line: "Don\'t Mock my Stubby Spy",
+	tag_line: "Mock Not A Stubby Spy",
 	copy: 'Refactoring green suites ... So Satisfying',
 	img: 'techs_2025/rspec.png',
 	rating: 4

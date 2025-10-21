@@ -1,4 +1,5 @@
 # .bashrc
+export EDITOR=vim
 
 # COLORS - A more colorful prompt
 # \[\e[0m\] resets the color to default color
