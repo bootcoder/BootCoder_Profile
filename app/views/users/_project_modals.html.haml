@@ -23,8 +23,7 @@
             - if project.project_source_url.present?
               %a.btn.btn-success{ href: project.project_source_url, target: "_blank", rel: "noopener" } Source
             %p.mb-3= project.project_description
-            - if project.project_stack.present?
-              - stack = project.project_stack.split(',')
-              %span.badge.bg-secondary.align-self-center= project.project_stack
+            - project.techs.each do |tech|
+              %span.badge.bg-secondary.align-self-center= tech.title
           .modal-footer
             %button.close{ type: "button", "data-dismiss" => "modal", "aria-label" => "Close" } ×

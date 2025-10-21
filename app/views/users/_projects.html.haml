@@ -1,7 +1,7 @@
 -# locals: projects: (collection), row_count: (Integer, default 2)
 - projects      ||= @projects || []
 - row_count     ||= 2
-- groups          = projects.in_groups(row_count, false)
+- groups          = rows_by_tens(@projects)
 - speeds          = [0.25, -0.15, 0.2, -0.18, 0.12, -0.1] # recycle if > 6 rows
 
 %section#projects.bc-projects.py-6{ data: { row_count: row_count } }

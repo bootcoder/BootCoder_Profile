@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @techs = Tech.all.order(:title)
+    @techs = Tech.where('rating > ?', 0).order(:title)
     @projects = Project.all
   end
 

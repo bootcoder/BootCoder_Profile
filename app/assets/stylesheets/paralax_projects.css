@@ -37,5 +37,5 @@
 }
 
 /* Stop parallax/tilt while a modal is open so stacking/positioning is sane */
-body.modal-open .bc-projects .bc-parallax-row { transform: none !important; }
-body.modal-open .bc-projects .project-3d    { transform: none !important; }
+/* body.modal-open .bc-projects .bc-parallax-row { transform: none !important; }
+body.modal-open .bc-projects .project-3d    { transform: none !important; } */
