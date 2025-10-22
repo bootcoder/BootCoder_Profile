@@ -1,5 +1,10 @@
-* {
+/* * {
 	outline: 1px solid blue;
+} */
+
+/* Styles applied when the checkbox is checked */
+.debug * {
+  outline: 1px solid blue;
 }
 /* ================================
 Imports
@@ -964,7 +969,7 @@ more media queries
 	padding-top: 20px;
 }
 
-.margin-5p {
+.margin-1p {
 	margin: 1%;
 }
 

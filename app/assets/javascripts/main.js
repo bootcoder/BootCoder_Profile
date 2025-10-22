@@ -11,6 +11,13 @@ $(document).ready(function(){
   //   $('[data-toggle="tooltip"]').tooltip();
   // })
 
+  $('#debug-toggle').on('click', function(event){
+    console.log('TOGGLE DEBUG');
+    event.preventDefault();
+    var docBody = $('#debuggable');
+    $(docBody).toggleClass('debug');
+  })
+
   $('.tech-item').hover(
     function(){
       var techId = this.id.split('-').at(-1);
