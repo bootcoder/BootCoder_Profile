@@ -4,9 +4,11 @@
 - groups          = rows_by_tens(@projects)
 - speeds          = [0.25, -0.15, 0.2, -0.18, 0.12, -0.1] # recycle if > 6 rows
 
-%section#projects.bc-projects.py-6{ data: { row_count: row_count } }
+%section#projects#works.bc-projects.py-6.home-section{ data: { row_count: row_count } }
   .container-xxl
     %h2.display-6.fw-bold.mb-4.text-center.white Projects
+    %p.white.glow Pushed a few commits or so far... Only 42,000 to go!
+
 
     - groups.each_with_index do |group, idx|
       - speed = speeds[idx % speeds.length]

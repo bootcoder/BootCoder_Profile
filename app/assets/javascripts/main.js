@@ -10,6 +10,9 @@ $(document).ready(function(){
   //   console.log('init tooltip');
   //   $('[data-toggle="tooltip"]').tooltip();
   // })
+  if (window.innerWidth < 768) {
+    $('.navbar-brand').text('HTC');
+  }
 
   $('#debug-toggle').on('click', function(event){
     console.log('TOGGLE DEBUG');

@@ -1,25 +1,25 @@
 <!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top bg-black" role="navigation">
+<nav class="navbar navbar-custom fixed-top bg-black" role="navigation">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+    <div class="responsive-navbar">
+      <button type="button" class="navbar-toggle col-auto float-left" data-toggle="collapse" data-target=".navbar-main-collapse">
         <i class="fa fa-2x fa-angle-double-down"></i>
       </button>
-      <button type="button" id='debug-toggle' class="navbar-toggle">
-        <i class="fa fa-2x fa-wrench"></i>
+      <a class="navbar-brand smooth-scroll col-auto mx-auto" href="/">Hunter Chapman</a>
+      <button type="button" id='debug-toggle' class="navbar-toggle col-auto float-right">
+        <i class="fa fa-2x fa-bug"></i>
       </button>
-      <a class="navbar-brand margin-5p pad-down-20 smooth-scroll" href="/">Hunter T. Chapman</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="dl-menu">
       <ul class="nav navbar-nav dl-menu">
       <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-        <li class="hidden"><a href="#page-top"></a></li>
-        <li><a class="page-scroll" href="#services">Skills</a></li>
-        <li><a class="page-scroll black" href="#works">Projects</a></li>
-        <li><a class="page-scroll" href="#about">History</a></li>
-        <li><a class="page-scroll" href="#interest">Interest</a></li>
+        <li class="hidden"><a ref="#page-top" href="/#page-top"></a></li>
+        <li><a class="page-scroll" ref="#services" href="/#services">Skills</a></li>
+        <li><a class="page-scroll black" ref="#works" href="/#works">Projects</a></li>
+        <li><a class="page-scroll" ref="#about" href="/#about">History</a></li>
+        <li><a class="page-scroll" ref="#interest" href="/#interest">Interest</a></li>
         <li><%= link_to("Resume", resume_path) %></li>
       </ul>
     </div>

@@ -88,6 +88,10 @@ button.navbar-toggle {
 	color: #fff;
 }
 
+.responsive-navbar {
+	width: 100%;
+}
+
 .btn-theme,.btn-theme:hover,.btn-theme:focus{
 	color: #fff;
 }
@@ -128,6 +132,12 @@ margin, padding
 }
 .mar-top40 {
 	margin-top: 40px;
+}
+.mar-top-10p {
+	margin-top: 10%;
+}
+.mar-top-50p {
+	margin-top: 50%;
 }
 
 
@@ -316,6 +326,7 @@ Intro
 	text-align:center;
 	font-weight: 300;
 }
+
 
 /* ================================
 About
@@ -1058,7 +1069,41 @@ more media queries
 	float: left;
 }
 
+.burning-text {
+	/* color: magenta; */
+	/* background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(212, 147, 0, 1) 55%, rgba(255, 59, 0, 1) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent !important; */
+	color: #ff6b00;
+	text-shadow:
+		0 0 5px yellow,
+		0 0 10px orange,
+		0 0 20px red;
+	animation: flicker 1.5s infinite alternate; /* Adjust duration and timing */
+}
 
+@keyframes flicker {
+  0% {
+    text-shadow:
+      0 0 5px yellow,
+      0 0 10px orange,
+      0 0 20px red;
+  }
+  50% {
+    text-shadow:
+      0 0 8px yellow,
+      0 0 15px orange,
+      0 0 25px red;
+  }
+  100% {
+    text-shadow:
+      0 0 6px yellow,
+      0 0 12px orange,
+      0 0 22px red;
+  }
+}
 
 .window {
 	display: none;
