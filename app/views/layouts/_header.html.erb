@@ -16,11 +16,11 @@
       <ul class="nav navbar-nav dl-menu">
       <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
         <li class="hidden"><a ref="#page-top" href="/#page-top"></a></li>
-        <li><a class="page-scroll" ref="#services" href="/#services">Skills</a></li>
-        <li><a class="page-scroll black" ref="#works" href="/#works">Projects</a></li>
-        <li><a class="page-scroll" ref="#about" href="/#about">History</a></li>
-        <li><a class="page-scroll" ref="#interest" href="/#interest">Interest</a></li>
-        <li><%= link_to("Resume", resume_path) %></li>
+        <li><a class="nav-link page-scroll" ref="#services" href="/#services">Skills</a></li>
+        <li><a class="nav-link page-scroll black" ref="#works" href="/#works">Projects</a></li>
+        <li><a class="nav-link page-scroll" ref="#about" href="/#about">History</a></li>
+        <li><a class="nav-link page-scroll" ref="#interest" href="/#interest">Interest</a></li>
+        <li><%= link_to("Resume", resume_path, class: 'nav-link') %></li>
       </ul>
     </div>
   </div>

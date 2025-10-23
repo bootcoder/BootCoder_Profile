@@ -6,10 +6,10 @@ $(document).ready(function(){
     event.preventDefault();
   })
 
-  // $(function () {
-  //   console.log('init tooltip');
-  //   $('[data-toggle="tooltip"]').tooltip();
-  // })
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+  });
+
   if (window.innerWidth < 768) {
     $('.navbar-brand').text('HTC');
   }
