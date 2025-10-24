@@ -133,6 +133,9 @@ margin, padding
 .mar-top40 {
 	margin-top: 40px;
 }
+.mar-top-5p {
+	margin-top: 5%;
+}
 .mar-top-10p {
 	margin-top: 10%;
 }
