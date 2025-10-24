@@ -10,17 +10,18 @@
     %p.white.glow Pushed a few commits or so far... Only 42,000 to go!
 
 
-    - groups.each_with_index do |group, idx|
-      - speed = speeds[idx % speeds.length]
-      .bc-parallax-row{ data: { speed: speed } }
-        .row.flex-nowrap.overflow-auto.gx-4.pb-3
-          - group.each do |project|
-            - modal_id = "projectModal-#{project.id}"
-            .col-10.col-sm-6.col-md-4.col-lg-3
-              %button.curved-6{ type: "button", "data-toggle" => "modal", "data-target" => "##{modal_id}" }
-                .ratio.ratio-16x9
-                  %img.card-img-top{ src: image_path(project.project_img), alt: "#{project.project_name} screenshot", loading: "lazy" }
-                .card-body
-                  %h5.card-title.mb-0= project.project_name
-                  %small.text-muted
-                    = [project.project_feature_lang, project.project_state.presence].compact.join(" \u2014 ")
+    .bg-white-border
+      - groups.each_with_index do |group, idx|
+        - speed = speeds[idx % speeds.length]
+        .bc-parallax-row.pad-3P-down{ data: { speed: speed } }
+          .row.flex-nowrap.overflow-auto.gx-4.pb-3.parallax-row
+            - group.each do |project|
+              - modal_id = "projectModal-#{project.id}"
+              .col-10.col-sm-6.col-md-4.col-lg-3
+                %button.curved-6{ type: "button", "data-toggle" => "modal", "data-target" => "##{modal_id}" }
+                  .ratio.ratio-16x9
+                    %img.card-img-top{ src: image_path(project.project_img), alt: "#{project.project_name} screenshot", loading: "lazy" }
+                  .card-body
+                    %h5.card-title.mb-0= project.project_name
+                    %small.text-muted
+                      = [project.project_feature_lang, project.project_state.presence].compact.join(" \u2014 ")

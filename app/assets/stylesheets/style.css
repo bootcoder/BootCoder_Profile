@@ -607,6 +607,10 @@ x:-o-prefocus, .lb-overlay img {
     height: 100%;
 }
 
+#comic-text {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
 
 /* ================================
 Techs
@@ -731,7 +735,6 @@ Projects
 	display: block;
 	max-width: 100%;
 	} */
-}
 
 
 /* ================================
@@ -905,6 +908,10 @@ more media queries
 	border: 2px solid black;
 }
 
+.bg-white-border {
+	border: 2px solid white;
+}
+
 .white {
 	color: white;
 }
@@ -945,6 +952,10 @@ more media queries
 
 .pad-2P-down {
 	padding-top: 2%;
+}
+
+.pad-3P-down {
+	padding-top: 3%;
 }
 
 .pad-5P-down {

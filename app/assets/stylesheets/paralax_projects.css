@@ -5,6 +5,17 @@
 
   .bc-parallax-row { will-change: transform; }
 
+
+  .parallax-row{
+    overflow: auto; /* Ensures content remains scrollable */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+  }
+
+  .parallax-row::-webkit-scrollbar {
+    display: none; /* For WebKit browsers (Chrome, Safari, Opera) */
+  }
+
   /* horizontal scroll niceties on mobile */
   .row.flex-nowrap {
     scroll-snap-type: x mandatory;

@@ -5,7 +5,7 @@
         .section-heading
           %h2.black.glow The Stack
           %p.black.glow In all my life I've never seen a list I was so sure would be growing...Quickly
-    .container.scrollable.overflow-auto
+    .container.scrollable.overflow-auto.bg-black-border
       - techs.in_groups_of(4, false).each_with_index do |group, oidx|
         .row
           - group.each_with_index do |tech, idx|
@@ -13,7 +13,7 @@
               .tech-container
                 = image_tag(tech.img, :alt => tech.title, id: "tech-img-#{oidx}#{idx}", class: "tech-item tech-img img-fluid")
                 .tech-item.tech-tip{ id: "tech-tip-#{oidx}#{idx}" }
-                  .h4.black.glow
+                  .h4.black.glow.pad-2P-down
                     = raw(tech.title)
                   .h5.tech-tag-line.d-none.d-md-block
                     = raw(tech.tag_line)
