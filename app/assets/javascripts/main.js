@@ -22,7 +22,6 @@ $(document).ready(function(){
 
     $('#view-port-width-bugger').text(viewPortWidth)
     $(docBody).toggleClass('debug');
-    // $('#hero-title').slideToggle('slow');
     $('#bs-bugger').slideToggle(500, 'swing');
   })
 

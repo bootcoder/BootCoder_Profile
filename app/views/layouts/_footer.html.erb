@@ -1,33 +1,57 @@
 <div class='container-fluid spacer'>
   <div class="social-network row">
-      <div class='col-4'><a class="white" href="https://github.com/bootcoder/BootCoder_Profile">Source</a></div>
-      <div class='col-4'><%= link_to("Resume", resume_path, class: 'white') %></div>
-      <div class='col-4'><%= link_to("Gallery", "gallery", class: "white") %></div>
+      <div class='col-6'>
+        <a href="https://github.com/bootcoder/BootCoder_Profile">
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+          </span>
+          <br>Source
+        </a>
+      </div>
+      <div class='col-6'>
+        <%= link_to(resume_path) do %>
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-file fa-stack-1x fa-inverse"></i>
+          </span>
+          <br>Resume
+        <% end %>
+      </div>
   </div>
+
   <div class="social-network row">
-    <div class='col-3'><a href="https://github.com/bootcoder" target="_blank">
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span></a>
+    <div class='col-3'>
+      <a href="https://github.com/bootcoder" target="_blank">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
     </div>
-    <div class='col-3'><a href="http://www.linkedin.com/in/bootcoder/" target="_blank">
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-      </span></a>
+    <div class='col-3'>
+      <a href="http://www.linkedin.com/in/bootcoder/" target="_blank">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
     </div>
-    <div class='col-3'><a href="https://www.facebook.com/BlueTyGator" target="_blank">
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-      </span></a>
+    <div class='col-3'>
+      <a href="https://www.facebook.com/BlueTyGator" target="_blank">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
     </div>
-    <div class='col-3'><a href="https://twitter.com/BootCoder" target="_blank">
-      <span class="fa-stack fa-2x">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span></a>
+    <div class='col-3'>
+      <a href="https://twitter.com/BootCoder" target="_blank">
+        <span class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
     </div>
   </div>
 </div>
