@@ -36,9 +36,6 @@ gem 'spring',        group: :development
 
 gem 'unicorn'
 gem 'font-awesome-rails'
-gem 'owlcarousel-rails'
-# gem 'magnific-popup-rails'
-# gem 'newrelic_rpm'
 gem 'dotenv-rails'
 gem 'extra_print'
 gem 'puma'
@@ -46,11 +43,9 @@ gem 'haml-rails'
 gem "recaptcha"
 gem 'lograge'
 
-# gem 'bootstrap-modal-rails'
 
 group :development, :test do
   gem 'capistrano-rails'
-  # gem 'debugger'
 	gem 'pry'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
@@ -60,8 +55,6 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-spork'
   gem 'ruby_gntp'
-  # gem 'spork', '~> 1.0rc'
-  # gem 'spork-rails'
 end
 
 group :test do
