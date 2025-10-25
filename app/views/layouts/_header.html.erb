@@ -2,13 +2,10 @@
 <nav class="navbar navbar-custom fixed-top bg-black" role="navigation">
   <div class="container">
     <div class="responsive-navbar">
-      <button type="button" class="navbar-toggle col-auto float-left" data-toggle="collapse" data-target=".navbar-main-collapse">
-        <i class="fa fa-2x fa-angle-double-down"></i>
-      </button>
-      <a class="navbar-brand smooth-scroll col-auto mx-auto" href="/">Hunter Chapman</a>
-      <button type="button" id='debug-toggle' class="navbar-toggle col-auto float-right">
-        <i class="fa fa-2x fa-bug"></i>
-      </button>
+      <%= render partial: 'layouts/bs_bugger' %>
+      <button type="button" id='nav-toggle' class="navbar-toggle col-auto float-left" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-2x fa-angle-double-down"></i></button>
+      <a id='hero-title' class="navbar-brand smooth-scroll col-auto mx-auto" href="/">Hunter Chapman</a>
+      <button type="button" id='debug-toggle' class="navbar-toggle col-auto float-right"><i class="fa fa-2x fa-bug"></i></button>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

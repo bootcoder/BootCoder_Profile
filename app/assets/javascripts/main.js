@@ -19,7 +19,11 @@ $(document).ready(function(){
     event.preventDefault();
     var docBody = $('#debuggable');
     $(docBody).toggleClass('debug');
+    $('#hero-title').toggle();
+    $('#bs-bugger').toggle();
   })
+
+  $('#tech-img-00').addClass('pulse');
 
   $('.tech-item').hover(
     function(){
@@ -27,6 +31,7 @@ $(document).ready(function(){
       var techTip = $(`#tech-tip-${techId}`);
       var techImg = $(`#tech-img-${techId}`);
 
+      $('.pulse').removeClass('pulse')
       techImg.addClass('tech-img-shrunken')
       techTip.addClass('tech-tip-enlarged');
     },
