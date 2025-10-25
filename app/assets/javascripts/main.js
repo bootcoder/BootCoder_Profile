@@ -15,51 +15,53 @@ $(document).ready(function(){
   }
 
   $('#debug-toggle').on('click', function(event){
-    console.log('TOGGLE DEBUG');
+    console.log('TOGGLE CSS BUGGER');
     event.preventDefault();
+    var viewPortWidth = window.innerWidth + " Pixels";
     var docBody = $('#debuggable');
+
+    $('#view-port-width-bugger').text(viewPortWidth)
     $(docBody).toggleClass('debug');
-    $('#hero-title').toggle();
-    $('#bs-bugger').toggle();
+    // $('#hero-title').slideToggle('slow');
+    $('#bs-bugger').slideToggle(500, 'swing');
   })
 
   $('#tech-img-00').addClass('pulse');
 
-  $('.tech-item').hover(
-    function(){
-      var techId = this.id.split('-').at(-1);
-      var techTip = $(`#tech-tip-${techId}`);
-      var techImg = $(`#tech-img-${techId}`);
+  if (window.innerWidth < 960) {
 
-      $('.pulse').removeClass('pulse')
-      techImg.addClass('tech-img-shrunken')
-      techTip.addClass('tech-tip-enlarged');
-    },
+    $('.tech-item').hover(
+      function(){
+        var techId = this.id.split('-').at(-1);
+        var techTip = $(`#tech-tip-${techId}`);
+        var techImg = $(`#tech-img-${techId}`);
 
-    function(){
-      var techId = this.id.split('-').at(-1);
-      var techTip = $(`#tech-tip-${techId}`);
-      var techImg = $(`#tech-img-${techId}`);
+        $('.pulse').removeClass('pulse')
+        techTip.toggleClass('tech-tip-enlarged');
+        techImg.toggleClass('tech-img-shrunken')
+      },
 
-      techTip.removeClass('tech-tip-enlarged');
-      techImg.removeClass('tech-img-shrunken')
-    }
-  )
+      function(){
+        var techId = this.id.split('-').at(-1);
+        var techTip = $(`#tech-tip-${techId}`);
+        var techImg = $(`#tech-img-${techId}`);
+
+        techTip.toggleClass('tech-tip-enlarged');
+        techImg.toggleClass('tech-img-shrunken')
+      }
+    )
+  }
 
 
   if ( $(window).width() < 1023 ) {
-    // $('.bg-space').removeClass('bg-space black')
     $('.bg-space').addClass('gray')
     $('.box-team').removeClass('wow')
     $('.service-box').removeClass('wow')
     $('.mobile-js').removeClass('max-400')
     $('.mobile-js').removeClass('max-500')
-    // $('.mobile-js').addClass('max-90P')
-    // $('.mobile-js').addClass('max-75P')
     $('.mobile-js').addClass('pad-5')
     $('.mobile-js').addClass('white')
     $('.gallery').removeClass('bg-site')
-
   }
 
 });
