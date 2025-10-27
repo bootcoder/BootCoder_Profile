@@ -25,9 +25,8 @@ $(document).ready(function(){
     $('#bs-bugger').slideToggle(500, 'swing');
   })
 
-  $('#tech-img-00').addClass('pulse');
-
-  if (window.innerWidth < 960) {
+  if (window.innerWidth > 960) {
+    $('#tech-img-00').addClass('pulse');
 
     $('.tech-item').hover(
       function(){
