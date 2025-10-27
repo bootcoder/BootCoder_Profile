@@ -785,13 +785,7 @@ ul.social-network li {
 	display: inline;
 }
 
-ul.social-network li a:hover {
-	color: #01a0b5;
-}
 
-ul.social-network li a:hover span .fa-circle {
-	color: #757272;
-}
 
 /* ================================
 Footer
@@ -802,6 +796,16 @@ footer {
 	padding: 50px 0 30px;
 }
 
+.footer-link-text {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  transition: color 1.5s ease;
+}
+
+.footer-link:hover .footer-link-text {
+  opacity: 1;
+	color: white;
+}
 
 /* ================================
 more media queries
