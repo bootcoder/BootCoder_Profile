@@ -13,16 +13,29 @@
     .container.verification-container
       .h-100.d-flex.align-items-center.justify-content-center.pad-5
         .row
+          .glow.col.col-lg-12.col-sm-12.margin-1p
+            = label_tag(:version, "Step 1: Select version:", class: 'resume-label')
+            .align-items-center.justify-content-center.d-flex
+              .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
+                %label.btn.btn-outline-secondary.active
+                  = radio_button_tag :format, 'verbose', true, id: 'verbose'
+                  Verbose
+                %label.btn.btn-outline-secondary
+                  = radio_button_tag :format, 'concise', false, id: 'concise'
+                  Concise
+                %label.btn.btn-outline-secondary
+                  = radio_button_tag :format, 'virtual', false, id: 'virtual'
+                  Virtual
           .glow.col.col-lg-12.col-sm-12
-            = label_tag(:request_email, "Step 1: Enter a valid email:")
+            = label_tag(:request_email, "Step 2: Enter valid email:", class: 'resume-label')
             .align-items-center.justify-content-center.d-flex
               = text_field_tag(:request_email)
           .glow.col.col-lg-12.col-sm-12.margin-1p
-            = label_tag(:recaptcha_copy, "Step 2: Verify via reCaptcha:")
+            = label_tag(:recaptcha_copy, "Step 3: Verify reCaptcha:", class: 'resume-label')
             .align-items-center.justify-content-center.d-flex
               = recaptcha_tags
-      = button_tag(type: "submit", class: "btn btn-info") do
-        Give Resume NOW!
+      .form-group.mt-3
+        = submit_tag 'Download PDF', class: 'btn btn-bootcoder rounded-pill resume-submit'
 
 - space_rand = rand(1..5)
 = render partial: "spacer#{space_rand}"

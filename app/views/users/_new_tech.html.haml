@@ -5,7 +5,7 @@
         .section-heading
           %h2.black.glow The Stack
           %p.black.glow In all my life I've never seen a list I was so sure would be growing...Quickly
-    .container.scrollable.overflow-auto.bg-black-border
+    .container.scrollable.overflow-auto
       - techs.in_groups_of(4, false).each_with_index do |group, oidx|
         .row
           - group.each_with_index do |tech, idx|

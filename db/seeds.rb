@@ -20,7 +20,7 @@ Tech.create(
 
 Tech.create(
 	title: 'Rails',
-	tag_line: "Convention<hr>Configuration",
+	tag_line: "Convention<hr class='red-breaker-bar'>Configuration",
 	copy: 'The G.O.A.T. API<br>This backend gets it done',
 	img: 'techs_2025/rails.png',
 	rating: 5,

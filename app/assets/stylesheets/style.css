@@ -659,7 +659,7 @@ Techs
 	color: black;
 }
 
-.tech-tag-line hr {
+.red-breaker-bar {
 	border: none;
 	height: 2px;
 	margin: 0;
@@ -713,6 +713,10 @@ Techs
 	.white h2 {
 		color: white;
 	}
+
+	.box-team {
+		padding-bottom: 5%;
+	}
 }
 
 @media (min-width: 768px) {
@@ -725,17 +729,17 @@ Techs
 }
 
 @keyframes pulse {
-    0% {
-			box-shadow: 0 0 0 0 rgba(1, 145, 171, 0.7);
-    }
+	0% {
+		box-shadow: 0 0 0 0 rgba(1, 145, 171, 0.7);
+	}
 
-    70% {
-			box-shadow: 0 0 0 15px rgba(222, 84, 72, 0);
-    }
+	70% {
+		box-shadow: 0 0 0 15px rgba(222, 84, 72, 0);
+	}
 
-    100% {
-			box-shadow: 0 0 0 0 rgba(222, 84, 72, 0);
-    }
+	100% {
+		box-shadow: 0 0 0 0 rgba(222, 84, 72, 0);
+	}
 }
 
 /* ================================
@@ -743,6 +747,23 @@ Resume / Recaptcha
 ================================= */
 .verification-container {
 	outline: 1px solid gray;
+}
+
+.verification-container .resume-label {
+	padding-top: 5%;
+}
+.verification-container .resume-submit {
+	margin-bottom: 5%;
+}
+
+.btn-bootcoder {
+	color: white;
+	background-color: #219ab3
+}
+
+.btn-bootcoder:hover {
+	color: greenyellow;
+	background-color: #219ab3
 }
 
 .recaptcha-form-height {
@@ -777,6 +798,10 @@ Contact
 /* ================================
 Bottom widget
 ================================= */
+.social-network {
+	margin-bottom: 5%;
+}
+
 ul.social-network {
 	list-style: none;
 }
@@ -797,14 +822,26 @@ footer {
 }
 
 .footer-link-text {
+	transition: color 1.5s ease;
+}
+
+.footer-link-icon {
   opacity: 0;
   transition: opacity 1.5s ease;
-  transition: color 1.5s ease;
+}
+
+.footer-link:hover .footer-link-icon {
+  opacity: 1;
 }
 
 .footer-link:hover .footer-link-text {
-  opacity: 1;
-	color: white;
+  color: white;
+}
+
+@media (max-width: 768px) {
+	.footer-link-icon {
+		opacity: 1;
+	}
 }
 
 /* ================================
@@ -880,17 +917,17 @@ more media queries
  font:normal 20pt Arial;
  color: white;
  text-shadow: 0 1px 0 #ccc,
- 0 2px 0 gray,
- 0 3px 0 #000000,
- 0 4px 0 #000000,
- 0 5px 0 #000000,
- 0 6px 1px rgba(0,0,0,.1),
- 0 0 5px rgba(0,0,0,.1),
- 0 1px 3px rgba(0,0,0,.3),
- 0 3px 5px rgba(0,0,0,.2),
- 0 5px 10px rgba(0,0,0,.25),
- 0 10px 10px rgba(0,0,0,.2),
- 0 20px 20px rgba(0,0,0,.15);
+							0 2px 0 gray,
+							0 3px 0 #000000,
+							0 4px 0 #000000,
+							0 5px 0 #000000,
+							0 6px 1px rgba(0,0,0,.1),
+							0 0 5px rgba(0,0,0,.1),
+							0 1px 3px rgba(0,0,0,.3),
+							0 3px 5px rgba(0,0,0,.2),
+							0 5px 10px rgba(0,0,0,.25),
+							0 10px 10px rgba(0,0,0,.2),
+							0 20px 20px rgba(0,0,0,.15);
 }
 
 .glow2 {
