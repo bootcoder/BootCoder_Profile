@@ -26,19 +26,23 @@ class UsersController < ApplicationController
     @user.source = 'resume' unless @user.persisted?
 
     # https://github.com/ambethia/recaptcha
-    if verify_recaptcha(model: @user) && @user.save
-      Rails.logger.info("Resume_Request Success: Email: #{email_param}")
-      require 'open-uri'
-      URI.open(I18n.t('resume_link')) do |pdf|
-        tmpfile = Tempfile.new("tmp.pdf")
-        File.open(tmpfile.path, 'wb') { |f| f.write(pdf.read) }
-        send_file(tmpfile.path, :filename => "non_standard_resume_hunter_chapman.pdf")
-      end
+    begin
+      if verify_recaptcha(model: @user) && @user.save
+        require 'open-uri'
+        URI.open(I18n.t('resume_link')) do |pdf|
+          @tmpfile = Tempfile.new("tmp.pdf")
+          @file = File.open(@tmpfile.path, 'wb') { |f| f.write(pdf.read) }
+          send_file(@tmpfile.path, :filename => "non_standard_resume_hunter_chapman.pdf")
+        end
 
-      redirect_to(root_path)
-    else
-      Rails.logger.error("Resume_Request Failed: Email: #{email_param} User: #{@user.errors.full_messages}")
-      render(file: "public/412.html", layout: false)
+        Rails.logger.info("Resume_Request Success: Email: #{email_param} File KB: #{@file.kilobytes}")
+        redirect_to(root_path)
+      else
+        Rails.logger.error("Resume_Request Failed: Email: #{email_param} User: #{@user.errors.full_messages}")
+        render(file: "public/412.html", layout: false)
+      end
+    rescue => e
+      Rails.logger.error("Resume_Request Rescued: Email: #{email_param} User: #{@user.errors.full_messages} File KB: #{@file.kilobytes} Error #{e.message}")
     end
   end
 
