@@ -14,8 +14,10 @@ Rails.application.routes.draw do
   get 'resume', to: 'users#resume_recaptcha', as: :resume
   post 'resume', to: 'users#resume'
 
-  mount Flipper::UI.app(Flipper) => '/flipper'
-
+  flipper_constraint = lambda { |request| request.cookies['flippy_flapper'] == 'true' }
+  constraints flipper_constraint do
+    mount Flipper::UI.app(Flipper) => '/flippy'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
