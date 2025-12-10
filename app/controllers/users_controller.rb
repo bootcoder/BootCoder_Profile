@@ -27,6 +27,11 @@ class UsersController < ApplicationController
 
     # https://github.com/ambethia/recaptcha
     begin
+      unless Flipper.enabled?(:resume_download)
+        Rails.logger.error("Resume_Request Disabled: Email: #{email_param} User: #{@user.errors.full_messages}")
+        return render(file: "public/412.html", layout: false)
+      end
+
       if verify_recaptcha(model: @user) && @user.save
         require 'open-uri'
         URI.open(I18n.t('resume_link')) do |pdf|

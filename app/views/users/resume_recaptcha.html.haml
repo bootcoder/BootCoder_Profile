@@ -35,7 +35,10 @@
             .align-items-center.justify-content-center.d-flex
               = recaptcha_tags
       .form-group.mt-3
-        = submit_tag 'Download PDF', class: 'btn btn-bootcoder rounded-pill resume-submit'
+        - if Flipper.enabled?(:resume_download)
+          = submit_tag 'Download PDF', class: 'btn btn-bootcoder rounded-pill resume-submit'
+        - else
+          = button_to('Download Disabled (Flipper)', '412.html', method: :get, class: 'btn btn-warning rounded-pill')
 
 - space_rand = rand(1..5)
 = render partial: "spacer#{space_rand}"
