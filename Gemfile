@@ -33,9 +33,10 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-
 gem 'unicorn'
 gem 'font-awesome-rails'
+gem 'flipper'
+gem 'flipper-active_record'
 gem 'dotenv-rails'
 gem 'extra_print'
 gem 'puma'
