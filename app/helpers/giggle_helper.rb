@@ -14,10 +14,10 @@ module GiggleHelper
     root     = Rails.root.join('app','assets','images')
     glob     = root.join('giggles','**','*.{png,jpg,jpeg,gif,webp,svg}')
     files    = Dir.glob(glob.to_s, File::FNM_CASEFOLD)
-    logical  = files.sample&.sub(root.to_s + '/', '') || 'giggles/giggle_0.png'
-    result   = []
+    result   = ['giggles/giggle_0.png']
     files.each do |file|
-      result << files.sample&.sub(root.to_s + '/', '') || 'giggles/giggle_0.png'
+      next if file.include?('giggle_0')
+      result << file.sub(root.to_s + '/', '') || 'giggles/giggle_0.png'
     end
     result
   end
