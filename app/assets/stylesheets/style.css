@@ -88,6 +88,14 @@ button.navbar-toggle {
 	color: #fff;
 }
 
+#navbar-toggle {
+	z-index: 1000;
+}
+
+#debug-toggle {
+	z-index: 1000;
+}
+
 .responsive-navbar {
 	width: 100%;
 }
