@@ -1,11 +1,23 @@
 services:
+  nginx:
+    image: nginx:1.27-alpine
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /var/log/bootcore/nginx:/var/log/nginx
+    restart: unless-stopped
   web:
     build: .
     command: bash -lc "rm -f tmp/pids/server.pid && bundle exec puma -C config/puma.rb"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"   # <-- maps to the EC2 host from inside container
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"   # <-- maps to the EC2 host from inside container
+    # ports:
+    #   - "3000:3000"
     restart: unless-stopped
     env_file:
       - .env.production
@@ -21,8 +33,10 @@ services:
     # Remove this line unless you truly need live code edits on the server:
     # volumes:
     #   - .:/app
-    logging:
-      driver: local
-      options:
-        max-size: "10m"
-        max-file: "3"
+    # logging:
+    #   driver: local
+    #   options:
+    #     max-size: "10m"
+    #     max-file: "3"
+    volumes:
+      - /var/log/bootcore/rails:/app/log
