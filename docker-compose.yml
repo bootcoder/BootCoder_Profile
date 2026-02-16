@@ -14,8 +14,8 @@ services:
     command: bash -lc "rm -f tmp/pids/server.pid && bundle exec puma -C config/puma.rb"
     expose:
       - "3000"
-    # extra_hosts:
-    #   - "host.docker.internal:host-gateway"   # <-- maps to the EC2 host from inside container
+    extra_hosts:
+      - "host.docker.internal:host-gateway"   # <-- maps to the EC2 host from inside container
     # ports:
     #   - "3000:3000"
     restart: unless-stopped
