@@ -1,5 +1,5 @@
 # nginx/Dockerfile
-ARG NGINX_VERSION=1.27
+ARG NGINX_VERSION=1.27.5
 
 # ---------- Builder: compile geoip2 module against exact nginx source ----------
 FROM nginx:${NGINX_VERSION}-alpine AS builder
@@ -42,14 +42,15 @@ ARG NGINX_VERSION
 
 # Runtime deps
 RUN apk add --no-cache \
-  bash curl jq \
+  bash curl jq libmaxminddb \
   nginx-mod-http-geoip2
 
 # Copy the compiled module
 COPY --from=builder /build/nginx-${NGINX_VERSION}/objs/ngx_http_geoip2_module.so /etc/nginx/modules/ngx_http_geoip2_module.so
 
+# Bake GeoLite2 DBs into the image (from your repo)
+COPY ./nginx/geolite2-city-ipv4.mmdb /etc/nginx/geoip/geolite2-city-ipv4.mmdb
+COPY ./nginx/geolite2-city-ipv6.mmdb /etc/nginx/geoip/geolite2-city-ipv6.mmdb
+
 # Create runtime dir for your CloudFront realip file
 RUN mkdir -p /etc/nginx/runtime
-
-# Optional: place GeoLite2 DB in image (you can also mount it instead)
-# COPY ./nginx/GeoLite2-City.mmdb /etc/nginx/GeoLite2-City.mmdb

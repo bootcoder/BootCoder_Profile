@@ -3,7 +3,8 @@ services:
     build:
       context: .
       dockerfile: nginx/Dockerfile
-    image: nginx:1.27-alpine
+      args:
+        NGINX_VERSION: "1.27.5"
     depends_on:
       - web
     ports:
