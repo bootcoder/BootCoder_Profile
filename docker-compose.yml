@@ -13,7 +13,7 @@ services:
       - ./:/app:ro
       - nginx_runtime:/etc/nginx/runtime
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./nginx/runtime/cloudfront_realip.conf:/etc/nginx/runtime/cloudfront_realip.conf:ro
+      - nginx_runtime:/etc/nginx/runtime
       - /var/log/bootcore/nginx:/var/log/nginx
     restart: unless-stopped
   web:
@@ -34,6 +34,7 @@ services:
       RDS_HOST: host.docker.internal
     volumes:
       - /var/log/bootcore/rails:/app/log
+      - nginx_runtime:/etc/nginx/runtime
 
 volumes:
   nginx_runtime:
