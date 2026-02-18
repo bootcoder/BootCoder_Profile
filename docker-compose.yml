@@ -6,6 +6,8 @@ services:
     ports:
       - "80:80"
     volumes:
+      - ./:/app:ro
+      - nginx_runtime:/etc/nginx/runtime
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - /var/log/bootcore/nginx:/var/log/nginx
     restart: unless-stopped
