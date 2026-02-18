@@ -2,7 +2,7 @@ FROM ruby:3.2.5
 
 # Install OS packages (and clean up lists to save space)
 RUN apt-get update -qq && apt-get install -y --no-install-recommends \
-  curl build-essential libpq-dev nodejs npm nginx-plus-module-geoip2 \
+  curl build-essential libpq-dev nodejs npm jq \
   && rm -rf /var/lib/apt/lists/*
 
 # Enable Yarn via Corepack
