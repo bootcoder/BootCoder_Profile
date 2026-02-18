@@ -31,10 +31,20 @@ fi
 # Add localhost as well (handy if you ever proxy internally)
 echo "set_real_ip_from 127.0.0.1;" >> "$TMP"
 
-# Atomically replace
+# Replace existing IPs
 mkdir -p "$(dirname "$OUT")"
-chmod 0644 "$TMP"
-mv -f "$TMP" "$OUT"
+
+# Sanity check to avoid clobbering with empty output
+LINES=$(grep -c '^set_real_ip_from ' "$TMP" || true)
+if [ "$LINES" -lt 10 ]; then
+  echo "Refusing to overwrite $OUT: only $LINES ranges found"
+  exit 1
+fi
+
+# Overwrite the existing file IN PLACE (avoids mv/unlink 'Resource busy')
+cat "$TMP" > "$OUT"
+chmod 0644 "$OUT"
+rm -f "$TMP"
 
 # Validate nginx config & reload
 nginx -t && nginx -s reload
