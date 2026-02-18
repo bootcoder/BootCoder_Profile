@@ -32,8 +32,9 @@ fi
 echo "set_real_ip_from 127.0.0.1;" >> "$TMP"
 
 # Atomically replace
-install -m 0644 "$TMP" "$OUT"
-rm -f "$TMP"
+mkdir -p "$(dirname "$OUT")"
+chmod 0644 "$TMP"
+mv -f "$TMP" "$OUT"
 
 # Validate nginx config & reload
 nginx -t && nginx -s reload
