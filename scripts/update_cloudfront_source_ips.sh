@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUT=/etc/nginx/runtime/cloudfront-realip.conf
+OUT=/etc/nginx/runtime/cloudfront_realip.conf
 TMP="$(mktemp)"
 URL="https://ip-ranges.amazonaws.com/ip-ranges.json"
 

@@ -79,8 +79,15 @@ alias grac="git add . && git rebase --continue"
 export RAILS_ENV=production
 
 alias bcdb="psql -h bootcore-prod.cgh8sy4w2396.us-east-1.rds.amazonaws.com -U bootcore_user -d bootcore_prod -p 5432"
-alias rlog="docker-compose logs web"
-alias tlog="docker-compose logs -f --since=10m web"
+alias logdcw="docker-compose logs web"
+alias logdcwt="docker-compose logs -f --since=10m web"
+
+alias logdcn="docker-compose logs nginx"
+alias logdcnt="docker-compose logs -f --since=10m nginx"
+
+alias logna="tail -n 500 /var/log/bootcore/nginx/access.log"
+alias logne="tail -n 500 /var/log/bootcore/nginx/error.log"
+alias lograils="tail -n 1000 /var/log/bootcore/rails/production.log"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
