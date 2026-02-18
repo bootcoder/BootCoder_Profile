@@ -1,5 +1,8 @@
 services:
   nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
     image: nginx:1.27-alpine
     depends_on:
       - web
