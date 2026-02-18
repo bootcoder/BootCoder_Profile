@@ -29,3 +29,6 @@ services:
       RDS_HOST: host.docker.internal
     volumes:
       - /var/log/bootcore/rails:/app/log
+
+volumes:
+  nginx_runtime:
