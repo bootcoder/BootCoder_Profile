@@ -13,8 +13,8 @@ c_cyan='\e[36m'
 
 # $VARIABLE will render before the rest of the command is executed
 echo -e "Logged in as ${c_purple}$USER${c_reset} at ${c_cyan}$(hostname)${c_reset}"
-echo -e "Directory set to ${c_green}BootCoder_Profile${c_reset} and loading ${c_purple}repo bashrc${c_reset}"
-cd BootCoder_Profile
+echo -e "Directory set to ${c_green}bootcore${c_reset} and loading ${c_purple}repo bashrc${c_reset}"
+cd bootcore
 
 # PS1 is the variable for the prompt you see everytime you hit enter
 PROMPT_COMMAND='PS1="${c_purple}$(whoami):${c_cyan}\W${c_reset}$(git_prompt) :> "'
@@ -104,7 +104,7 @@ function deploy() {
   docker builder prune -a -f
   ./scripts/load_ssm_params.sh
   set -a
-  . /home/ec2-user/BootCoder_Profile/.env.production
+  . /home/ec2-user/bootcore/.env.production
   set +a
   echo "INSPECT ENV"
   echo $RDS_USERNAME
