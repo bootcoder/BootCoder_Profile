@@ -95,7 +95,7 @@ function deploy() {
   docker system prune -f --filter 'until=24h'
   docker system prune -a -f --volumes
   docker builder prune -a -f
-  ./load_ssm_params.sh
+  ./scripts/load_ssm_params.sh
   set -a
   . /home/ec2-user/BootCoder_Profile/.env.production
   set +a
