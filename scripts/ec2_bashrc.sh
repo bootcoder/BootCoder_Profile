@@ -130,7 +130,8 @@ function logeo() {
 }
 
 function logec() {
-  tail -f /var/log/bootcore/nginx/access.log | jq -r '
+  N=5
+  tail -n "$N" /var/log/bootcore/nginx/access.log | jq -r '
     def t: (.time | strptime("%Y-%m-%dT%H:%M:%S%z") | strftime("%m/%d %H:%M"));
     def uri50: ((.uri // .request // "") | tostring | .[0:50]);
     def geo: (.location // "-" | if . == "" then "-" else . end);
@@ -151,7 +152,7 @@ function logec() {
 }
 
 function loged() {
-  N=2000
+  N=5
   tail -n "$N" /var/log/bootcore/nginx/access.log | jq -r '
     def uri: (.uri // "");
     def geo: (.location // "-" | if . == "" then "-" else . end);
@@ -217,7 +218,89 @@ function loged() {
         | .[0:10][]
         | "  \(.request_time)\t\(.status)\t\(.remote_addr)\t\(.uri)"
       )
-  ' 2>/dev/null
+  '
+}
+
+nglive() {
+  local N="${1:-0}"
+  local LOG="/var/log/bootcore/nginx/access.log"
+
+  if [ "$N" -gt 0 ] 2>/dev/null; then
+    tail -n "$N" -f "$LOG"
+  else
+    tail -f "$LOG"
+  fi \
+  | sed -E 's/"country_iso":"([^"]+)""timezone"/"country_iso":"\1","timezone"/; s/,}$/}/' \
+  | jq -r '
+      def t: (.time | strptime("%Y-%m-%dT%H:%M:%S%z") | strftime("%m/%d %H:%M"));
+      def path50: ((.uri // .request // "") | tostring | .[0:50]);
+      def geo: (.location // "-" | if . == "" then "-" else . end);
+      def id8: (.request_id // "-" | tostring | .[0:8]);
+      def sc: (.status|tonumber);
+      def scol:
+        if sc < 300 then "\u001b[32m"
+        elif sc < 400 then "\u001b[36m"
+        elif sc < 500 then "\u001b[33m"
+        else "\u001b[31m" end;
+
+      "\u001b[2m\(t)\u001b[0m " +
+      (scol + "\(.status)\u001b[0m ") +
+      "\u001b[34m\(.remote_addr)\u001b[0m " +
+      "\u001b[1m\(path50)\u001b[0m " +
+      "\u001b[35m\(geo)\u001b[0m " +
+      "\u001b[2m\(id8)\u001b[0m"
+    '
+}
+
+ngdash() {
+  local N="${1:-2000}"
+  local LOG="/var/log/bootcore/nginx/access.log"
+
+  tail -n "$N" "$LOG" \
+  | sed -E 's/"country_iso":"([^"]+)""timezone"/"country_iso":"\1","timezone"/; s/,}$/}/' \
+  | jq -s -r '
+      def geo: (.location // "-" | if . == "" then "-" else . end);
+      def uri: (.uri // "");
+      def rt: ((.request_time // 0) | tonumber);
+
+      "Requests (last \(length))",
+      "",
+      "Status counts",
+      (group_by(.status)
+        | map({s: (.[0].status|tostring), c: length})
+        | sort_by(-.c)
+        | .[]
+        | "  \(.s): \(.c)"),
+      "",
+      "Top IPs",
+      (group_by(.remote_addr)
+        | map({k: (.[0].remote_addr), v: length})
+        | sort_by(-.v)
+        | .[0:10][]
+        | "  \(.v)\t\(.k)"),
+      "",
+      "Top Paths",
+      (map(uri)
+        | map(select(. != ""))
+        | group_by(.)
+        | map({k: (.[0]), v: length})
+        | sort_by(-.v)
+        | .[0:10][]
+        | "  \(.v)\t\(.k)"),
+      "",
+      "Top GEO",
+      (map(geo)
+        | group_by(.)
+        | map({k: (.[0]), v: length})
+        | sort_by(-.v)
+        | .[0:10][]
+        | "  \(.v)\t\(.k)"),
+      "",
+      "Slowest (sec)",
+      (sort_by(-rt)
+        | .[0:10][]
+        | "  \(.request_time)\t\(.status)\t\(.remote_addr)\t\(.uri)")
+    '
 }
 
 # User specific environment
