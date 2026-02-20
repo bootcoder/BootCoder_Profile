@@ -114,6 +114,21 @@ function deploy() {
   docker-compose up --build -d
 };
 
+function logeo() {
+  jq -r '
+    [
+      .remote_addr,
+      (.request | tostring | .[0:50]),
+      (.time
+        | strptime("%Y-%m-%dT%H:%M:%S%z")
+        | strftime("%m/%d - %H:%M")
+      ),
+      (.location // ""),
+      .request_id
+    ] | @tsv
+  ' /var/log/bootcore/nginx/access.log | column -t -s $'\t'
+}
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
