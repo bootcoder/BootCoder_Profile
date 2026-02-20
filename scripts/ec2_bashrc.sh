@@ -129,7 +129,7 @@ function logeo() {
   ' /var/log/bootcore/nginx/access.log | column -t -s $'\t'
 }
 
-function legec() {
+function logec() {
   tail -f /var/log/bootcore/nginx/access.log | jq -r '
     def t: (.time | strptime("%Y-%m-%dT%H:%M:%S%z") | strftime("%m/%d %H:%M"));
     def uri50: ((.uri // .request // "") | tostring | .[0:50]);
@@ -150,9 +150,9 @@ function legec() {
   '
 }
 
-function leged() {
+function loged() {
   N=2000
-  tail -n "$N" /var/log/nginx/access.log | jq -r '
+  tail -n "$N" /var/log/bootcore/nginx/access.log | jq -r '
     def uri: (.uri // "");
     def geo: (.location // "-" | if . == "" then "-" else . end);
     def ms: ((.request_time // 0) | tonumber);
