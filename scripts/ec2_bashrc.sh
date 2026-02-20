@@ -129,6 +129,97 @@ function logeo() {
   ' /var/log/bootcore/nginx/access.log | column -t -s $'\t'
 }
 
+function legec() {
+  tail -f /var/log/bootcore/nginx/access.log | jq -r '
+    def t: (.time | strptime("%Y-%m-%dT%H:%M:%S%z") | strftime("%m/%d %H:%M"));
+    def uri50: ((.uri // .request // "") | tostring | .[0:50]);
+    def geo: (.location // "-" | if . == "" then "-" else . end);
+    def id8: (.request_id // "-" | tostring | .[0:8]);
+    def color_status:
+      if (.status|tonumber) < 300 then "\u001b[32m"          # green
+      elif (.status|tonumber) < 400 then "\u001b[36m"        # cyan
+      elif (.status|tonumber) < 500 then "\u001b[33m"        # yellow
+      else "\u001b[31m" end;                                 # red
+
+    "\u001b[2m\(t)\u001b[0m " +
+    (color_status + "\(.status)\u001b[0m ") +
+    "\u001b[34m\(.remote_addr)\u001b[0m " +
+    "\u001b[1m\(uri50)\u001b[0m " +
+    "\u001b[35m\(geo)\u001b[0m " +
+    "\u001b[2m\(id8)\u001b[0m"
+  '
+}
+
+function leged() {
+  N=2000
+  tail -n "$N" /var/log/nginx/access.log | jq -r '
+    def uri: (.uri // "");
+    def geo: (.location // "-" | if . == "" then "-" else . end);
+    def ms: ((.request_time // 0) | tonumber);
+
+    # collect entries
+    [inputs] as $all
+    | (
+        $all | length as $total
+        | "Requests (last \($total))"
+      ),
+      "",
+      (
+        "Status counts"
+      ),
+      (
+        $all
+        | group_by(.status)
+        | map({status: (.[0].status|tostring), count: length})
+        | sort_by(-.count)
+        | .[]
+        | "  \(.status): \(.count)"
+      ),
+      "",
+      "Top IPs",
+      (
+        $all
+        | group_by(.remote_addr)
+        | map({k: (.[0].remote_addr), v: length})
+        | sort_by(-.v)
+        | .[0:10][]
+        | "  \(.v)\t\(.k)"
+      ),
+      "",
+      "Top Paths",
+      (
+        $all
+        | map(uri)
+        | map(select(. != ""))
+        | group_by(.)
+        | map({k: (.[0]), v: length})
+        | sort_by(-.v)
+        | .[0:10][]
+        | "  \(.v)\t\(.k)"
+      ),
+      "",
+      "Top GEO",
+      (
+        $all
+        | map(geo)
+        | group_by(.)
+        | map({k: (.[0]), v: length})
+        | sort_by(-.v)
+        | .[0:10][]
+        | "  \(.v)\t\(.k)"
+      ),
+      "",
+      "Slowest (sec)",
+      (
+        $all
+        | map(select(.request_time != null))
+        | sort_by(-ms)
+        | .[0:10][]
+        | "  \(.request_time)\t\(.status)\t\(.remote_addr)\t\(.uri)"
+      )
+  ' 2>/dev/null
+}
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
