@@ -45,12 +45,7 @@ export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
 
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
-alias docker-clean=' \
-  docker container prune -f ; \
-  docker image prune -f ; \
-  docker network prune -f ; \
-  docker volume prune -f '
-
+alias docker-clean='docker container prune -f && docker image prune -f && docker network prune -f && docker volume prune -f'
 # Git related aliases
 alias g=git
 alias gd='git checkout develop && git pull'
