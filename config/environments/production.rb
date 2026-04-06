@@ -49,7 +49,8 @@ Rails.application.configure do
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info").to_sym
 
   # Send logs to STDOUT in containers
-  logger            = ActiveSupport::Logger.new($stdout)
+  # logger            = ActiveSupport::Logger.new($stdout)
+  logger            = ActiveSupport::Logger.new(Rails.root.join("log", "production.log"))
   logger.formatter  = config.log_formatter # keep Rails’ default formatter
   config.logger     = ActiveSupport::TaggedLogging.new(logger)
 

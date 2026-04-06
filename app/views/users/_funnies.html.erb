@@ -6,14 +6,22 @@
         <div class='mx-auto d-block col-md-8'>
           <div id='comic-text' class='section-heading'>
             <h2 class='black glow'>Finally</h2>
-            <p class='black glow'>A Giggle a day keeps the demons away.</p>
+            <p class='black glow'>A Giggle a day keeps the demons at bay</p>
           </div>
         </div>
       </div>
 
       <div class='row'>
         <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-          <%= random_giggle_image_tag(class: 'image-meme image-responsive max-500 pad-5P') %>
+          <div id="giggle_carousel" class="carousel slide" data-ride="carousel" data-keyboard=true data-pause='hover'>
+            <div class="carousel-inner">
+              <% giggle_images.each_with_index do |gig, idx| %>
+                <div class="carousel-item <%= idx.zero? ? 'active' : '' %>">
+                  <%= image_tag gig, { alt: File.basename(gig, '.*'), class: 'image-meme image-responsive max-500 pad-5P' } %>
+                </div>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

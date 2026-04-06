@@ -9,4 +9,16 @@ module GiggleHelper
               { alt: File.basename(logical, '.*'),
                 class: 'image-meme image-responsive max-500 pad-5P' }.merge(options)
   end
+
+  def giggle_images(**options)
+    root     = Rails.root.join('app','assets','images')
+    glob     = root.join('giggles','**','*.{png,jpg,jpeg,gif,webp,svg}')
+    files    = Dir.glob(glob.to_s, File::FNM_CASEFOLD)
+    result   = ['giggles/giggle_0.png']
+    files.each do |file|
+      next if file.include?('giggle_0')
+      result << file.sub(root.to_s + '/', '') || 'giggles/giggle_0.png'
+    end
+    result
+  end
 end
