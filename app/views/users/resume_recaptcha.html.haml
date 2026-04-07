@@ -26,6 +26,9 @@
                 %label.btn.btn-outline-secondary
                   = radio_button_tag :version, 'virtual', false, id: 'virtual'
                   Virtual
+                %label.btn.btn-outline-secondary
+                  = radio_button_tag :version, 'visual', false, id: 'visual'
+                  View-Only
           .glow.col.col-lg-12.col-sm-12
             = label_tag(:request_email, "Step 2: Enter valid email:", class: 'resume-label')
             .align-items-center.justify-content-center.d-flex
