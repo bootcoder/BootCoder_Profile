@@ -18,13 +18,13 @@
             .align-items-center.justify-content-center.d-flex
               .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
                 %label.btn.btn-outline-secondary.active
-                  = radio_button_tag :format, 'verbose', true, id: 'verbose'
+                  = radio_button_tag :version, 'verbose', true, id: 'verbose'
                   Verbose
                 %label.btn.btn-outline-secondary
-                  = radio_button_tag :format, 'concise', false, id: 'concise'
+                  = radio_button_tag :version, 'concise', false, id: 'concise'
                   Concise
                 %label.btn.btn-outline-secondary
-                  = radio_button_tag :format, 'virtual', false, id: 'virtual'
+                  = radio_button_tag :version, 'virtual', false, id: 'virtual'
                   Virtual
           .glow.col.col-lg-12.col-sm-12
             = label_tag(:request_email, "Step 2: Enter valid email:", class: 'resume-label')

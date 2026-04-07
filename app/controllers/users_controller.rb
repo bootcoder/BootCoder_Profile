@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
   def resume
     email_param = resume_params[:request_email]
+    version_param = resume_params[:version]
     @user = User.find_or_initialize_by(email: email_param)
     @user.source = 'resume' unless @user.persisted?
 
@@ -38,11 +39,13 @@ class UsersController < ApplicationController
         URI.open(I18n.t('resume_link')) do |pdf|
           @tmpfile = Tempfile.new("tmp.pdf")
           @file = File.open(@tmpfile.path, 'wb') { |f| f.write(pdf.read) }
-          send_file(@tmpfile.path, :filename => "non_standard_resume_hunter_chapman.pdf")
+          Rails.logger.info("Resume_Request Success: Email: #{email_param} File KB: #{@file.kilobytes}")
+          if version_param == 'visual'
+            send_file(@tmpfile.path, filename: "non_standard_resume_hunter_chapman.pdf", type: 'application/pdf', disposition: :inline)
+          else
+            send_file(@tmpfile.path, filename: "non_standard_resume_hunter_chapman.pdf", type: 'application/pdf')
+          end
         end
-
-        Rails.logger.info("Resume_Request Success: Email: #{email_param} File KB: #{@file.kilobytes}")
-        redirect_to(root_path)
       else
         Rails.logger.error("Resume_Request Failed: Email: #{email_param} User: #{@user.errors.full_messages}")
         render(file: "public/412.html", layout: false)
