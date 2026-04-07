@@ -39,12 +39,15 @@ class UsersController < ApplicationController
         URI.open(I18n.t('resume_link')) do |pdf|
           @tmpfile = Tempfile.new("tmp.pdf")
           @file = File.open(@tmpfile.path, 'wb') { |f| f.write(pdf.read) }
-          Rails.logger.info("Resume_Request Success: Email: #{email_param} File KB: #{@file.kilobytes}")
+
           if version_param == 'visual'
+            Rails.logger.info("Resume_Request View: Email: #{email_param} File KB: #{@file.kilobytes}")
             send_file(@tmpfile.path, filename: "non_standard_resume_hunter_chapman.pdf", type: 'application/pdf', disposition: :inline)
           else
+            Rails.logger.info("Resume_Request Download: Email: #{email_param} File KB: #{@file.kilobytes}")
             send_file(@tmpfile.path, filename: "non_standard_resume_hunter_chapman.pdf", type: 'application/pdf')
           end
+
         end
       else
         Rails.logger.error("Resume_Request Failed: Email: #{email_param} User: #{@user.errors.full_messages}")
