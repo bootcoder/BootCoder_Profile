@@ -1,3 +1,8 @@
+<%
+  root         = Rails.root.join('app', 'assets', 'images')
+  giggle_paths = Dir.glob(root.join('giggles', '**', '*.{png,jpg,jpeg,gif,webp,svg}').to_s, File::FNM_CASEFOLD)
+                    .map { |f| image_path(f.sub("#{root}/", '')) }
+%>
 <!-- Funnies -->
 <div class='bg-site'>
   <section id='giggles' class='home-section'>
@@ -13,14 +18,10 @@
 
       <div class='row'>
         <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-          <div id="giggle_carousel" class="carousel slide" data-ride="carousel" data-keyboard=true data-pause='hover'>
-            <div class="carousel-inner">
-              <% giggle_images.each_with_index do |gig, idx| %>
-                <div class="carousel-item <%= idx.zero? ? 'active' : '' %>">
-                  <%= image_tag gig, { alt: File.basename(gig, '.*'), class: 'image-meme image-responsive max-500 pad-5P' } %>
-                </div>
-              <% end %>
-            </div>
+          <div id="giggle_carousel" class="carousel slide"
+               data-ride="carousel" data-keyboard="true" data-pause="hover"
+               data-images="<%= giggle_paths.to_json %>">
+            <div class="carousel-inner"><%# populated by giggles.js %></div>
           </div>
         </div>
       </div>

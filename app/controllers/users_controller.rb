@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @techs = Tech.where('rating > ?', 0).order(:title)
-    @projects = Project.includes(:tech).all
+    @projects = Project.includes(:techs).all
   end
 
   # GET /users/1
