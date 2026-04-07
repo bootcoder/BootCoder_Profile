@@ -8,7 +8,12 @@ class ApplicationController < ActionController::Base
   private
 
   def set_default_cache_control
-    # Only set if nothing else has already set it
-    response.headers['Cache-Control'] = 'public, max-age=300' unless response.cache_control.present?
+    return if response.cache_control.present?
+    # Only cache safe, non-authenticated GET/HEAD responses
+    if request.get? || request.head?
+      response.headers['Cache-Control'] = 'public, max-age=300'
+    else
+      response.headers['Cache-Control'] = 'no-store'
+    end
   end
 end

@@ -15,6 +15,9 @@ Rails.application.configure do
   ## Can be set to `:warn`, `:raise`, or `false`
   # config.flipper.strict = Rails.env.development? && :warn
 
+  config.flipper.memoize = true   # one DB call per feature per request
+  config.flipper.preload = true   # load all features upfront per request
+
   ## Show Flipper checks in logs
   # config.flipper.log = true
 

@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class UsersController < ApplicationController
   # before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -6,7 +8,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @techs = Tech.where('rating > ?', 0).order(:title)
-    @projects = Project.all
+    @projects = Project.includes(:tech).all
   end
 
   # GET /users/1
@@ -33,7 +35,6 @@ class UsersController < ApplicationController
       end
 
       if verify_recaptcha(model: @user) && @user.save
-        require 'open-uri'
         URI.open(I18n.t('resume_link')) do |pdf|
           @tmpfile = Tempfile.new("tmp.pdf")
           @file = File.open(@tmpfile.path, 'wb') { |f| f.write(pdf.read) }
