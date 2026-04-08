@@ -35,11 +35,10 @@ class UsersController < ApplicationController
         return render(file: "public/412.html", layout: false)
       end
 
-      if verify_recaptcha(model: @user) && @user.save
+      if Rails.env.development? || verify_recaptcha(model: @user) && @user.save
         URI.open(I18n.t('resume_link')) do |pdf|
           @tmpfile = Tempfile.new("tmp.pdf")
           @file = File.open(@tmpfile.path, 'wb') { |f| f.write(pdf.read) }
-
           if version_param == 'visual'
             Rails.logger.info("Resume_Request View: Email: #{email_param} File KB: #{@file.kilobytes}")
             send_file(@tmpfile.path, filename: "non_standard_resume_hunter_chapman.pdf", type: 'application/pdf', disposition: :inline)
@@ -119,6 +118,6 @@ class UsersController < ApplicationController
     end
 
     def resume_params
-      params.permit(:request_email, 'g-recaptcha-response')
+      params.permit(:request_email, 'g-recaptcha-response', :version)
     end
 end

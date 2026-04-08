@@ -9,7 +9,7 @@
   .img-container
     = image_tag 'no_bots.png', alt: 'no_bots_allowed', class: 'img-fluid centered'
 
-  = form_tag '/resume' do
+  = form_tag '/resume', data: { turbo: false } do
     .container.verification-container
       .h-100.d-flex.align-items-center.justify-content-center.pad-5
         .row
