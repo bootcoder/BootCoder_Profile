@@ -459,3 +459,11 @@ Project.create(project_name: "HomeBase",
 								Tech.smart_find_or_create(title: 'Javascript'),
 								Tech.smart_find_or_create(title: 'AJAX'),
 							])
+
+
+Resume.destroy_all
+
+Resume.create(title: 'Default',
+							file_name: 'resume_hunter_chapman_denormalized.pdf',
+
+)
