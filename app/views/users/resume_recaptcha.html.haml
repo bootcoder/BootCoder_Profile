@@ -9,7 +9,7 @@
   .img-container
     = image_tag 'no_bots.png', alt: 'no_bots_allowed', class: 'img-fluid centered'
 
-  = form_tag '/resume' do
+  = form_tag '/resume', data: { turbo: false } do
     .container.verification-container
       .h-100.d-flex.align-items-center.justify-content-center.pad-5
         .row
@@ -18,14 +18,17 @@
             .align-items-center.justify-content-center.d-flex
               .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
                 %label.btn.btn-outline-secondary.active
-                  = radio_button_tag :format, 'verbose', true, id: 'verbose'
+                  = radio_button_tag :version, 'verbose', true, id: 'verbose'
                   Verbose
                 %label.btn.btn-outline-secondary
-                  = radio_button_tag :format, 'concise', false, id: 'concise'
+                  = radio_button_tag :version, 'concise', false, id: 'concise'
                   Concise
                 %label.btn.btn-outline-secondary
-                  = radio_button_tag :format, 'virtual', false, id: 'virtual'
+                  = radio_button_tag :version, 'virtual', false, id: 'virtual'
                   Virtual
+                %label.btn.btn-outline-secondary
+                  = radio_button_tag :version, 'visual', false, id: 'visual'
+                  View-Only
           .glow.col.col-lg-12.col-sm-12
             = label_tag(:request_email, "Step 2: Enter valid email:", class: 'resume-label')
             .align-items-center.justify-content-center.d-flex
@@ -35,7 +38,10 @@
             .align-items-center.justify-content-center.d-flex
               = recaptcha_tags
       .form-group.mt-3
-        = submit_tag 'Download PDF', class: 'btn btn-bootcoder rounded-pill resume-submit'
+        - if Flipper.enabled?(:resume_download)
+          = submit_tag 'Download PDF', class: 'btn btn-bootcoder rounded-pill resume-submit'
+        - else
+          = button_to('Download Disabled (Flipper)', '412.html', method: :get, class: 'btn btn-warning rounded-pill')
 
 - space_rand = rand(1..5)
 = render partial: "spacer#{space_rand}"

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 SSM_PATH="/prod/bootcore/"
-ENV_DIR="/home/ec2-user/BootCoder_Profile"
+ENV_DIR="/home/ec2-user/bootcore"
 TMP_FILE="$ENV_DIR/.env.prod.tmp"
 FINAL_FILE="$ENV_DIR/.env.production"
 

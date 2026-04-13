@@ -6,14 +6,10 @@ class Tech < ApplicationRecord
   has_many :projects, through: :project_techs
 
   def self.smart_find(identifier)
-    target = nil
-    return target if identifier.blank? || identifier.nil?
-    return target unless identifier.is_a?(String)
+    return nil if identifier.blank? || !identifier.is_a?(String)
 
-    target ||= find_by('lower(title) = ?', identifier.downcase)
-    target ||= find_by('lower(aka) = ?', identifier.downcase)
-    target ||= nil
-    target
+    val = identifier.downcase
+    find_by('lower(title) = ? OR lower(aka) = ?', val, val)
   end
 
   def self.smart_find_or_create(identifier)

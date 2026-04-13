@@ -71,8 +71,20 @@
     console.log('DOM Loaded')
     init();
   }
-  document.addEventListener('turbo:load', init);
-// Delegated modal opener that works on BS 5.0+ (no getOrCreateInstance required)
+
+  var initialized = false;
+
+  function init() {
+    if (initialized) return;
+    initialized = true;
+    // ... rest of init
+  }
+  document.addEventListener('turbo:load', function() {
+    initialized = false; // reset on navigation
+    init();
+  });
+
+  // Delegated modal opener that works on BS 5.0+ (no getOrCreateInstance required)
   document.addEventListener('click', function (e) {
     console.log("Project Click Event");
     const trigger = e.target.closest('[data-bs-toggle="modal"][data-bs-target]');
