@@ -1,0 +1,27 @@
+%h1 Listing cover_letters
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Resume
+      %th File name
+      %th Version
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cover_letters.each do |cover_letter|
+      %tr
+        %td= cover_letter.title
+        %td= cover_letter.resume
+        %td= cover_letter.file_name
+        %td= cover_letter.version
+        %td= link_to 'Show', cover_letter
+        %td= link_to 'Edit', edit_cover_letter_path(cover_letter)
+        %td= link_to 'Destroy', cover_letter, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Cover letter', new_cover_letter_path

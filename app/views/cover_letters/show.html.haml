@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @cover_letter.title
+%p
+  %b Resume:
+  = @cover_letter.resume
+%p
+  %b File name:
+  = @cover_letter.file_name
+%p
+  %b Version:
+  = @cover_letter.version
+
+= link_to 'Edit', edit_cover_letter_path(@cover_letter)
+\|
+= link_to 'Back', cover_letters_path
