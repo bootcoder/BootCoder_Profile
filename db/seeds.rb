@@ -1,3 +1,8 @@
+p "*" * 50
+p "Seeding BootCore DB"
+p "*" * 50
+
+p 'Seeding Techs'
 Tech.destroy_all
 
 #<Tech img: nil, title: nil, copy: nil, rating: nil, tag_line: nil>
@@ -220,7 +225,7 @@ Tech.create(
 	aka: 'Ubuntu'
 )
 
-
+p 'Seeding Projects'
 Project.destroy_all
 
 Project.create(project_name: "Rivals",
@@ -461,9 +466,9 @@ Project.create(project_name: "HomeBase",
 							])
 
 
+p 'Seeding Resumes'
 Resume.destroy_all
 
 Resume.create(title: 'Default',
 							file_name: 'resume_hunter_chapman_denormalized.pdf',
-
 )
