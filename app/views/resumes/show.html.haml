@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @resume.title
+%p
+  %b File name:
+  = @resume.file_name
+%p
+  %b Download count:
+  = @resume.download_count
+%p
+  %b Version:
+  = @resume.version
+%p
+  %b Company:
+  = @resume.company
+
+= link_to 'Edit', edit_resume_path(@resume)
+\|
+= link_to 'Back', resumes_path

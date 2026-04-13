@@ -1,0 +1,29 @@
+%h1 Listing resumes
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th File name
+      %th Download count
+      %th Version
+      %th Company
+      %th
+      %th
+      %th
+
+  %tbody
+    - @resumes.each do |resume|
+      %tr
+        %td= resume.title
+        %td= resume.file_name
+        %td= resume.download_count
+        %td= resume.version
+        %td= resume.company
+        %td= link_to 'Show', resume
+        %td= link_to 'Edit', edit_resume_path(resume)
+        %td= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Resume', new_resume_path
