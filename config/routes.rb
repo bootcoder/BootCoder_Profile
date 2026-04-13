@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   resources :projects
 
   get 'gallery', to: 'users#gallery'
-  get 'resume', to: 'users#resume_recaptcha', as: :resume
-  post 'resume', to: 'users#resume'
+  # get 'resume', to: 'users#resume_recaptcha', as: :resume
+  # post 'resume', to: 'users#resume'
 
   flipper_constraint = lambda { |request| request.cookies['flippy_flapper'] == 'true' }
   constraints flipper_constraint do
